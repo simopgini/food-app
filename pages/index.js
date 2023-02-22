@@ -3,6 +3,10 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css'
 import { ClockIcon, FireIcon } from '@heroicons/react/24/outline'
+// import { HomeIcon } from '@heroicons/react/24/outline'
+// import { HomeIcon } from '@heroicons/react/24/outline'
+import { HomeIcon } from '@heroicons/react/20/solid'
+import { ClipboardIcon, MagnifyingGlassIcon, UserIcon } from '@heroicons/react/24/solid'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,6 +38,9 @@ export default function Home() {
               <div className='text-white '>
                 <div className='bg-[#60B99E] h-32 w-64 rounded-xl'>
                   <div className='px-2 py-2'>
+                  <div className='p-4 h-16'>
+                  <div className=' bg-slate-200 rounded-xl'></div>
+                </div>
                     <h2 className='text-base pb-1 font-semibold'>Penne all'arrabbiata</h2>
                     <div className='flex items-center text-sm'>
                       <ClockIcon className='h-4 w-4 mr-1 text-white' />
@@ -63,6 +70,9 @@ export default function Home() {
             </div>
             <div className='flex justify-between text-white pl-4'>
               <div className='bg-white h-64 w-44 rounded-xl drop-shadow'>
+                <div className='p-4 h-44'>
+                  <div className='h-36 bg-[#F1F5F5] rounded-xl'></div>
+                </div>
                 <div className='px-4 py-2'>
                   <h2 className='text-base pb-1 font-semibold text-[#082224]'>Tacos Muy Buenos</h2>
                   <div className='flex justify-between text-[#8B8E8D]'>
@@ -78,6 +88,9 @@ export default function Home() {
                 </div>
               </div>
               <div className='bg-white h-64 w-44 rounded-xl drop-shadow'>
+                <div className='p-4 h-44'>
+                  <div className='h-36 bg-[#F1F5F5] rounded-xl'></div>
+                </div>
                 <div className='px-4 py-2'>
                   <h2 className='text-base pb-1 font-semibold text-[#082224]'>Cheeky Curry Super Zozzone</h2>
                   <div className='flex justify-between text-[#8B8E8D]'>
@@ -90,11 +103,20 @@ export default function Home() {
                       <span className='font-light text-xs'>120 min</span>
                     </div>
                   </div>
-                  
                 </div>
               </div>
             </div>
           </section>
+          <nav className='mt-10'>
+            {/* <div className=''></div> */}
+            <hr></hr>
+            <div className='pt-6 px-10 flex justify-between items-center text-sm'>
+              <HomeIcon className='h-6 w-6 mr-1 text-[#60B99E]' />
+              <ClipboardIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+              <MagnifyingGlassIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+              <UserIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+            </div>
+          </nav>
         </div>
       </main>
     </>
