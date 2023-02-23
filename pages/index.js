@@ -20,15 +20,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main >
-        {/* <div className='bg-zinc-600 px-32 w-96'>
-          <div>
-            sdffgjkjhgfd
-            sdfghjfd
-          </div>
-        </div> */}
-
         {/* HOME */}
-        <div>
+        {/* <div>
           <div className='mt-14 mb-6 pl-4 text-[#082224] text-xl font-bold'>
             Hello 👋
           </div>
@@ -108,7 +101,6 @@ export default function Home() {
             </div>
           </section>
           <nav className='mt-10'>
-            {/* <div className=''></div> */}
             <hr></hr>
             <div className='pt-6 px-10 flex justify-between items-center text-sm'>
               <HomeIcon className='h-6 w-6 mr-1 text-[#60B99E]' />
@@ -117,6 +109,81 @@ export default function Home() {
               <UserIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
             </div>
           </nav>
+        </div> */}
+
+
+        <div>
+          <div className='px-4'>
+            <div className='mt-10 flex justify-between items-center'>
+              <div>freccia</div>
+              <div>cuore</div>
+            </div>
+            <img></img>
+            <div className='pt-28'>
+              <section className='pb-4'>
+                <div className='flex justify-between items-baseline'>
+                  <h1 className='mt-14 mb-6 text-[#082224] text-xl font-bold'>
+                    Avocado Toast
+                  </h1>
+                  <p className='flex text-[#8B8E8D]'>
+                    <ClockIcon className='h-4 w-4 mr-1' />
+                    <span className='font-light text-xs'>10 min</span>
+                  </p>
+                </div>
+                <div className='flex justify-between text-[#082224]'>
+                  <div className='text-sm font-semibold'>
+                    <div className='mb-4'>80g carbs</div>
+                    <div>275 Kcal</div>
+                  </div>
+                  <div className='mb-8 text-sm font-semibold'>
+                    <div className='mb-4'>29g proteins</div>
+                    <div>96g fats</div>
+                  </div>
+                </div>
+                <div className='bg-[#E9ECEC] py-1.5 px-1 flex rounded-xl font-medium'>
+                  <button className='text-[#E9ECEC] bg-[#082224] px-10 py-2 rounded-xl'>Ingredients</button>
+                  <button className='text-[#082224] pl-10'>Instructions</button>
+                </div>
+              </section>
+              <section>
+                <div className='flex justify-between items-baseline'>
+                  <h1 className=' mb-6 text-[#082224] text-xl font-bold'>
+                    Ingredients
+                  </h1>
+                  <p className='flex text-[#8B8E8D]'>
+                    <span className='font-light text-xs'>4 items</span>
+                  </p>
+                </div>
+                <div>
+                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-baseline rounded-xl text-[#082224]'>
+                    <div className='rounded-xl'>Avocado</div>
+                    <div className='pr-2'>2</div>
+                  </div>
+                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-baseline rounded-xl text-[#082224]'>
+                    <div className='rounded-xl'>Lime</div>
+                    <div className='pr-2'>1/2</div>
+                  </div>
+                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-baseline rounded-xl text-[#082224]'>
+                    <div className='rounded-xl'>Cherry Tomatoes</div>
+                    <div className='pr-2'>8</div>
+                  </div>
+                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-baseline rounded-xl text-[#082224]'>
+                    <div className='rounded-xl'>Paprika</div>
+                    <div className='pr-2'>q.b.</div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div className='pt-8'>
+            <hr></hr>
+            <div className='pt-6 px-10 flex justify-between items-center text-sm'>
+              <HomeIcon className='h-6 w-6 mr-1 text-[#60B99E]' />
+              <ClipboardIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+              <MagnifyingGlassIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+              <UserIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+            </div>
+          </div>
         </div>
       </main>
     </>
