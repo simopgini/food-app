@@ -7,9 +7,6 @@ import { ClockIcon, FireIcon } from '@heroicons/react/24/outline'
 // import { HomeIcon } from '@heroicons/react/24/outline'
 import { HomeIcon } from '@heroicons/react/20/solid'
 import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
-// import Spaghetti from '../public/spaghetti.svg'
-// import Taco from '../public/taco.svg'
-// import Avocado from '../public/avocado.svg'
 import Image from 'next/image'
 
 
@@ -117,16 +114,19 @@ export default function Home() {
         </div> */}
 
         {/* PAGINA RICETTA: dopo aver cliccato ricette sulla home o su cerca */}
-        <div>
-          <div className=''>
-            <div className='px-4 mt-16 flex justify-between items-center'>
+        {/* <div>
+          <div className=''> */}
+            {/* <div className='px-4 mt-16 flex justify-between items-center'>
               <div className='bg-[#E9ECEC] rounded-lg p-1'><ChevronLeftIcon className='h-6 w-6'/></div>
               <div className='bg-[#E9ECEC] rounded-lg p-1'><HeartIcon className='h-6 w-6 text-[#60B99E]'/></div>
-            </div>
-            <img></img>
+            </div> */}
+            {/* <Image src="/avocado.jpg" width="130" height="130"/> */}
+            {/* <div class="bg-cover bg-center" style={{backgroundImage: url('/avocado.jpg')}}></div> */}
+            {/* <div class="bg-[url('/avocado.jpg')]"></div>
+
             <div className='pt-28'></div>
-            <div className=' rounded-t-3xl'>
-              <section className='px-4 pb-4 '>
+            <div className=' rounded-t-3xl'> */}
+              {/* <section className='px-4 pb-4 '>
                 <div className='flex justify-between items-baseline'>
                   <h1 className=' mb-6 text-[#082224] text-xl font-bold'>
                     Avocado Toast
@@ -162,8 +162,10 @@ export default function Home() {
                   <button className='text-[#E9ECEC] bg-[#082224] px-10 py-2 rounded-xl'>Ingredients</button>
                   <button className='text-[#082224] pl-10'>Instructions</button>
                 </div>
-              </section>
-              <section className='px-4'>
+              </section> */}
+
+              {/* INGREDIENTS */}
+              {/* <section className='px-4'>
                 <div className='flex justify-between items-baseline'>
                   <h1 className=' mb-6 text-[#082224] text-xl font-bold'>
                     Ingredients
@@ -203,9 +205,71 @@ export default function Home() {
                     <p className='pr-2'>q.b.</p>
                   </div>
                 </div>
-              </section>
+              </section> */}
+
+
+              {/* INSTRUCTIONS */}
+              {/* <section>
+                <div className='px-4 flex justify-between items-baseline'>
+                  <h1 className=' mb-6 text-[#082224] text-xl font-bold'>
+                    Instructions
+                  </h1>
+                  <p className='flex text-[#8B8E8D]'>
+                    <span className='font-light text-xs'>4 steps</span>
+                  </p>
+                </div>
+
+                <div className='mb-4 mx-4 flex items-center text-sm font-medium'>
+                      <div className='bg-[#60B99E] text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center'><span>1</span></div>
+                      <p>Mash your avocado separately.</p>
+                </div>
+                <div className='mb-4 mx-4 flex items-center text-sm font-medium'>
+                      <div className='bg-[#60B99E] text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center'><span>2</span></div>
+                      <p>Slice cherry tomatoes and add salt and pepper.</p>
+                </div>
+                <div className='mb-4 mx-4 flex items-center text-sm font-medium'>
+                      <div className='bg-[#60B99E] text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center'><span>3</span></div>
+                      <p>Buy good bread and toast it well. It offers a sturdy base and a crisp contrast against the creamy avocado.</p>
+                </div>
+                <div className='mb-4 mx-4 flex items-center text-sm font-medium'>
+                      <div className='bg-[#60B99E] text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center'><span>4</span></div>
+                      <p>Don’t forget lime and paprika. </p>
+                </div>
+              </section> */}
+            {/* </div>
+          </div> */}
+          {/* <div className='pt-8'>
+            <hr></hr>
+            <div className='pt-6 px-10 flex justify-between items-center text-sm'>
+              <HomeIcon className='h-6 w-6 mr-1 text-[#60B99E]' />
+              <ClipboardIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+              <MagnifyingGlassIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+              <UserIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
             </div>
           </div>
+        </div> */}
+
+        {/* SEARCH NAV BAR SECTION */}
+        <div>
+          <div className='px-4 mt-16 flex justify-between items-center'>
+              <button className=' bg-white rounded-lg p-1 shadow-md'><ChevronLeftIcon className='h-6 w-6'/></button>
+              <div className='flex-1 bg-white'></div>
+              <div className='flex-auto p-1 font-bold text-xl'>Search</div>
+          </div>
+        </div>
+        
+        <form className='px-4'>
+          <label class="block">
+            <input class="w-100 border-slate-600 "/>
+            {/* <p class="mt-2 opacity-10 contrast-more:opacity-100 text-slate-600 text-sm">
+              Search by food name
+            </p> */}
+            Search by food name
+          </label>
+        </form>
+
+
+
           <div className='pt-8'>
             <hr></hr>
             <div className='pt-6 px-10 flex justify-between items-center text-sm'>
@@ -215,7 +279,6 @@ export default function Home() {
               <UserIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
             </div>
           </div>
-        </div>
       </main>
     </>
   )
