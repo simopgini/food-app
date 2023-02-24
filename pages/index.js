@@ -6,7 +6,7 @@ import { ClockIcon, FireIcon } from '@heroicons/react/24/outline'
 // import { HomeIcon } from '@heroicons/react/24/outline'
 // import { HomeIcon } from '@heroicons/react/24/outline'
 import { HomeIcon } from '@heroicons/react/20/solid'
-import { ClipboardIcon, MagnifyingGlassIcon, UserIcon } from '@heroicons/react/24/solid'
+import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -111,18 +111,19 @@ export default function Home() {
           </nav>
         </div> */}
 
-
+        {/* PAGINA RICETTA: dopo aver cliccato ricette sulla home o su cerca */}
         <div>
-          <div className='px-4'>
-            <div className='mt-10 flex justify-between items-center'>
-              <div>freccia</div>
-              <div>cuore</div>
+          <div className=''>
+            <div className='px-4 mt-16 flex justify-between items-center'>
+              <div className='bg-[#E9ECEC] rounded-lg p-1'><ChevronLeftIcon className='h-6 w-6'/></div>
+              <div className='bg-[#E9ECEC] rounded-lg p-1'><HeartIcon className='h-6 w-6 text-[#60B99E]'/></div>
             </div>
             <img></img>
-            <div className='pt-28'>
-              <section className='pb-4'>
+            <div className='pt-28'></div>
+            <div className=' rounded-t-3xl'>
+              <section className='px-4 pb-4 '>
                 <div className='flex justify-between items-baseline'>
-                  <h1 className='mt-14 mb-6 text-[#082224] text-xl font-bold'>
+                  <h1 className=' mb-6 text-[#082224] text-xl font-bold'>
                     Avocado Toast
                   </h1>
                   <p className='flex text-[#8B8E8D]'>
@@ -132,12 +133,24 @@ export default function Home() {
                 </div>
                 <div className='flex justify-between text-[#082224]'>
                   <div className='text-sm font-semibold'>
-                    <div className='mb-4'>80g carbs</div>
-                    <div>275 Kcal</div>
+                    <div className='mb-4 flex items-center'>
+                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <p>80g carbs</p>
+                    </div>
+                    <div className='mb-4 flex items-center'>
+                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><FireIcon className='h-5 w-5'/></div>
+                      <p>275 Kcal</p>
+                    </div>
                   </div>
                   <div className='mb-8 text-sm font-semibold'>
-                    <div className='mb-4'>29g proteins</div>
-                    <div>96g fats</div>
+                    <div className='mb-4 flex items-center'>
+                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <p>29g proteins</p>
+                    </div>
+                    <div className='mb-4 flex items-center'>
+                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <p>96g fats</p>
+                    </div>
                   </div>
                 </div>
                 <div className='bg-[#E9ECEC] py-1.5 px-1 flex rounded-xl font-medium'>
@@ -145,7 +158,7 @@ export default function Home() {
                   <button className='text-[#082224] pl-10'>Instructions</button>
                 </div>
               </section>
-              <section>
+              <section className='px-4'>
                 <div className='flex justify-between items-baseline'>
                   <h1 className=' mb-6 text-[#082224] text-xl font-bold'>
                     Ingredients
@@ -155,21 +168,34 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-baseline rounded-xl text-[#082224]'>
-                    <div className='rounded-xl'>Avocado</div>
-                    <div className='pr-2'>2</div>
+                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-[#082224]'>
+                    
+                  <div className='rounded-xl flex items-center'>
+                      <div className='bg-white rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <p>Avocado</p>
+                    </div>
+                    <p className='pr-2'>2</p>
                   </div>
-                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-baseline rounded-xl text-[#082224]'>
-                    <div className='rounded-xl'>Lime</div>
-                    <div className='pr-2'>1/2</div>
+                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-[#082224]'>
+                    <div className='rounded-xl flex items-center'>
+                      <div className='bg-white rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <p>Lime</p>
+                    </div>
+                    <p className='pr-2'>1/2</p>
                   </div>
-                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-baseline rounded-xl text-[#082224]'>
-                    <div className='rounded-xl'>Cherry Tomatoes</div>
-                    <div className='pr-2'>8</div>
+                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-[#082224]'>
+                    <div className='rounded-xl flex items-center'>
+                      <div className='bg-white rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <p>Cherry Tomatoes</p>
+                    </div>
+                    <p className='pr-2'>8</p>
                   </div>
-                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-baseline rounded-xl text-[#082224]'>
-                    <div className='rounded-xl'>Paprika</div>
-                    <div className='pr-2'>q.b.</div>
+                  <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-[#082224]'>
+                  <div className='rounded-xl flex items-center'>
+                      <div className='bg-white rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <p>Paprika</p>
+                    </div>
+                    <p className='pr-2'>q.b.</p>
                   </div>
                 </div>
               </section>
