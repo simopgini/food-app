@@ -2,7 +2,7 @@ import Head from 'next/head'
 // import Image from 'next/image'
 import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css'
-import { ClockIcon, FireIcon } from '@heroicons/react/24/outline'
+import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline'
 // import { HomeIcon } from '@heroicons/react/24/outline'
 // import { HomeIcon } from '@heroicons/react/24/outline'
 import { HomeIcon } from '@heroicons/react/20/solid'
@@ -250,27 +250,142 @@ export default function Home() {
         </div> */}
 
         {/* SEARCH NAV BAR SECTION */}
-        <div>
-          <div className='px-4 mt-16 flex justify-between items-center'>
+        {/* <div>
+          <div className='px-4 mb-6 mt-16 flex justify-between items-center'>
               <button className=' bg-white rounded-lg p-1 shadow-md'><ChevronLeftIcon className='h-6 w-6'/></button>
               <div className='flex-1 bg-white'></div>
               <div className='flex-auto p-1 font-bold text-xl'>Search</div>
           </div>
         </div>
-        
-        <form className='px-4'>
-          <label class="block">
-            <input class="w-100 border-slate-600 "/>
-            {/* <p class="mt-2 opacity-10 contrast-more:opacity-100 text-slate-600 text-sm">
-              Search by food name
-            </p> */}
-            Search by food name
+
+        <div className='px-4 flex items-center mb-4'>
+          <label class="flex-1 relative block">
+            <span class="sr-only">Search</span>
+            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+              <MagnifyingGlassIcon className='h-4 w-4 mr-1 text-[#8B8E8D]' />
+            </span>
+            <input style={{borderWidth: 0}}
+              class="flex-1 placeholder:text-sm placeholder:text-[#8B8E8D] block  bg-[#F7F8F8] w-full  rounded-md py-2 pl-9 pr-3 shadow-md focus:outline-none 
+              focus:border-[#60B99E] focus:ring-[#60B99E] focus:ring-1 sm:text-sm" 
+              placeholder="Search by food name" type="text" name="search"/>
           </label>
-        </form>
+          <button class="ml-2">
+            <AdjustmentsHorizontalIcon className='h-8 w-8 mr-1 text-[#8B8E8D]' />
+          </button>
+        </div>
 
+        <div className='pl-4 mb-8 flex justify-between'>
+              <button className='bg-[#60B99E] text-white px-4 py-2 rounded-full text-sm'>Smoothie | 🍹</button>
+              <button className='bg-[#F1F5F5] text-[#082224] px-4 py-2 rounded-full text-sm'>Snack | 🍿</button>
+              <button className='bg-[#F1F5F5] text-[#082224] px-4 py-2 rounded-full text-sm'>Salad | 🥗</button>
+        </div>
 
+        <div className='px-4 mb-6'>
+          <div className='py-12 flex items-center bg-white h-20 rounded-xl drop-shadow'>
+            <div className='ml-2 my-1 mr-2 '>
+              <div className='h-20 w-20 bg-[#F1F5F5] rounded-xl'></div>
+            </div>
+            <div>
+              <div className='pt-8'>
+                <h2 className='text-base pb-1 font-semibold text-[#082224]'>Strawberry Delight</h2>
+                  <div className='flex justify-between text-[#8B8E8D] pb-2'>
+                    <div className='flex items-center text-sm'>
+                      <ClockIcon className='h-4 w-4 mr-1' />
+                      <span className='font-light text-xs'>5 Min</span>
+                    </div>
+                    <div className='flex items-center text-xs'>
+                    <FireIcon className='h-4 w-4 mr-1' />
+                      <span className='font-light text-xs'>176 Kcal</span>
+                    </div>
+                  </div>
+                  <div className='mb-8 flex'>
+                    <div className='bg-[#60B99E] text-white px-2 rounded-full text-xs mr-1'>Easy</div>
+                    <div className='bg-[#EBA352] text-white px-2 rounded-full text-xs'>Quick</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <div className='pt-8'>
+        <div className='px-4 mb-6'>
+          <div className='py-12 flex items-center bg-white h-20 rounded-xl drop-shadow'>
+            <div className='ml-2 my-1 mr-2 '>
+              <div className='h-20 w-20 bg-[#F1F5F5] rounded-xl'></div>
+            </div>
+            <div>
+              <div className='pt-8'>
+                <h2 className='text-base pb-1 font-semibold text-[#082224]'>Strawberry Cheescake</h2>
+                  <div className='flex justify-between text-[#8B8E8D] pb-2'>
+                    <div className='flex items-center text-sm'>
+                      <ClockIcon className='h-4 w-4 mr-1' />
+                      <span className='font-light text-xs'>90 Min</span>
+                    </div>
+                    <div className='flex items-center text-xs'>
+                    <FireIcon className='h-4 w-4 mr-1' />
+                      <span className='font-light text-xs'>275 Kcal</span>
+                    </div>
+                  </div>
+                  <div className='mb-8 flex'>
+                    <div className='bg-[#EBA352] text-white px-2 rounded-full text-xs'>Medium</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='px-4 mb-6'>
+          <div className='py-12 flex items-center bg-white h-20 rounded-xl drop-shadow'>
+            <div className='ml-2 my-1 mr-2 '>
+              <div className='h-20 w-20 bg-[#F1F5F5] rounded-xl'></div>
+            </div>
+            <div>
+              <div className='pt-8'>
+                <h2 className='text-base pb-1 font-semibold text-[#082224]'>Smoothieliscious</h2>
+                  <div className='flex justify-between text-[#8B8E8D] pb-2'>
+                    <div className='flex items-center text-sm'>
+                      <ClockIcon className='h-4 w-4 mr-1' />
+                      <span className='font-light text-xs'>5 Min</span>
+                    </div>
+                    <div className='flex items-center text-xs'>
+                    <FireIcon className='h-4 w-4 mr-1' />
+                      <span className='font-light text-xs'>105 Kcal</span>
+                    </div>
+                  </div>
+                  <div className='mb-8 flex'>
+                    <div className='bg-[#60B99E] text-white px-2 rounded-full text-xs mr-1'>Easy</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='px-4'>
+          <div className='py-12 flex items-center bg-white h-20 rounded-xl drop-shadow'>
+            <div className='ml-2 my-1 mr-2 '>
+              <div className='h-20 w-20 bg-[#F1F5F5] rounded-xl'></div>
+            </div>
+            <div>
+              <div className='pt-8'>
+                <h2 className='text-base pb-1 font-semibold text-[#082224]'>Rainbow Salad</h2>
+                  <div className='flex justify-between text-[#8B8E8D] pb-2'>
+                    <div className='flex items-center text-sm'>
+                      <ClockIcon className='h-4 w-4 mr-1' />
+                      <span className='font-light text-xs'>5 Min</span>
+                    </div>
+                    <div className='flex items-center text-xs'>
+                    <FireIcon className='h-4 w-4 mr-1' />
+                      <span className='font-light text-xs'>105 Kcal</span>
+                    </div>
+                  </div>
+                  <div className='mb-8 flex'>
+                    <div className='bg-[#60B99E] text-white px-2 rounded-full text-xs mr-1'>Easy</div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
+
+          {/* <div className='pt-8'>
             <hr></hr>
             <div className='pt-6 px-10 flex justify-between items-center text-sm'>
               <HomeIcon className='h-6 w-6 mr-1 text-[#60B99E]' />
@@ -278,7 +393,47 @@ export default function Home() {
               <MagnifyingGlassIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
               <UserIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
             </div>
+          </div> */}
+
+          <div className='px-4'>
+            <div>
+              <div className='mb-6 mt-16 flex justify-between items-center'>
+                  <button className=' bg-white rounded-lg p-1 shadow-md'><ChevronLeftIcon className='h-6 w-6'/></button>
+                  <div className='flex-1 bg-white'></div>
+                  <div className='flex-auto p-1 font-bold text-xl'>LIST</div>
+              </div>
+            </div>
+          
+            <div className='mb-8'>
+              <h2 className='font-bold text-xl text-[#0A2533]'>My ingredients list:</h2>
+            </div>
+
+            <div className='flex items-center'>
+              <label class="flex-1  block">
+                <span class="sr-only">Search</span>
+                <input style={{borderWidth: 0}}
+                  class="flex-1 placeholder:text-sm placeholder:text-[#8B8E8D] block  bg-[#F7F8F8] w-full  rounded-md py-2 pr-3 shadow-md focus:outline-none 
+                  focus:border-[#60B99E] focus:ring-[#60B99E] focus:ring-1 sm:text-sm" 
+                  placeholder="Type the first ingredient" type="text" name="search"/>
+              </label>
+              <button class="ml-3 px-4 py-2 bg-[#60B99E] text-sm text-white rounded-lg">
+                Add
+              </button>
+            </div>
+
+
+
+            <div className='pt-8'>
+              <hr></hr>
+              <div className='pt-6 px-10 flex justify-between items-center text-sm'>
+                <HomeIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+                <ClipboardIcon className='h-6 w-6 mr-1  text-[#60B99E]' />
+                <MagnifyingGlassIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+                <UserIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
+              </div>
+            </div>
           </div>
+          
       </main>
     </>
   )
