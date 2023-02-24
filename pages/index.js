@@ -7,6 +7,11 @@ import { ClockIcon, FireIcon } from '@heroicons/react/24/outline'
 // import { HomeIcon } from '@heroicons/react/24/outline'
 import { HomeIcon } from '@heroicons/react/20/solid'
 import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
+// import Spaghetti from '../public/spaghetti.svg'
+// import Taco from '../public/taco.svg'
+// import Avocado from '../public/avocado.svg'
+import Image from 'next/image'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -134,7 +139,7 @@ export default function Home() {
                 <div className='flex justify-between text-[#082224]'>
                   <div className='text-sm font-semibold'>
                     <div className='mb-4 flex items-center'>
-                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><Image src="/spaghetti.svg" alt="spaghetti icon" width={20} height={20}/></div>
                       <p>80g carbs</p>
                     </div>
                     <div className='mb-4 flex items-center'>
@@ -144,11 +149,11 @@ export default function Home() {
                   </div>
                   <div className='mb-8 text-sm font-semibold'>
                     <div className='mb-4 flex items-center'>
-                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><Image src="/taco.svg" alt="spaghetti icon" width={20} height={20}/></div>
                       <p>29g proteins</p>
                     </div>
                     <div className='mb-4 flex items-center'>
-                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <div className='bg-[#E9ECEC] rounded-lg p-1 mr-2'><Image src="/avocado.svg" alt="spaghetti icon" width={18} height={20}/></div>
                       <p>96g fats</p>
                     </div>
                   </div>
@@ -171,28 +176,28 @@ export default function Home() {
                   <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-[#082224]'>
                     
                   <div className='rounded-xl flex items-center'>
-                      <div className='bg-white rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <div className='bg-white rounded-lg p-1 mr-2'>🥑</div>
                       <p>Avocado</p>
                     </div>
                     <p className='pr-2'>2</p>
                   </div>
                   <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-[#082224]'>
                     <div className='rounded-xl flex items-center'>
-                      <div className='bg-white rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <div className='bg-white rounded-lg p-1 mr-2'>🍋</div>
                       <p>Lime</p>
                     </div>
                     <p className='pr-2'>1/2</p>
                   </div>
                   <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-[#082224]'>
                     <div className='rounded-xl flex items-center'>
-                      <div className='bg-white rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <div className='bg-white rounded-lg p-1 mr-2'>🍅</div>
                       <p>Cherry Tomatoes</p>
                     </div>
                     <p className='pr-2'>8</p>
                   </div>
                   <div className='bg-[#F7F8F8] text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-[#082224]'>
                   <div className='rounded-xl flex items-center'>
-                      <div className='bg-white rounded-lg p-1 mr-2'><ChevronLeftIcon className='h-5 w-5'/></div>
+                      <div className='bg-white rounded-lg p-1 mr-2'>🌶️</div>
                       <p>Paprika</p>
                     </div>
                     <p className='pr-2'>q.b.</p>
