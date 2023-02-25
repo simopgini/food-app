@@ -38,7 +38,7 @@ export default function Home() {
                       <div className='p-4 h-16'>
                         <div className=' bg-slate-200 rounded-xl'></div>
                       </div>
-                      <h2 className="text-base pb-1 font-semibold">Penne all'arrabbiata</h2>
+                      <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
                       <div className='flex items-center text-sm'>
                         <ClockIcon className='h-4 w-4 mr-1 text-white' />
                         <span className='font-light text-xs'>30 min</span>
@@ -64,7 +64,7 @@ export default function Home() {
           <section className='mb-6'>
             <div className='px-4 pb-3 flex justify-between items-center font-bold'>
               <h1 className='text-dark-green text-lg font-bold'>Category</h1>
-              <div className='text-green text-sm'>See all</div>
+              <div className='text-green text-xs'>See all</div>
             </div>
             <div className='pl-4 flex justify-between'>
               <button className='bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm'>Breakfast</button>
@@ -76,7 +76,7 @@ export default function Home() {
           <section>
             <div className='px-4 pb-3 flex justify-between items-center font-bold'>
               <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
-              <div className='text-green text-sm'>See all</div>
+              <div className='text-green text-xs'>See all</div>
             </div>
             <div className='flex justify-between text-white pl-4'>
               <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
@@ -84,7 +84,7 @@ export default function Home() {
                   <div className='h-36 bg-gray-light rounded-xl'></div>
                 </div>
                 <div className='px-4 py-2'>
-                  <h2 className='text-base pb-1 font-semibold text-dark-green'>Tacos Muy Buenos</h2>
+                  <h2 className='text-sm pb-1 font-semibold text-dark-green'>Tacos Muy Buenos</h2>
                   <div className='flex justify-between text-gray'>
                     <div className='flex items-center text-sm'>
                       <FireIcon className='h-4 w-4 mr-1' />
@@ -102,7 +102,7 @@ export default function Home() {
                   <div className='h-36 bg-gray-light rounded-xl'></div>
                 </div>
                 <div className='px-4 py-2'>
-                  <h2 className='text-base pb-1 font-semibold text-dark-green'>Cheeky Curry Super Zozzone</h2>
+                  <h2 className='text-sm pb-1 font-semibold text-dark-green truncate'>Cheeky Curry Super Zozzone</h2>
                   <div className='flex justify-between text-gray'>
                     <div className='flex items-center text-sm'>
                       <FireIcon className='h-4 w-4 mr-1' />

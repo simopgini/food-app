@@ -9,6 +9,25 @@ module.exports = {
     // "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif'],
+      // 'ui-sans-serif',
+      //   'system-ui',
+      //   '-apple-system',
+      //   'BlinkMacSystemFont',
+      //   '"Segoe UI"',
+      //   'Roboto',
+      //   '"Helvetica Neue"',
+      //   'Arial',
+      //   '"Noto Sans"',
+      //   'sans-serif',
+      //   '"Apple Color Emoji"',
+      //   '"Segoe UI Emoji"',
+      //   '"Segoe UI Symbol"',
+      //   '"Noto Color Emoji"',
+      serif: ['ui-serif', 'serif'],
+      // ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+    },
     extend: {
       colors: {
         'dark-green': '#082224',
@@ -19,7 +38,6 @@ module.exports = {
         'gray-lighter': '#E9ECEC',
         'gray-line': '#DEDCDC',
         'orange': '#EBA352',
-        'yellow': '#ffc82c',
         'gray-dark': '#273444',
       },
     },
