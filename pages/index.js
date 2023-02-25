@@ -33,7 +33,7 @@ export default function Home() {
               
               <div className='flex snap-x space-x-2'>
                 <a className='snap-center hover:scale-105 duration-500 cursor-pointer text-white'>
-                  <div className='bg-[#60B99E] h-32 w-64 rounded-xl'>
+                  <div className='bg-green h-32 w-64 rounded-xl'>
                     <div className='px-2 py-2'>
                       <div className='p-4 h-16'>
                         <div className=' bg-slate-200 rounded-xl'></div>
@@ -67,10 +67,10 @@ export default function Home() {
               <div className='text-[#60B99E] text-sm'>See all</div>
             </div>
             <div className='pl-4 flex justify-between'>
-              <button className='bg-[#60B99E] text-white px-5 py-2 rounded-full text-sm'>Breakfast</button>
-              <button className='bg-[#F1F5F5] text-[#082224] px-5 py-2 rounded-full text-sm'>Lunch</button>
-              <button className='bg-[#F1F5F5] text-[#082224] px-5 py-2 rounded-full text-sm'>Dinner</button>
-              <button className='bg-[#F1F5F5] text-[#082224] px-5 py-2 rounded-full text-sm'>Veg</button>
+              <button className='bg-[#60B99E] hover:bg-[#60B99E] text-white px-5 py-2 rounded-full text-sm'>Breakfast</button>
+              <button className='bg-[#F1F5F5] hover:bg-[#60B99E] active:bg-[#60B99E]  hover:text-white text-[#082224] px-5 py-2 rounded-full text-sm'>Lunch</button>
+              <button className='bg-[#F1F5F5] hover:bg-[#60B99E] active:bg-[#60B99E] hover:text-white text-[#082224] px-5 py-2 rounded-full text-sm'>Dinner</button>
+              <button className='bg-[#F1F5F5] hover:bg-[#60B99E] active:bg-[#60B99E] hover:text-white text-[#082224] px-5 py-2 rounded-full text-sm'>Veg</button>
             </div>
           </section>
           <section>
