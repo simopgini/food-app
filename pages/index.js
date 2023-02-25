@@ -2,7 +2,7 @@ import Head from 'next/head'
 // import Image from 'next/image'
 import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css'
-import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline'
+import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon, TrashIcon, PencilSquareIcon, MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
 // import { HomeIcon } from '@heroicons/react/24/outline'
 // import { HomeIcon } from '@heroicons/react/24/outline'
 import { HomeIcon } from '@heroicons/react/20/solid'
@@ -395,40 +395,116 @@ export default function Home() {
             </div>
           </div> */}
 
-          <div className='px-4'>
+          <div className=''>
             <div>
-              <div className='mb-6 mt-16 flex justify-between items-center'>
-                  <button className=' bg-white rounded-lg p-1 shadow-md'><ChevronLeftIcon className='h-6 w-6'/></button>
+              <div className='px-4 mb-6 mt-16 flex justify-between items-center'>
+                  <button className='hover:scale-105 bg-white rounded-lg p-1 shadow-md'><ChevronLeftIcon className='hover:animate-pulse h-6 w-6'/></button>
                   <div className='flex-1 bg-white'></div>
                   <div className='flex-auto p-1 font-bold text-xl'>LIST</div>
               </div>
             </div>
           
-            <div className='mb-8'>
+            <div className='px-4 mb-8'>
               <h2 className='font-bold text-xl text-[#0A2533]'>My ingredients list:</h2>
             </div>
 
-            <section>
-              <div className='flex items-center my-3'>
+            <section className='px-4'>
+              <div className='flex items-center space-x-2 my-3'>
                 <input type="checkbox" class="appearance-none enabled:ring-[#60B99E] checked:ring-[#60B99E] text-[#60B99E] border-[#DEDCDC] checked:bg-[#E9ECEC] indeterminate:bg-gray-300 rounded-md h-6 w-6 mr-2" />
                 <p className='text-[#082224] text-sm'>Lime</p>
               </div>
               <hr></hr>
-              <div className='flex items-center my-3'>
+              <div className='flex items-center space-x-2 my-3'>
                 <input type="checkbox" class="appearance-none enabled:ring-[#60B99E] checked:ring-[#60B99E] text-[#60B99E] border-[#DEDCDC] checked:bg-[#E9ECEC] rounded-md h-6 w-6 mr-2" />
                 <p className='text-[#082224] text-sm'>Bread</p>
               </div>
+              <hr></hr>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center space-x-2 my-3'>
+                  <input type="checkbox" class="appearance-none enabled:ring-[#60B99E] checked:ring-[#60B99E] text-[#60B99E] border-[#DEDCDC] checked:bg-[#E9ECEC] rounded-md h-6 w-6 mr-2" />
+                  <p className='text-[#082224] text-sm'>Coffee</p>
+                </div>
+                <div className='flex text-[#082224] space-x-2 text-sm '>
+                  <button>
+                  <PencilSquareIcon className='hover:scale-110 h-5 w-5 text-[#60B99E]' />
+                  </button>
+                  <button>
+                  <TrashIcon className='hover:scale-110 h-5 w-5 text-red-500' />
+                  </button>
+                </div>
+              </div>
+              <hr></hr>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center space-x-2 my-3'>
+                  <input type="checkbox" class="appearance-none enabled:ring-[#60B99E] checked:ring-[#60B99E] text-[#60B99E] border-[#DEDCDC] checked:bg-[#E9ECEC] rounded-md h-6 w-6 mr-2" />
+                  <p className='text-[#082224] text-sm'>Orange juice</p>
+                </div>
+                <div className='flex text-[#082224] space-x-2 text-sm '>
+                  <button>
+                    <MinusCircleIcon className='transition duration-300 hover:scale-110 h-5 w-5 text-[#60B99E]'/>
+                  </button>
+                  <p className=' text-[#082224]'>0</p>
+                  <button>
+                    <PlusCircleIcon className='transition duration-300 hover:scale-110 h-5 w-5 text-[#60B99E]' />
+                  </button>
+                  <button>
+                    <TrashIcon className='transition duration-300 hover:scale-110 h-5 w-5 text-red-500' />
+                  </button>
+                </div>
+              </div>
+              <hr></hr>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center space-x-2 my-3'>
+                  <input type="checkbox" class="appearance-none enabled:ring-[#60B99E] checked:ring-[#60B99E] text-[#60B99E] border-[#DEDCDC] checked:bg-[#E9ECEC] rounded-md h-6 w-6 mr-2" />
+                  <p className='text-[#082224] text-sm'>Paprika</p>
+                </div>
+                <div className='flex text-[#082224] space-x-2 text-sm '>
+                  <button>
+                    <MinusCircleIcon className=' transition duration-300 hover:scale-110 h-5 w-5 text-[#60B99E]'/>
+                  </button>
+                  <p className=' text-[#082224]'>1</p>
+                  <button>
+                    <PlusCircleIcon className='transition duration-300 hover:scale-110 solid h-5 w-5 text-white fill-[#60B99E]' />
+                  </button>
+                  <button>
+                    <TrashIcon className='transition duration-300 hover:scale-110 h-5 w-5 text-red-500' />
+                  </button>
+                  
+                </div>
+              </div>
+              <hr></hr>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center space-x-2 my-3'>
+                  <input type="checkbox" class="appearance-none enabled:ring-[#60B99E] checked:ring-[#60B99E] text-[#60B99E] border-[#DEDCDC] checked:bg-[#E9ECEC] rounded-md h-6 w-6 mr-2" />
+                  <p className='text-[#8B8E8D] text-sm line-through'>Avocado</p>
+                </div>
+                <div className='flex text-[#082224] space-x-2 text-sm '>
+                  <p className=' text-[#8B8E8D]'>4</p>
+                  <p className=' text-[#082224]'>🥑</p>
+                </div>
+              </div>
+              <hr></hr>
+              <div className='flex items-center justify-between'>
+                <div className='flex items-center space-x-2 my-3'>
+                  <input type="checkbox" class="appearance-none enabled:ring-[#60B99E] checked:ring-[#60B99E] text-[#60B99E] border-[#DEDCDC] checked:bg-[#E9ECEC] rounded-md h-6 w-6 mr-2" />
+                  <p className='text-[#8B8E8D] text-sm line-through'>Tomatoes</p>
+                </div>
+                <div className='flex text-[#082224] space-x-2 text-sm '>
+                  <p className=' text-[#8B8E8D]'>1</p>
+                  <p className=' text-[#082224]'>🍅</p>
+                </div>
+              </div>
             </section>
 
-            <div className='flex items-center'>
+            <div className='mt-36 px-4 flex items-center'>
               <label class="flex-1  block">
                 <span class="sr-only">Search</span>
                 <input style={{borderWidth: 0}}
-                  class="flex-1 placeholder:text-sm placeholder:text-[#8B8E8D] block  bg-[#F7F8F8] w-full  rounded-md py-2 pr-3 shadow-md focus:outline-none 
+                  class="flex-1 placeholder:text-sm placeholder:text-[#8B8E8D] block  bg-[#F7F8F8] w-full  rounded-lg py-2 pr-3 shadow-md focus:outline-none 
                   focus:border-[#60B99E] focus:ring-[#60B99E] focus:ring-1 sm:text-sm" 
                   placeholder="Type the first ingredient" type="text" name="search"/>
               </label>
-              <button class="ml-3 px-4 py-2 bg-[#60B99E] text-sm text-white rounded-lg">
+              <button class="drop-shadow-lg drop-shadow-white hover:shadow-[#A4D3C5] hover:bg-[#55a78e] duration-500 hover:scale-105 ml-3 px-4 py-2 bg-[#60B99E] text-sm text-white rounded-lg">
                 Add
               </button>
             </div>
