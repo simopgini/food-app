@@ -408,6 +408,18 @@ export default function Home() {
               <h2 className='font-bold text-xl text-[#0A2533]'>My ingredients list:</h2>
             </div>
 
+            <section>
+              <div className='flex items-center my-3'>
+                <input type="checkbox" class="appearance-none enabled:ring-[#60B99E] checked:ring-[#60B99E] text-[#60B99E] border-[#DEDCDC] checked:bg-[#E9ECEC] indeterminate:bg-gray-300 rounded-md h-6 w-6 mr-2" />
+                <p className='text-[#082224] text-sm'>Lime</p>
+              </div>
+              <hr></hr>
+              <div className='flex items-center my-3'>
+                <input type="checkbox" class="appearance-none enabled:ring-[#60B99E] checked:ring-[#60B99E] text-[#60B99E] border-[#DEDCDC] checked:bg-[#E9ECEC] rounded-md h-6 w-6 mr-2" />
+                <p className='text-[#082224] text-sm'>Bread</p>
+              </div>
+            </section>
+
             <div className='flex items-center'>
               <label class="flex-1  block">
                 <span class="sr-only">Search</span>
