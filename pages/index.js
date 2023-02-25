@@ -395,6 +395,8 @@ export default function Home() {
             </div>
           </div> */}
 
+
+          {/* LIST PAGE */}
           <div className=''>
             <div>
               <div className='px-4 mb-6 mt-16 flex justify-between items-center'>
