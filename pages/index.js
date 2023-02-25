@@ -23,26 +23,41 @@ export default function Home() {
       </Head>
       <main >
         {/* HOME */}
-        {/* <div>
+        <div>
           <div className='mt-14 mb-6 pl-4 text-[#082224] text-xl font-bold'>
             Hello 👋
           </div>
           <section className='mb-6'>
             <div className='pl-4'>
               <h1 className='pb-3 text-[#082224] text-lg font-bold'>Getting Inspired</h1>
-              <div className='text-white '>
-                <div className='bg-[#60B99E] h-32 w-64 rounded-xl'>
-                  <div className='px-2 py-2'>
-                  <div className='p-4 h-16'>
-                  <div className=' bg-slate-200 rounded-xl'></div>
-                </div>
-                    <h2 className='text-base pb-1 font-semibold'>Penne all'arrabbiata</h2>
-                    <div className='flex items-center text-sm'>
-                      <ClockIcon className='h-4 w-4 mr-1 text-white' />
-                      <span className='font-light text-xs'>30 min</span>
+              
+              <div className='flex snap-x space-x-2'>
+                <a className='snap-center hover:scale-105 duration-500 cursor-pointer text-white'>
+                  <div className='bg-[#60B99E] h-32 w-64 rounded-xl'>
+                    <div className='px-2 py-2'>
+                      <div className='p-4 h-16'>
+                        <div className=' bg-slate-200 rounded-xl'></div>
+                      </div>
+                      <h2 className="text-base pb-1 font-semibold">Penne all'arrabbiata</h2>
+                      <div className='flex items-center text-sm'>
+                        <ClockIcon className='h-4 w-4 mr-1 text-white' />
+                        <span className='font-light text-xs'>30 min</span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
+                <a className='snap-center  text-white hover:scale-105 duration-500 cursor-pointer'>
+                  <div className='bg-[#60B99E] h-32 w-64 rounded-xl'>
+                    <div className='px-2 py-2'>
+ 
+                      <h2 className="text-base pb-1 font-semibold">Penne alla arrabbiata</h2>
+                      <div className='flex items-center text-sm'>
+                        <ClockIcon className='h-4 w-4 mr-1 text-white' />
+                        <span className='font-light text-xs'>30 min</span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
           </section>
@@ -64,7 +79,7 @@ export default function Home() {
               <div className='text-[#60B99E] text-sm'>See all</div>
             </div>
             <div className='flex justify-between text-white pl-4'>
-              <div className='bg-white h-64 w-44 rounded-xl drop-shadow'>
+              <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
                 <div className='p-4 h-44'>
                   <div className='h-36 bg-[#F1F5F5] rounded-xl'></div>
                 </div>
@@ -81,8 +96,8 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className='bg-white h-64 w-44 rounded-xl drop-shadow'>
+              </a>
+              <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
                 <div className='p-4 h-44'>
                   <div className='h-36 bg-[#F1F5F5] rounded-xl'></div>
                 </div>
@@ -99,7 +114,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </section>
           <nav className='mt-10'>
@@ -111,7 +126,7 @@ export default function Home() {
               <UserIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
             </div>
           </nav>
-        </div> */}
+        </div>
 
         {/* PAGINA RICETTA: dopo aver cliccato ricette sulla home o su cerca */}
         {/* <div>
@@ -397,7 +412,7 @@ export default function Home() {
 
 
           {/* LIST PAGE */}
-          <div className=''>
+          {/* <div className=''>
             <div>
               <div className='px-4 mb-6 mt-16 flex justify-between items-center'>
                   <button className='hover:scale-105 bg-white rounded-lg p-1 shadow-md'><ChevronLeftIcon className='hover:animate-pulse h-6 w-6'/></button>
@@ -522,7 +537,7 @@ export default function Home() {
                 <UserIcon className='h-6 w-6 mr-1 text-[#8B8E8D]' />
               </div>
             </div>
-          </div>
+          </div> */}
           
       </main>
     </>
