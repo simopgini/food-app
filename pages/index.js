@@ -21,112 +21,108 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main >
-        {/* HOME */}
-        <div>
-          <div className='mt-14 mb-6 pl-4 text-dark-green text-xl font-bold'>
-            Hello 👋
-          </div>
-          <section className='mb-6'>
-            <div className='pl-4'>
-              <h1 className='pb-3 text-dark-green text-lg font-bold'>Getting Inspired</h1>
-              
-              <div className='flex snap-x space-x-2'>
-                <a className='snap-center hover:scale-105 duration-500 cursor-pointer text-white'>
-                  <div className='bg-green h-32 w-64 rounded-xl'>
-                    <div className='px-2 py-2'>
-                      <div className='p-4 h-16'>
-                        <div className=' bg-slate-200 rounded-xl'></div>
+
+      {/* HOME SECTION */}
+      <div>
+          <div className="xs:h-screen mb-8">
+            <div className='mt-14 mb-6 pl-4 text-dark-green text-xl font-bold'>
+              Hello 👋
+            </div>
+            <section className='mb-6'>
+              <div className='pl-4'>
+                <h1 className='pb-3 text-dark-green text-lg font-bold'>Getting Inspired</h1>
+                
+                <div className='flex space-x-2'>
+                  <a className='hover:scale-105 duration-500 cursor-pointer text-white'>
+                    <div className='bg-green h-32 w-64 rounded-xl'>
+                      <div className='px-2 py-2'>
+                        <div className='p-4 h-16'>
+                          <div className=' bg-slate-200 rounded-xl'></div>
+                        </div>
+                        <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
+                        <div className='flex items-center text-sm'>
+                          <ClockIcon className='h-4 w-4 mr-1 text-white' />
+                          <span className='font-light text-xs'>30 min</span>
+                        </div>
                       </div>
-                      <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <section className='mb-6'>
+              <div className='px-4 pb-3 flex justify-between items-center font-bold'>
+                <h1 className='text-dark-green text-lg font-bold'>Category</h1>
+                <div className='text-green text-xs'>See all</div>
+              </div>
+              <div className='pl-4 flex justify-between'>
+                <button className='bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm'>Breakfast</button>
+                <button className='bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Lunch</button>
+                <button className='bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Dinner</button>
+                <button className='bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Veg</button>
+              </div>
+            </section>
+            <section>
+              <div className='px-4 pb-3 flex justify-between items-center font-bold'>
+                <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
+                <div className='text-green text-xs'>See all</div>
+              </div>
+              <div className='flex justify-between text-white pl-4'>
+                <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
+                  <div className='p-4 h-44'>
+                    <div className='h-36 bg-gray-light rounded-xl'></div>
+                  </div>
+                  <div className='px-4 py-2'>
+                    <h2 className='text-sm pb-1 font-semibold text-dark-green'>Tacos Muy Buenos</h2>
+                    <div className='flex justify-between text-gray'>
                       <div className='flex items-center text-sm'>
-                        <ClockIcon className='h-4 w-4 mr-1 text-white' />
+                        <FireIcon className='h-4 w-4 mr-1' />
+                        <span className='font-light text-xs'>200 Kcal</span>
+                      </div>
+                      <div className='flex items-center text-sm'>
+                        <ClockIcon className='h-4 w-4 mr-1' />
                         <span className='font-light text-xs'>30 min</span>
                       </div>
                     </div>
                   </div>
                 </a>
-                <a className='snap-center  text-white hover:scale-105 duration-500 cursor-pointer'>
-                  <div className='bg-green h-32 w-64 rounded-xl'>
-                    <div className='px-2 py-2'>
- 
-                      <h2 className="text-base pb-1 font-semibold">Penne alla arrabbiata</h2>
+                <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
+                  <div className='p-4 h-44'>
+                    <div className='h-36 bg-gray-light rounded-xl'></div>
+                  </div>
+                  <div className='px-4 py-2'>
+                    <h2 className='text-sm pb-1 font-semibold text-dark-green truncate'>Cheeky Curry Super Zozzone</h2>
+                    <div className='flex justify-between text-gray'>
                       <div className='flex items-center text-sm'>
-                        <ClockIcon className='h-4 w-4 mr-1 text-white' />
-                        <span className='font-light text-xs'>30 min</span>
+                        <FireIcon className='h-4 w-4 mr-1' />
+                        <span className='font-light text-xs'>800 Kcal</span>
+                      </div>
+                      <div className='flex items-center text-sm'>
+                        <ClockIcon className='h-4 w-4 mr-1' />
+                        <span className='font-light text-xs'>120 min</span>
                       </div>
                     </div>
                   </div>
                 </a>
               </div>
-            </div>
-          </section>
-          <section className='mb-6'>
-            <div className='px-4 pb-3 flex justify-between items-center font-bold'>
-              <h1 className='text-dark-green text-lg font-bold'>Category</h1>
-              <div className='text-green text-xs'>See all</div>
-            </div>
-            <div className='pl-4 flex justify-between'>
-              <button className='bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm'>Breakfast</button>
-              <button className='bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Lunch</button>
-              <button className='bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Dinner</button>
-              <button className='bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Veg</button>
-            </div>
-          </section>
-          <section>
-            <div className='px-4 pb-3 flex justify-between items-center font-bold'>
-              <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
-              <div className='text-green text-xs'>See all</div>
-            </div>
-            <div className='flex justify-between text-white pl-4'>
-              <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
-                <div className='p-4 h-44'>
-                  <div className='h-36 bg-gray-light rounded-xl'></div>
-                </div>
-                <div className='px-4 py-2'>
-                  <h2 className='text-sm pb-1 font-semibold text-dark-green'>Tacos Muy Buenos</h2>
-                  <div className='flex justify-between text-gray'>
-                    <div className='flex items-center text-sm'>
-                      <FireIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>200 Kcal</span>
-                    </div>
-                    <div className='flex items-center text-sm'>
-                      <ClockIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>30 min</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
-                <div className='p-4 h-44'>
-                  <div className='h-36 bg-gray-light rounded-xl'></div>
-                </div>
-                <div className='px-4 py-2'>
-                  <h2 className='text-sm pb-1 font-semibold text-dark-green truncate'>Cheeky Curry Super Zozzone</h2>
-                  <div className='flex justify-between text-gray'>
-                    <div className='flex items-center text-sm'>
-                      <FireIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>800 Kcal</span>
-                    </div>
-                    <div className='flex items-center text-sm'>
-                      <ClockIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>120 min</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </section>
-          <nav className='mt-10'>
+            </section>
+          </div>
+
+
+          <nav className='sticky bottom-0 bg-white'>
             <hr className='text-gray-line'></hr>
-            <div className='pt-6 px-10 flex justify-between items-center text-sm'>
+            <div className='py-6 pb-8 px-10 flex justify-between items-center text-sm'>
               <HomeIcon className='h-6 w-6 mr-1 text-green' />
               <ClipboardIcon className='h-6 w-6 mr-1 text-gray' />
               <MagnifyingGlassIcon className='h-6 w-6 mr-1 text-gray' />
               <UserIcon className='h-6 w-6 mr-1 text-gray' />
             </div>
           </nav>
+        
         </div>
+
+
+
 
         {/* PAGINA RICETTA: dopo aver cliccato ricette sulla home o su cerca */}
         {/* <div>
@@ -179,7 +175,7 @@ export default function Home() {
                 </div>
               </section> */}
 
-              {/* INGREDIENTS */}
+              {/* INGREDIENTS SECTION */}
               {/* <section className='px-4'>
                 <div className='flex justify-between items-baseline'>
                   <h1 className=' mb-6 text-dark-green text-xl font-bold'>
@@ -223,7 +219,7 @@ export default function Home() {
               </section> */}
 
 
-              {/* INSTRUCTIONS */}
+              {/* INSTRUCTIONS SECTION */}
               {/* <section>
                 <div className='px-4 flex justify-between items-baseline'>
                   <h1 className=' mb-6 text-dark-green text-xl font-bold'>
@@ -264,7 +260,7 @@ export default function Home() {
           </div>
         </div> */}
 
-        {/* SEARCH NAV BAR SECTION */}
+        {/* 2: SEARCH NAV BAR SECTION */}
         {/* <div>
           <div className='px-4 mb-6 mt-16 flex justify-between items-center'>
               <button className=' bg-white rounded-lg p-1 shadow-md'><ChevronLeftIcon className='h-6 w-6'/></button>
@@ -274,17 +270,17 @@ export default function Home() {
         </div>
 
         <div className='px-4 flex items-center mb-4'>
-          <label class="flex-1 relative block">
-            <span class="sr-only">Search</span>
-            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+          <label className="flex-1 relative block">
+            <span className="sr-only">Search</span>
+            <span className="absolute inset-y-0 left-0 flex items-center pl-2">
               <MagnifyingGlassIcon className='h-4 w-4 mr-1 text-gray' />
             </span>
             <input style={{borderWidth: 0}}
-              class="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-lighter w-full  rounded-md py-2 pl-9 pr-3 shadow-md focus:outline-none 
+              className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-lighter w-full  rounded-md py-2 pl-9 pr-3 shadow-md focus:outline-none 
               focus:border-green focus:ring-green focus:ring-1 sm:text-sm" 
               placeholder="Search by food name" type="text" name="search"/>
           </label>
-          <button class="ml-2">
+          <button className="ml-2">
             <AdjustmentsHorizontalIcon className='h-8 w-8 mr-1 text-gray' />
           </button>
         </div>
@@ -539,7 +535,7 @@ export default function Home() {
             </div>
           </div> */}
           
-      </main>
+      {/* </main> */}
     </>
   )
 }

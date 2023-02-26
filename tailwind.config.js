@@ -40,6 +40,9 @@ module.exports = {
         'orange': '#EBA352',
         'gray-dark': '#273444',
       },
+      screens: {
+        'xs': '280px'
+      }
     },
   },
   plugins: [
