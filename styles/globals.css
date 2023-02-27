@@ -14,7 +14,7 @@
   } */
 
   a {
-    @apply hover:underline hover:text-green transition;
+    @apply transition delay-300;
   }
   
   .btn-tag {
