@@ -56,10 +56,10 @@ export default function Home() {
                 <div className='text-green text-xs'>See all</div>
               </div>
               <div className='pl-4 flex justify-between'>
-                <button className='bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm'>Breakfast</button>
-                <button className='bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Lunch</button>
-                <button className='bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Dinner</button>
-                <button className='bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Veg</button>
+                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm'>Breakfast</button>
+                <button disabled className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Lunch</button>
+                <button disabled className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Dinner</button>
+                <button disabled className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Veg</button>
               </div>
             </section>
             <section>
