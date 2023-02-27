@@ -109,26 +109,6 @@ export default function Home() {
               </div>
             </section>
           </div>
-
-
-          <nav className='sticky bottom-0 bg-white'>
-            <hr className='text-gray-line'></hr>
-            <div className='py-6 pb-8 px-10 flex justify-between items-center text-sm'>
-              <Link href="/">
-                <HomeIcon className='h-6 w-6 mr-1 text-green' />
-              </Link>
-              <Link href="/search">
-                <MagnifyingGlassIcon className='h-6 w-6 mr-1 text-gray' />
-              </Link>
-              <Link href="/list">
-                <ClipboardIcon className='h-6 w-6 mr-1 text-gray' />                
-              </Link>
-              <Link href="/profile">
-                <UserIcon className='h-6 w-6 mr-1 text-gray' />
-              </Link>
-
-            </div>
-          </nav>
         
         </div>
 
@@ -271,17 +251,7 @@ export default function Home() {
           </div>
         </div> */}
 
-        {/* 2: SEARCH NAV BAR SECTION */}
 
-          {/* <div className='pt-8'>
-            <hr className='text-gray-line'></hr>
-            <div className='pt-6 px-10 flex justify-between items-center text-sm'>
-              <HomeIcon className='h-6 w-6 mr-1 text-green' />
-              <ClipboardIcon className='h-6 w-6 mr-1 text-gray' />
-              <MagnifyingGlassIcon className='h-6 w-6 mr-1 text-gray' />
-              <UserIcon className='h-6 w-6 mr-1 text-gray' />
-            </div>
-          </div> */}
 
 
           {/* LIST PAGE */}
