@@ -76,17 +76,17 @@ export default function Home() {
             </div>
             <section className='mb-6'>
               <div className='pl-4'>
-                <h1 className='pb-3 text-dark-green text-lg font-bold'>Getting Inspired</h1>
+                <h1 className=' text-dark-green text-lg font-bold'>Getting Inspired</h1>
                 
                 {/* container */}
                 {/* pl-4 py-4 sm:py-16 */}
                 <div class="container flex-grow w-full mx-auto">
                   {/* mx-auto w-full md:w-4/5 px-4 */}
                   <div class="">
-                    <div class="container my-8">
+                    <div class="container my-4">
                       
                       <div id="scrollContainer"
-                        class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8" >
+                        class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-4" >
                         <div class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
                           <a href="#" class="space-y-4">
                             <div class="aspect-w-16 aspect-h-9">
@@ -193,7 +193,48 @@ export default function Home() {
                 
               </div>
             </section>
+
             <section className='mb-6'>
+              <div className='px-4 flex justify-between items-center font-bold'>
+                <h1 className='text-dark-green text-lg font-bold'>Category</h1>
+                <div className='text-green text-xs'>See all</div>
+              </div>
+              <div class="container flex-grow w-full mx-auto">
+                  <div class="pl-4">
+                    <div class=" my-4">
+                      
+                      <div id="scrollContainer"
+                        class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-4" >
+                        <div class=" mr-2 md:pb-4 rounded-lg">
+                            <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Breakfast</button>
+                        </div>
+                        <div
+                          class="flex-none mr-2 md:pb-4 rounded-lg">
+                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Lunch</button>
+                        </div>
+                        <div
+                          class="flex-none  mr-2 md:pb-4 rounded-lg">
+                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Prova</button>
+                        </div>
+                        <div
+                          class="flex-none  mr-2 md:pb-4rounded-lg">
+                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dinner</button>
+                        </div>
+                        <div
+                          class="flex-none  mr-2 md:pb-4  rounded-lg">
+                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Veg</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+
+            </section>
+
+            {/* <section className='mb-6'>
               <div className='px-4 pb-3 flex justify-between items-center font-bold'>
                 <h1 className='text-dark-green text-lg font-bold'>Category</h1>
                 <div className='text-green text-xs'>See all</div>
@@ -204,7 +245,8 @@ export default function Home() {
                 <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dinner</button>
                 <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Veg</button>
               </div>
-            </section>
+            </section> */}
+
             <section>
               <div className='px-4 pb-3 flex justify-between items-center font-bold'>
                 <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
