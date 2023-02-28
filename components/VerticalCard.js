@@ -9,7 +9,7 @@ const VerticalCard = ({recipe}) => {
 return (
     // <div className='flex justify-between text-white pl-4'>
         <a className='bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
-            <div className='p-4 h-fit'>
+            <div className='p-4 h-fit '>
                     {/* <div src={recipe.image} className='h-36 bg-gray-light rounded-xl'>{recipe.image}</div> */}
                     {/* <Image 
                         src={recipe.image} 
@@ -20,7 +20,7 @@ return (
                     /> */}
                     <img src={recipe.image} 
                         alt={recipe.title} fill
-                        className='rounded-xl contrast-[1.1] saturate-[1.4]'>
+                        className='hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]'>
                     </img>
             </div>
             <div className='px-4 py-2'>

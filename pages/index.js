@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -77,22 +78,119 @@ export default function Home() {
               <div className='pl-4'>
                 <h1 className='pb-3 text-dark-green text-lg font-bold'>Getting Inspired</h1>
                 
-                <div className='flex space-x-2'>
-                  <a className='hover:scale-105 duration-500 cursor-pointer text-white'>
-                    <div className='bg-green h-32 w-64 rounded-xl'>
-                      <div className='px-2 py-2'>
-                        <div className='p-4 h-16'>
-                          <div className=' bg-slate-200 rounded-xl'></div>
+                {/* container */}
+                {/* pl-4 py-4 sm:py-16 */}
+                <div class="container flex-grow w-full mx-auto">
+                  {/* mx-auto w-full md:w-4/5 px-4 */}
+                  <div class="">
+                    <div class="container my-8">
+                      
+                      <div id="scrollContainer"
+                        class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8" >
+                        <div class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
+                          <a href="#" class="space-y-4">
+                            <div class="aspect-w-16 aspect-h-9">
+                              <img 
+                                className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-br-xl rounded-tl-lg"
+                                src="https://spoonacular.com/recipeImages/716429-556x370.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="px-2 py-2 text-white">
+                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
+                              <div className='flex items-center text-sm'>
+                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
+                                <span className='font-light text-xs'>30 min</span>
+                              </div>
+                            </div>
+                          </a>
                         </div>
-                        <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
-                        <div className='flex items-center text-sm'>
-                          <ClockIcon className='h-4 w-4 mr-1 text-white' />
-                          <span className='font-light text-xs'>30 min</span>
+                        <div
+                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
+                          <a href="#" class="space-y-4">
+                            <div class="aspect-w-16 aspect-h-9">
+                              <img
+                                className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-br-xl rounded-tl-lg"
+                                src="https://spoonacular.com/recipeImages/715538-312x231.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="px-2 py-2 text-white">
+                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
+                              <div className='flex items-center text-sm'>
+                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
+                                <span className='font-light text-xs'>30 min</span>
+                              </div>
+                            </div>
+                          </a>
                         </div>
+                        <div
+                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg"
+                        >
+                          <a href="#" class="space-y-4">
+                            <div class="aspect-w-16 aspect-h-9">
+                              <img
+                                className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-br-xl rounded-tl-lg"
+                                src="https://spoonacular.com/recipeImages/511728-312x231.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="px-2 py-2 text-white">
+                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
+                              <div className='flex items-center text-sm'>
+                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
+                                <span className='font-light text-xs'>30 min</span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div
+                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg"
+                        >
+                          <a href="#" class="space-y-4">
+                            <div class="aspect-w-16 aspect-h-9">
+                              <img
+                                className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-br-xl rounded-tl-lg"
+                                src="https://spoonacular.com/recipeImages/655235-312x231.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="px-2 py-2 text-white">
+                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
+                              <div className='flex items-center text-sm'>
+                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
+                                <span className='font-light text-xs'>30 min</span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div
+                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg"
+                        >
+                          <a href="#" class="space-y-4">
+                            <div class="aspect-w-16 aspect-h-9">
+                              <img
+                                class="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40  rounded-br-xl rounded-tl-lg"
+                                src="https://spoonacular.com/recipeImages/655235-312x231.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="px-2 py-2 text-white">
+                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
+                              <div className='flex items-center text-sm'>
+                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
+                                <span className='font-light text-xs'>30 min</span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        
                       </div>
                     </div>
-                  </a>
+                    
+                  </div>
                 </div>
+                
               </div>
             </section>
             <section className='mb-6'>
@@ -113,61 +211,16 @@ export default function Home() {
                 <div className='text-green text-xs'>See all</div>
               </div>
 
-              <div className='grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-x-10 md:gap-y-16 sm:gap-x-8 sm:gap-y-8 xs:gap-x-2 xs:gap-y-2 text-white px-4'>
+              <div className='items-stretch grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-x-10 md:gap-y-10 sm:gap-x-8 sm:gap-y-8 gap-x-2 gap-y-2 text-white px-4'>
                 {recipes.results.map((recipe) => {
                 return (
-                <VerticalCard key={recipe.id} recipe={recipe} className=" "/>
-                  )
-                })
+                  <VerticalCard key={recipe.id} recipe={recipe} className=" "/>
+                    )
+                  })
                 }
               </div>
 
-                    {/* {recipes.results.map((recipe) => {
-                    return (
-                      <li key={recipe.id} className="list-none text-dark-green">
-                          <ul className="list-none text-sm pb-1 font-semibold text-dark-green">{recipe.title}</ul>
-                      </li>
-                      );
-                    })} */}
-
-              {/* <div className='flex justify-between text-white pl-4'>
-                <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
-                  <div className='p-4 h-44'>
-                    <div className='h-36 bg-gray-light rounded-xl'></div>
-                  </div>
-                  <div className='px-4 py-2'>
-                    <h2 className='text-sm pb-1 font-semibold text-dark-green'>Tacos Muy Buenos</h2>
-                    <div className='flex justify-between text-gray'>
-                      <div className='flex items-center text-sm'>
-                        <FireIcon className='h-4 w-4 mr-1' />
-                        <span className='font-light text-xs'>200 Kcal</span>
-                      </div>
-                      <div className='flex items-center text-sm'>
-                        <ClockIcon className='h-4 w-4 mr-1' />
-                        <span className='font-light text-xs'>30 min</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
-                  <div className='p-4 h-44'>
-                    <div className='h-36 bg-gray-light rounded-xl'></div>
-                  </div>
-                  <div className='px-4 py-2'>
-                    <h2 className='text-sm pb-1 font-semibold text-dark-green truncate'>Cheeky Curry Super Zozzone</h2>
-                    <div className='flex justify-between text-gray'>
-                      <div className='flex items-center text-sm'>
-                        <FireIcon className='h-4 w-4 mr-1' />
-                        <span className='font-light text-xs'>800 Kcal</span>
-                      </div>
-                      <div className='flex items-center text-sm'>
-                        <ClockIcon className='h-4 w-4 mr-1' />
-                        <span className='font-light text-xs'>120 min</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div> */}
+                    
             </section>
           </div>
         

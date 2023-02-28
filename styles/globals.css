@@ -34,7 +34,12 @@
   /* invece di appearence-none scrivo: accent-eaggilcolore */
   }
 
-  
+  @media (max-width: 280px){
+    .container.slider {
+      max-width: none !important;
+    }
+
+  }
 }
 
 
