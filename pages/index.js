@@ -29,25 +29,25 @@ export default function Home() {
           {
               "id": 716429,
               "title": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
-              "image": "https://spoonacular.com/recipeImages/716429-312x231.jpg",
+              "image": "https://spoonacular.com/recipeImages/716429-556x370.jpg",
               "imageType": "jpg"
           },
           {
               "id": 715538,
-              "title": "Bruschetta Style Pork & Pasta",
+              "title": "Bruschetta Style",
               "image": "https://spoonacular.com/recipeImages/715538-312x231.jpg",
               "imageType": "jpg"
           },
           {
             "id": 7,
-            "title": "Cheesecake",
-            "image": "https://spoonacular.com/recipeImages/716429-312x231.jpg",
+            "title": "Caprese Pasta",
+            "image": "https://spoonacular.com/recipeImages/511728-312x231.jpg",
             "imageType": "jpg"
         },
         {
             "id": 38,
-            "title": "Apple Crumble",
-            "image": "https://spoonacular.com/recipeImages/715538-312x231.jpg",
+            "title": "Smoothie",
+            "image": "https://spoonacular.com/recipeImages/655235-312x231.jpg",
             "imageType": "jpg"
         }
       ],
@@ -102,9 +102,9 @@ export default function Home() {
               </div>
               <div className='pl-4 flex justify-between'>
                 <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Breakfast</button>
-                <button disabled className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Lunch</button>
-                <button disabled className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Dinner</button>
-                <button disabled className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Veg</button>
+                <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Lunch</button>
+                <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dinner</button>
+                <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Veg</button>
               </div>
             </section>
             <section>
@@ -113,12 +113,14 @@ export default function Home() {
                 <div className='text-green text-xs'>See all</div>
               </div>
 
-              {recipes.results.map((recipe) => {
-              return (
-              <VerticalCard key={recipe.id} recipe={recipe}/>
-                )
-              })
-              }
+              <div className='grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-x-10 md:gap-y-16 sm:gap-x-8 sm:gap-y-8 xs:gap-x-2 xs:gap-y-2 text-white px-4'>
+                {recipes.results.map((recipe) => {
+                return (
+                <VerticalCard key={recipe.id} recipe={recipe} className=" "/>
+                  )
+                })
+                }
+              </div>
 
                     {/* {recipes.results.map((recipe) => {
                     return (

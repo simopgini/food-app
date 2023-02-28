@@ -9,9 +9,10 @@ import Link from 'next/link'
 export default function App({ Component, pageProps }) {
   return (
   <>
-    <Component {...pageProps} />
-    <nav className='sticky bottom-0 bg-white'>
-            <hr className='text-gray-line'></hr>
+    {/* <div className='xs:h-screen'> */}
+      <Component {...pageProps} />
+    {/* </div> */}
+    <nav className='sticky bottom-0 bg-white border-t border-gray-line'>
             <div className='py-6 pb-8 px-10 flex justify-between items-center text-sm'>
               <Link href="/">
                 <HomeIcon default className='h-6 w-6 mr-1 text-green disabled:text-gray' />
