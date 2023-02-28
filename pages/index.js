@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { useState } from 'react'
+import VerticalCard from '@/components/VerticalCard'
 // import Image from 'next/image'
 import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css'
@@ -15,6 +16,48 @@ import Image from 'next/image'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [recipes, setrecipes] = useState({results:[]});
+
+  const fetchRecipes = async () => {
+  // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}");
+    //n const data = await response.json();
+  
+  const response = `{
+      "offset": 0,
+      "number": 2,
+      "results": [
+          {
+              "id": 716429,
+              "title": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
+              "image": "https://spoonacular.com/recipeImages/716429-312x231.jpg",
+              "imageType": "jpg"
+          },
+          {
+              "id": 715538,
+              "title": "Bruschetta Style Pork & Pasta",
+              "image": "https://spoonacular.com/recipeImages/715538-312x231.jpg",
+              "imageType": "jpg"
+          },
+          {
+            "id": 7,
+            "title": "Cheesecake",
+            "image": "https://spoonacular.com/recipeImages/716429-312x231.jpg",
+            "imageType": "jpg"
+        },
+        {
+            "id": 38,
+            "title": "Apple Crumble",
+            "image": "https://spoonacular.com/recipeImages/715538-312x231.jpg",
+            "imageType": "jpg"
+        }
+      ],
+      "totalResults": 86
+  }`
+  const data = JSON.parse(response);
+
+  setrecipes(data);
+};
+
   return (
     <>
       <Head>
@@ -26,7 +69,7 @@ export default function Home() {
 
       {/* HOME SECTION */}
       <div>
-          <div className="xs:h-screen mb-8">
+          <div className="xs:h-full mb-8">
             <div className='mt-14 mb-6 pl-4 text-dark-green text-xl font-bold'>
               Hello 👋
             </div>
@@ -58,7 +101,7 @@ export default function Home() {
                 <div className='text-green text-xs'>See all</div>
               </div>
               <div className='pl-4 flex justify-between'>
-                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm'>Breakfast</button>
+                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Breakfast</button>
                 <button disabled className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Lunch</button>
                 <button disabled className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Dinner</button>
                 <button disabled className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm'>Veg</button>
@@ -69,7 +112,23 @@ export default function Home() {
                 <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
                 <div className='text-green text-xs'>See all</div>
               </div>
-              <div className='flex justify-between text-white pl-4'>
+
+              {recipes.results.map((recipe) => {
+              return (
+              <VerticalCard key={recipe.id} recipe={recipe}/>
+                )
+              })
+              }
+
+                    {/* {recipes.results.map((recipe) => {
+                    return (
+                      <li key={recipe.id} className="list-none text-dark-green">
+                          <ul className="list-none text-sm pb-1 font-semibold text-dark-green">{recipe.title}</ul>
+                      </li>
+                      );
+                    })} */}
+
+              {/* <div className='flex justify-between text-white pl-4'>
                 <a className='bg-white h-64 w-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
                   <div className='p-4 h-44'>
                     <div className='h-36 bg-gray-light rounded-xl'></div>
@@ -106,7 +165,7 @@ export default function Home() {
                     </div>
                   </div>
                 </a>
-              </div>
+              </div> */}
             </section>
           </div>
         
