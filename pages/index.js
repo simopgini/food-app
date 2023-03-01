@@ -12,6 +12,7 @@ import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon, TrashIcon, PencilSquare
 import { HomeIcon } from '@heroicons/react/20/solid'
 import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
+import HorizontalCardHome from '@/components/HorizontalCardHome'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -82,12 +83,20 @@ export default function Home() {
                 {/* pl-4 py-4 sm:py-16 */}
                 <div class="container flex-grow w-full mx-auto">
                   {/* mx-auto w-full md:w-4/5 px-4 */}
-                  <div class="">
-                    <div class="container my-4">
+                  <div className="">
+                    <div className="container my-4">
                       
                       <div id="scrollContainer"
                         class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-4" >
-                        <div class="mb-2 flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
+                          
+                        {recipes.results.map((recipe) => {
+                          return (
+                            <HorizontalCardHome key={recipe.id} recipe={recipe} className=" "/>
+                              )
+                            })
+                        }
+                        
+                        {/* <div class="mb-2 flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
                           <a href="#" class="space-y-2">
                             <div class="aspect-w-16 aspect-h-9">
                               <img 
@@ -104,8 +113,8 @@ export default function Home() {
                               </div>
                             </div>
                           </a>
-                        </div>
-                        <div
+                        </div> */}
+                        {/* <div
                           class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
                           <a href="#" class="space-y-2">
                             <div class="aspect-w-16 aspect-h-9">
@@ -123,10 +132,9 @@ export default function Home() {
                               </div>
                             </div>
                           </a>
-                        </div>
-                        <div
-                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg"
-                        >
+                        </div> */}
+                        {/* <div
+                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
                           <a href="#" class="space-y-2">
                             <div class="aspect-w-16 aspect-h-9">
                               <img
@@ -143,10 +151,9 @@ export default function Home() {
                               </div>
                             </div>
                           </a>
-                        </div>
-                        <div
-                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg"
-                        >
+                        </div> */}
+                        {/* <div
+                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
                           <a href="#" class="space-y-2">
                             <div class="aspect-w-16 aspect-h-9">
                               <img
@@ -163,10 +170,9 @@ export default function Home() {
                               </div>
                             </div>
                           </a>
-                        </div>
-                        <div
-                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg"
-                        >
+                        </div> */}
+                        {/* <div
+                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
                           <a href="#" class="space-y-2">
                             <div class="aspect-w-16 aspect-h-9">
                               <img
@@ -183,7 +189,7 @@ export default function Home() {
                               </div>
                             </div>
                           </a>
-                        </div>
+                        </div> */}
                         
                       </div>
                     </div>
