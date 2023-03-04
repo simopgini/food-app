@@ -19,7 +19,8 @@ return (
                         className='rounded-xl contrast-125 saturate-150'
                     /> */}
                     <img src={recipe.image} 
-                        alt={recipe.title} fill
+                        alt={recipe.title} 
+                        // fill="true"
                         className='hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]'>
                     </img>
             </div>

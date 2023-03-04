@@ -22,7 +22,7 @@ export default function Home() {
 
   const fetchRecipes = async () => {
   // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}");
-    //n const data = await response.json();
+  // const data = await response.json();
   
   const response = `{
       "offset": 0,
@@ -78,16 +78,17 @@ export default function Home() {
             <section className='mb-6'>
               <div className='pl-4'>
                 <h1 className=' text-dark-green text-lg font-bold'>Getting Inspired</h1>
-                
+
+                {/* SCROLL-X CARDS */}
                 {/* container */}
                 {/* pl-4 py-4 sm:py-16 */}
-                <div class="container flex-grow w-full mx-auto">
+                <div className="container flex-grow w-full mx-auto">
                   {/* mx-auto w-full md:w-4/5 px-4 */}
                   <div className="">
                     <div className="container my-4">
                       
                       <div id="scrollContainer"
-                        class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-4" >
+                        className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-4" >
                           
                         {recipes.results.map((recipe) => {
                           return (
@@ -95,105 +96,8 @@ export default function Home() {
                               )
                             })
                         }
-                        
-                        {/* <div class="mb-2 flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
-                          <a href="#" class="space-y-2">
-                            <div class="aspect-w-16 aspect-h-9">
-                              <img 
-                                className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-br-xl rounded-tl-lg"
-                                src="https://spoonacular.com/recipeImages/716429-556x370.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="px-2 py-2 text-white">
-                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
-                              <div className='flex items-center text-sm'>
-                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
-                                <span className='font-light text-xs'>30 min</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div> */}
-                        {/* <div
-                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
-                          <a href="#" class="space-y-2">
-                            <div class="aspect-w-16 aspect-h-9">
-                              <img
-                                className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-br-xl rounded-tl-lg"
-                                src="https://spoonacular.com/recipeImages/715538-312x231.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="px-2 py-2 text-white">
-                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
-                              <div className='flex items-center text-sm'>
-                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
-                                <span className='font-light text-xs'>30 min</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div> */}
-                        {/* <div
-                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
-                          <a href="#" class="space-y-2">
-                            <div class="aspect-w-16 aspect-h-9">
-                              <img
-                                className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-br-xl rounded-tl-lg"
-                                src="https://spoonacular.com/recipeImages/511728-312x231.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="px-2 py-2 text-white">
-                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
-                              <div className='flex items-center text-sm'>
-                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
-                                <span className='font-light text-xs'>30 min</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div> */}
-                        {/* <div
-                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
-                          <a href="#" class="space-y-2">
-                            <div class="aspect-w-16 aspect-h-9">
-                              <img
-                                className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-br-xl rounded-tl-lg"
-                                src="https://spoonacular.com/recipeImages/655235-312x231.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="px-2 py-2 text-white">
-                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
-                              <div className='flex items-center text-sm'>
-                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
-                                <span className='font-light text-xs'>30 min</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div> */}
-                        {/* <div
-                          class="flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
-                          <a href="#" class="space-y-2">
-                            <div class="aspect-w-16 aspect-h-9">
-                              <img
-                                class="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40  rounded-br-xl rounded-tl-lg"
-                                src="https://spoonacular.com/recipeImages/655235-312x231.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <div class="px-2 py-2 text-white">
-                              <h2 className="text-base pb-1 font-semibold">Penne all arrabbiata</h2>
-                              <div className='flex items-center text-sm'>
-                                <ClockIcon className='h-4 w-4 mr-1 text-white' />
-                                <span className='font-light text-xs'>30 min</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div> */}
-                        
                       </div>
                     </div>
-                    
                   </div>
                 </div>
                 
@@ -205,29 +109,29 @@ export default function Home() {
                 <h1 className='text-dark-green text-lg font-bold'>Category</h1>
                 <div className='text-green text-xs'>See all</div>
               </div>
-              <div class="container flex-grow w-full mx-auto">
-                  <div class="pl-4">
-                    <div class=" my-4">
+              <div className="container flex-grow w-full mx-auto">
+                  <div className="pl-4">
+                    <div className=" my-4">
                       
                       <div id="scrollContainer"
-                        class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start" >
-                        <div class="mb-2 mr-2 md:pb-4 rounded-lg">
+                        className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start" >
+                        <div className="mb-2 mr-2 md:pb-4 rounded-lg">
                             <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Breakfast</button>
                         </div>
                         <div
-                          class="flex-none mr-2 md:pb-4 rounded-lg">
+                          className="flex-none mr-2 md:pb-4 rounded-lg">
                             <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Lunch</button>
                         </div>
                         <div
-                          class="flex-none  mr-2 md:pb-4 rounded-lg">
+                          className="flex-none  mr-2 md:pb-4 rounded-lg">
                             <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Prova</button>
                         </div>
                         <div
-                          class="flex-none  mr-2 md:pb-4rounded-lg">
+                          className="flex-none  mr-2 md:pb-4rounded-lg">
                             <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dinner</button>
                         </div>
                         <div
-                          class="flex-none  mr-2 md:pb-4  rounded-lg">
+                          className="flex-none  mr-2 md:pb-4  rounded-lg">
                             <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Veg</button>
                         </div>
                         
@@ -239,19 +143,6 @@ export default function Home() {
 
 
             </section>
-
-            {/* <section className='mb-6'>
-              <div className='px-4 pb-3 flex justify-between items-center font-bold'>
-                <h1 className='text-dark-green text-lg font-bold'>Category</h1>
-                <div className='text-green text-xs'>See all</div>
-              </div>
-              <div className='pl-4 flex justify-between'>
-                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Breakfast</button>
-                <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Lunch</button>
-                <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dinner</button>
-                <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Veg</button>
-              </div>
-            </section> */}
 
             <section>
               <div className='px-4 pb-3 flex justify-between items-center font-bold'>
@@ -267,8 +158,6 @@ export default function Home() {
                   })
                 }
               </div>
-
-                    
             </section>
           </div>
         
@@ -285,8 +174,8 @@ export default function Home() {
               <div className='bg-gray-mid rounded-lg p-1'><HeartIcon className='h-6 w-6 text-green'/></div>
             </div> */}
             {/* <Image src="/avocado.jpg" width="130" height="130"/> */}
-            {/* <div class="bg-cover bg-center" style={{backgroundImage: url('/avocado.jpg')}}></div> */}
-            {/* <div class="bg-[url('/avocado.jpg')]"></div>
+            {/* <div className="bg-cover bg-center" style={{backgroundImage: url('/avocado.jpg')}}></div> */}
+            {/* <div className="bg-[url('/avocado.jpg')]"></div>
 
             <div className='pt-28'></div>
             <div className=' rounded-t-3xl'> */}
@@ -432,18 +321,18 @@ export default function Home() {
 
             <section className='px-4'>
               <div className='flex items-center space-x-2 my-3'>
-                <input type="checkbox" class="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid indeterminate:bg-gray-300 rounded-md h-6 w-6 mr-2" />
+                <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid indeterminate:bg-gray-300 rounded-md h-6 w-6 mr-2" />
                 <p className='text-dark-green text-sm'>Lime</p>
               </div>
               <hr></hr>
               <div className='flex items-center space-x-2 my-3'>
-                <input type="checkbox" class="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
+                <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                 <p className='text-dark-green text-sm'>Bread</p>
               </div>
               <hr></hr>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center space-x-2 my-3'>
-                  <input type="checkbox" class="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
+                  <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                   <p className='text-dark-green text-sm'>Coffee</p>
                 </div>
                 <div className='flex text-dark-green space-x-2 text-sm '>
@@ -458,7 +347,7 @@ export default function Home() {
               <hr></hr>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center space-x-2 my-3'>
-                  <input type="checkbox" class="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
+                  <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                   <p className='text-dark-green text-sm'>Orange juice</p>
                 </div>
                 <div className='flex text-dark-green space-x-2 text-sm '>
@@ -477,7 +366,7 @@ export default function Home() {
               <hr></hr>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center space-x-2 my-3'>
-                  <input type="checkbox" class="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
+                  <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                   <p className='text-dark-green text-sm'>Paprika</p>
                 </div>
                 <div className='flex text-dark-green space-x-2 text-sm '>
@@ -497,7 +386,7 @@ export default function Home() {
               <hr></hr>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center space-x-2 my-3'>
-                  <input type="checkbox" class="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
+                  <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                   <p className='text-gray text-sm line-through'>Avocado</p>
                 </div>
                 <div className='flex text-dark-green space-x-2 text-sm '>
@@ -508,7 +397,7 @@ export default function Home() {
               <hr></hr>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center space-x-2 my-3'>
-                  <input type="checkbox" class="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
+                  <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                   <p className='text-gray text-sm line-through'>Tomatoes</p>
                 </div>
                 <div className='flex text-dark-green space-x-2 text-sm '>
@@ -519,14 +408,14 @@ export default function Home() {
             </section>
 
             <div className='mt-36 px-4 flex items-center'>
-              <label class="flex-1  block">
-                <span class="sr-only">Search</span>
+              <label className="flex-1  block">
+                <span className="sr-only">Search</span>
                 <input style={{borderWidth: 0}}
-                  class="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-lighter w-full  rounded-lg py-2 pr-3 shadow-md focus:outline-none 
+                  className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-lighter w-full  rounded-lg py-2 pr-3 shadow-md focus:outline-none 
                   focus:border-green focus:ring-green focus:ring-1 sm:text-sm" 
                   placeholder="Type the first ingredient" type="text" name="search"/>
               </label>
-              <button class="drop-shadow-lg drop-shadow-white hover:shadow-[#A4D3C5] hover:bg-[#55a78e] duration-500 hover:scale-105 ml-3 px-4 py-2 bg-green text-sm text-white rounded-lg">
+              <button className="drop-shadow-lg drop-shadow-white hover:shadow-[#A4D3C5] hover:bg-[#55a78e] duration-500 hover:scale-105 ml-3 px-4 py-2 bg-green text-sm text-white rounded-lg">
                 Add
               </button>
             </div>
