@@ -32,11 +32,128 @@ export default function Search() {
           </button>
         </div>
 
-        <div className='pl-4 mb-8 flex justify-between'>
+
+        <section className='mb-6'>
+              <div className="container flex-grow w-full mx-auto">
+                  <div className="pl-4">
+                    <div className=" my-4">
+                      
+                      <div id="scrollContainer"
+                        className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start" >
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-green hover:bg-green text-white px-5 rounded-full text-sm'>
+                              <span className='mr-2'>Italian</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🍕</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>Spanish</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🥘</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>Japanese</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🍱</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>India</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🍛</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>Mexican</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🌮</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>Middle Eastern</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🧆</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>Chinese</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🥟</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>Greek</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🥙</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>French</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🥐</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>American</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🍔</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>German</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🥨</span>
+                            </button>
+                        </div>
+
+                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                            <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
+                              <span className='mr-2'>British</span> 
+                              <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
+                              <span className='ml-2'>🫖</span>
+                            </button>
+                        </div>
+
+                        {/* <button class="flex-none mr-2 md:pb-4 px-5 py-2 rounded-full text-sm hover:duration-300 hover:bg-green active:bg-green bg-gray-light disabled:bg-gray-light flex divide-x-2 divide-white hover:text-white active:text-white text-dark-green ...">
+                          <div className='pr-2'>Greek</div>
+                          <div className='pl-2'>🥙</div>
+                        </button> */}
+                        
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+            </section>
+
+
+        {/* <div className='pl-4 mb-8 flex justify-between'>
               <button className='bg-green text-white px-4 py-2 rounded-full text-sm'>Smoothie | 🍹</button>
               <button className='bg-gray-light text-dark-green px-4 py-2 rounded-full text-sm'>Snack | 🍿</button>
               <button className='bg-gray-light text-dark-green px-4 py-2 rounded-full text-sm'>Salad | 🥗</button>
-        </div>
+        </div> */}
 
         <div className='px-4 mb-6'>
           <div className='py-12 flex items-center bg-white h-20 rounded-xl drop-shadow'>
