@@ -75,7 +75,7 @@ export default function Search() {
               <MagnifyingGlassIcon className='h-4 w-4 mr-1 text-gray' />
             </span>
             <input style={{borderWidth: 0}}
-              className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-lighter w-full  rounded-md py-2 pl-9 pr-3 shadow-md focus:outline-none 
+              className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-light w-full  rounded-md py-2 pl-9 pr-3 shadow-md focus:outline-none 
               focus:border-green focus:ring-green focus:ring-1 sm:text-sm" 
               placeholder="Search by food name" type="text" name="search"/>
           </label>

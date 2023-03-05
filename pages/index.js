@@ -13,6 +13,7 @@ import { HomeIcon } from '@heroicons/react/20/solid'
 import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 import HorizontalCardHome from '@/components/HorizontalCardHome'
+import Modal from '@/components/Modal'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -143,6 +144,10 @@ export default function Home() {
 
 
             </section>
+
+            <div className="App ">
+              <Modal />
+            </div>
 
             <section>
               <div className='px-4 pb-3 flex justify-between items-center font-bold'>
