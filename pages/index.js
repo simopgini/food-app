@@ -120,11 +120,11 @@ export default function Home() {
                         </div>
                         <div
                           className="flex-none mr-2 md:pb-4 rounded-lg">
-                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Lunch</button>
+                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Main course</button>
                         </div>
                         <div
                           className="flex-none  mr-2 md:pb-4 rounded-lg">
-                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Prova</button>
+                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Snack</button>
                         </div>
                         <div
                           className="flex-none  mr-2 md:pb-4rounded-lg">
@@ -132,7 +132,7 @@ export default function Home() {
                         </div>
                         <div
                           className="flex-none  mr-2 md:pb-4  rounded-lg">
-                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Veg</button>
+                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dessert</button>
                         </div>
                         
                       </div>
