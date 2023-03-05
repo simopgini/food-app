@@ -33,7 +33,7 @@ const List = () => {
                 </div>
 
                 <section className='px-4'>
-                    <div class="grid grid-cols-1 divide-y divide-slate-200">
+                    <div className="grid grid-cols-1 divide-y divide-slate-200">
                         <div className='flex items-center space-x-2 py-3 hover:bg-gray-light'>
                             <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid indeterminate:bg-gray-300 rounded-md h-6 w-6 mr-2" />
                             <p className='text-dark-green text-sm'>Lime</p>

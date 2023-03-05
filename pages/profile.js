@@ -12,6 +12,7 @@ export default function Profile() {
                         <div className='flex-1 bg-white'></div>
                         <div className='flex-auto p-1 font-bold text-xl'>Profile</div>
                     </div>
+                    <p className='px-4 py-72 text-center text-xl'>⚠️ Work in progress ⚠️ </p>
                 </div>
             </div>
         </>
