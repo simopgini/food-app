@@ -19,7 +19,32 @@ import Modal from '@/components/Modal'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [recipes, setrecipes] = useState({results:[]});
+  const [recipes, setrecipes] = useState({results:[
+    {
+        "id": 716429,
+        "title": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
+        "image": "https://spoonacular.com/recipeImages/716429-556x370.jpg",
+        "imageType": "jpg"
+    },
+    {
+        "id": 715538,
+        "title": "Bruschetta Style",
+        "image": "https://spoonacular.com/recipeImages/715538-312x231.jpg",
+        "imageType": "jpg"
+    },
+    {
+      "id": 7,
+      "title": "Caprese Pasta",
+      "image": "https://spoonacular.com/recipeImages/511728-312x231.jpg",
+      "imageType": "jpg"
+    },
+    {
+        "id": 38,
+        "title": "Smoothie",
+        "image": "https://spoonacular.com/recipeImages/655235-312x231.jpg",
+        "imageType": "jpg"
+    }
+]});
 
   const fetchRecipes = async () => {
   // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}");
@@ -145,9 +170,9 @@ export default function Home() {
 
             </section>
 
-            <div className="App ">
+            {/* <div className="App ">
               <Modal />
-            </div>
+            </div> */}
 
             <section>
               <div className='px-4 pb-3 flex justify-between items-center font-bold'>

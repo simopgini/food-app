@@ -16,18 +16,26 @@ export default function recipe() {
             {/* PAGINA RICETTA: dopo aver cliccato ricette sulla home o su cerca */}
         {/* <div>
           <div className=''> */}
-            <div className='px-4 mt-16 flex justify-between items-center'>
-              <div className='bg-gray-mid rounded-lg p-1'><ChevronLeftIcon className='h-6 w-6'/></div>
+          {/* bg-cover bg-center  */}
+          <div className='immagine hover:transition hover:duration-300 hover:object-none hover:object-center contrast-[1.1] saturate-[1.4]'>
+
+                {/* h-96  */}
+            <div className='px-4 pt-16 flex justify-between items-center mb-24'>
+              <Link href="/" className='bg-gray-mid rounded-lg p-1'><ChevronLeftIcon className='h-6 w-6'/></Link>
               <div className='bg-gray-mid rounded-lg p-1'><HeartIcon className='h-6 w-6 text-green'/></div>
             </div>
-            <Image src="/avocado.jpg" width="130" height="130"/>
-            {/* <div className="bg-cover bg-center" style={{backgroundImage: url('/avocado.jpg')}}></div> */}
-            {/* <div className="bg-[url('/avocado.jpg')]"></div>
 
+
+            {/* <Image className="bg-" alt="zfv" src="/avocado.jpg" width="130" height="130"/> */}
+            {/* <div className="bg-cover bg-center h-96 immagine"></div> */}
+            {/* <div className="bg-[url('/avocado.jpg')]"></div>
+                
             <div className='pt-28'></div>
             <div className=' rounded-t-3xl'> */}
+            
+            <div className=' rounded-t-3xl bg-white shadow-sm'>
               <section className='px-4 pb-4 '>
-                <div className='flex justify-between items-baseline'>
+                <div className='pt-8 flex justify-between items-baseline'>
                   <h1 className=' mb-6 text-dark-green text-xl font-bold'>
                     Avocado Toast
                   </h1>
@@ -138,9 +146,10 @@ export default function recipe() {
               </section>
             {/* </div>
             </div> */}
-
+            </div>
           {/* 
         </div> */}
+        </div>
         </>
     )
 }
