@@ -3,11 +3,62 @@ import { HomeIcon } from '@heroicons/react/20/solid'
 import { MagnifyingGlassIcon, ChevronLeftIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import SearchCard from '@/components/SearchCard'
+import { useState } from 'react'
 
 
 export default function Search() {
-    return (
-        <>
+  const [searchRecipes, setSearchedRecipes] = useState({results:[]});
+
+  const fetchSearchedRecipes = async () => {
+  // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}");
+  // const data = await response.json();
+  
+  const response = `{
+        "results": [
+        {
+        "id": 631762,
+        "title": "Strawberry Tart",
+        "image": "https://spoonacular.com/recipeImages/631762-312x231.jpg",
+        "imageType": "jpg"
+        },
+        {
+        "id": 661904,
+        "title": "Strawberry Syrup",
+        "image": "https://spoonacular.com/recipeImages/661904-312x231.jpg",
+        "imageType": "jpg"
+        },
+        {
+        "id": 661760,
+        "title": "Strawberry Bites",
+        "image": "https://spoonacular.com/recipeImages/661760-312x231.jpg",
+        "imageType": "jpg"
+        },
+        {
+        "id": 1646939,
+        "title": "Strawberry Scones",
+        "image": "https://spoonacular.com/recipeImages/1646939-312x231.jpg",
+        "imageType": "jpg"
+        },
+        {
+        "id": 1470917,
+        "title": "Strawberry Cobbler",
+        "image": "https://spoonacular.com/recipeImages/1470917-312x231.jpg",
+        "imageType": "jpg"
+        }
+        ],
+        "offset": 0,
+        "number": 5,
+        "totalResults": 150
+        }`
+
+  const data = JSON.parse(response);
+
+  setSearchedRecipes(data);
+};
+
+
+  return (
+      <>
         <div className="xs:h-screen mb-8">
             <div>
                 <div className='px-4 mb-6 mt-16 flex justify-between items-center'>
@@ -28,7 +79,8 @@ export default function Search() {
               focus:border-green focus:ring-green focus:ring-1 sm:text-sm" 
               placeholder="Search by food name" type="text" name="search"/>
           </label>
-          <button className="ml-2">
+          <button onClick={fetchSearchedRecipes}
+          className="ml-2">
             <AdjustmentsHorizontalIcon className='h-8 w-8 mr-1 text-gray' />
           </button>
         </div>
@@ -136,12 +188,6 @@ export default function Search() {
                               <span className='ml-2'>🫖</span>
                             </button>
                         </div>
-
-                        {/* <button class="flex-none mr-2 md:pb-4 px-5 py-2 rounded-full text-sm hover:duration-300 hover:bg-green active:bg-green bg-gray-light disabled:bg-gray-light flex divide-x-2 divide-white hover:text-white active:text-white text-dark-green ...">
-                          <div className='pr-2'>Greek</div>
-                          <div className='pl-2'>🥙</div>
-                        </button> */}
-                        
                       </div>
                     </div>
                     
@@ -150,100 +196,26 @@ export default function Search() {
             </section>
 
 
-        {/* <div className='pl-4 mb-8 flex justify-between'>
-              <button className='bg-green text-white px-4 py-2 rounded-full text-sm'>Smoothie | 🍹</button>
-              <button className='bg-gray-light text-dark-green px-4 py-2 rounded-full text-sm'>Snack | 🍿</button>
-              <button className='bg-gray-light text-dark-green px-4 py-2 rounded-full text-sm'>Salad | 🥗</button>
-        </div> */}
-
-              {/* {recipes.results.map((recipe) => {
+            <div>
+              {searchRecipes.results.map((searchRecipe) => {
                 return (
-                  <VerticalCard key={recipe.id} recipe={recipe} className=" "/>
+                  <SearchCard key={searchRecipe.id} searchRecipe={searchRecipe} className=" "/>
                     )
                   })
-              } */}
-
-
-        <SearchCard />
-
-        <div className='px-4 mb-6'>
-          <div className='py-12 flex items-center bg-white h-20 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
-            <div className='ml-2 my-1 mr-2 '>
-              <div className='h-20 w-20 bg-gray-light rounded-xl'></div>
+              }
             </div>
-            <div>
-              <div className='pt-8'>
-                <h2 className='text-base pb-1 font-semibold text-dark-green'>Strawberry Cheescake</h2>
-                  <div className='flex justify-between text-gray pb-2'>
-                    <div className='flex items-center text-sm'>
-                      <ClockIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>90 Min</span>
-                    </div>
-                    <div className='flex items-center text-xs'>
-                    <FireIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>275 Kcal</span>
-                    </div>
-                  </div>
-                  <div className='mb-8 flex'>
-                    <div className='bg-orange text-white px-2 rounded-full text-xs'>Medium</div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className='px-4 mb-6'>
-          <div className='py-12 flex items-center bg-white h-20 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
-            <div className='ml-2 my-1 mr-2 '>
-              <div className='h-20 w-20 bg-gray-light rounded-xl'></div>
-            </div>
-            <div>
-              <div className='pt-8'>
-                <h2 className='text-base pb-1 font-semibold text-dark-green'>Smoothieliscious</h2>
-                  <div className='flex justify-between text-gray pb-2'>
-                    <div className='flex items-center text-sm'>
-                      <ClockIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>5 Min</span>
-                    </div>
-                    <div className='flex items-center text-xs'>
-                    <FireIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>105 Kcal</span>
-                    </div>
-                  </div>
-                  <div className='mb-8 flex'>
-                    <div className='bg-green text-white px-2 rounded-full text-xs mr-1'>Easy</div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className='px-4'>
-          <div className='py-12 flex items-center bg-white h-20 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
-            <div className='ml-2 my-1 mr-2 '>
-              <div className='h-20 w-20 bg-gray-light rounded-xl'></div>
-            </div>
-            <div>
-              <div className='pt-8'>
-                <h2 className='text-base pb-1 font-semibold text-dark-green'>Rainbow Salad</h2>
-                  <div className='flex justify-between text-gray pb-2'>
-                    <div className='flex items-center text-sm'>
-                      <ClockIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>5 Min</span>
-                    </div>
-                    <div className='flex items-center text-xs'>
-                    <FireIcon className='h-4 w-4 mr-1' />
-                      <span className='font-light text-xs'>105 Kcal</span>
-                    </div>
-                  </div>
-                  <div className='mb-8 flex'>
-                    <div className='bg-green text-white px-2 rounded-full text-xs mr-1'>Easy</div>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        </>
-    )
+                        {/* <button class="flex-none mr-2 md:pb-4 px-5 py-2 rounded-full text-sm hover:duration-300 hover:bg-green active:bg-green bg-gray-light disabled:bg-gray-light flex divide-x-2 divide-white hover:text-white active:text-white text-dark-green ...">
+                          <div className='pr-2'>Greek</div>
+                          <div className='pl-2'>🥙</div>
+                        </button> */}
+                        
+            {/* <div className='pl-4 mb-8 flex justify-between'>
+                  <button className='bg-green text-white px-4 py-2 rounded-full text-sm'>Smoothie | 🍹</button>
+                  <button className='bg-gray-light text-dark-green px-4 py-2 rounded-full text-sm'>Snack | 🍿</button>
+                  <button className='bg-gray-light text-dark-green px-4 py-2 rounded-full text-sm'>Salad | 🥗</button>
+            </div> */}
+        
+      </div>
+    </>
+  )
 }

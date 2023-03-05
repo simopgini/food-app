@@ -45,13 +45,13 @@ export default function Home() {
             "title": "Caprese Pasta",
             "image": "https://spoonacular.com/recipeImages/511728-312x231.jpg",
             "imageType": "jpg"
-        },
-        {
-            "id": 38,
-            "title": "Smoothie",
-            "image": "https://spoonacular.com/recipeImages/655235-312x231.jpg",
-            "imageType": "jpg"
-        }
+          },
+          {
+              "id": 38,
+              "title": "Smoothie",
+              "image": "https://spoonacular.com/recipeImages/655235-312x231.jpg",
+              "imageType": "jpg"
+          }
       ],
       "totalResults": 86
   }`
