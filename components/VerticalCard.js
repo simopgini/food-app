@@ -3,16 +3,20 @@ import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon, TrashIcon, PencilSquare
 import { HomeIcon } from '@heroicons/react/20/solid'
 import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
+import Link from 'next/link'
+
 
 const VerticalCard = ({recipe}) => {
 
 return (
     <>
-        <button  type="button"
-            data-te-toggle="modal"
-            data-te-target="#exampleModalFullscreen"
-            data-te-ripple-init
-            data-te-ripple-color="light"
+        <Link href="/recipe"  
+            
+            // type="button"
+            // data-te-toggle="modal"
+            // data-te-target="#exampleModalFullscreen"
+            // data-te-ripple-init
+            // data-te-ripple-color="light"
             className='bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
             <div className='p-4 h-fit '>
                     {/* <div src={recipe.image} className='h-36 bg-gray-light rounded-xl'>{recipe.image}</div> */}
@@ -43,7 +47,7 @@ return (
                     </div>
                 </div>
             </div>
-        </button>
+        </Link>
 
         
 

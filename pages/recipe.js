@@ -10,14 +10,14 @@ import Image from 'next/image'
 import HorizontalCardHome from '@/components/HorizontalCardHome'
 import Modal from '@/components/Modal'
 
-export default function recipe() {
+const recipe = ()  => {
     return (
         <>
             {/* PAGINA RICETTA: dopo aver cliccato ricette sulla home o su cerca */}
         {/* <div>
           <div className=''> */}
           {/* bg-cover bg-center  */}
-          <div className='immagine hover:transition hover:duration-300 hover:object-none hover:object-center contrast-[1.1] saturate-[1.4]'>
+          <div className='immagine bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center contrast-[1.1] saturate-[1.4]'>
 
                 {/* h-96  */}
             <div className='px-4 pt-16 flex justify-between items-center mb-24'>
@@ -153,3 +153,4 @@ export default function recipe() {
         </>
     )
 }
+export default recipe;

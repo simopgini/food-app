@@ -9,7 +9,7 @@ const SearchCard = ({searchRecipe}) => {
 
 return (
     <div className='px-4 mb-6'>
-        <div className='py-12 flex items-center bg-white h-20 md:h-28 xl:h-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
+        <Link href="/recipe" className='py-12 flex items-center bg-white h-20 md:h-28 xl:h-44 rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
             <div className='ml-2 my-1 mr-2 '>
               <div className='h-20 w-20 md:h-24 xl:h-40 md:w-24 xl:w-40 rounded-xl'>
                 <img 
@@ -39,7 +39,7 @@ return (
                   </div>
               </div>
             </div>
-        </div>
+        </Link>
     </div>
     )
 }

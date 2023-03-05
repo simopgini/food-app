@@ -9,7 +9,7 @@ const HorizontalCardHome = ({recipe}) => {
 
 return (
     <div className="mb-2 flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
-        <a href="#" className="space-y-2">
+        <Link href="/recipe" className="space-y-2">
             <div className="aspect-w-16 aspect-h-9">
                 <img 
                     className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-br-xl rounded-tl-lg"
@@ -25,7 +25,7 @@ return (
                     <span className='font-light text-xs'>30 min</span>
                 </div>
             </div>
-        </a>
+        </Link>
     </div>
     )
 }
