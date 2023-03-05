@@ -3,9 +3,20 @@ import { HomeIcon } from '@heroicons/react/20/solid'
 import {  ChevronLeftIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
+
+const List = () => {
+    const [count, setCount] = useState(0);
+
+    const incrementCount = () => {
+        setCount(count + 1)
+    }
+
+    const reduceCount = () => {
+        setCount(count - 1)
+    }
 
 
-export default function List() {
     return (
         <>
             <div className="xs:h-screen mb-8">
@@ -21,19 +32,18 @@ export default function List() {
                 <h2 className='font-bold text-xl text-[#0A2533]'>My ingredients list:</h2>
                 </div>
 
-
                 <section className='px-4'>
                     <div class="grid grid-cols-1 divide-y divide-slate-200">
-                        <div className='flex items-center space-x-2 py-3'>
+                        <div className='flex items-center space-x-2 py-3 hover:bg-gray-light'>
                             <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid indeterminate:bg-gray-300 rounded-md h-6 w-6 mr-2" />
                             <p className='text-dark-green text-sm'>Lime</p>
                         </div>
-                        <div className='flex items-center space-x-2 py-3'>
+                        <div className='flex items-center space-x-2 py-3 hover:bg-gray-light'>
                             <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                             <p className='text-dark-green text-sm'>Bread</p>
                         </div>
-                        <div className='flex items-center justify-between'>
-                            <div className='flex items-center space-x-2 my-3'>
+                        <div className='flex items-center justify-between  hover:bg-gray-light'>
+                            <div className='flex items-center space-x-2 my-3 hover:bg-gray-light'>
                                 <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                                 <p className='text-dark-green text-sm'>Coffee</p>
                             </div>
@@ -46,45 +56,37 @@ export default function List() {
                                 </button>
                             </div>
                         </div>
-                        <div className='flex items-center justify-between'>
-                            <div className='flex items-center space-x-2 my-3'>
+                        <div className='flex items-center justify-between  hover:bg-gray-light'>
+                            <div className='flex items-center space-x-2 my-3 hover:bg-gray-light'>
                                 <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                                 <p className='text-dark-green text-sm'>Orange juice</p>
                             </div>
                             <div className='flex text-dark-green space-x-2 text-sm '>
-                                <button>
-                                    <MinusCircleIcon className='transition duration-300 hover:scale-110 h-5 w-5 text-green'/>
-                                </button>
-                                <p className=' text-dark-green'>0</p>
-                                <button>
-                                    <PlusCircleIcon className='transition duration-300 hover:scale-110 h-5 w-5 text-green' />
-                                </button>
+                                <MinusCircleIcon onClick={reduceCount} className='transition duration-300 hover:scale-110 h-5 w-5 text-green mr-2'></MinusCircleIcon>
+                                {count}
+                                <PlusCircleIcon onClick={incrementCount} className='transition duration-300 hover:scale-110 h-5 w-5 text-green'></PlusCircleIcon>
                                 <button>
                                     <TrashIcon className='transition duration-300 hover:scale-110 h-5 w-5 text-red-500' />
                                 </button>
                             </div>
                         </div>
-                        <div className='flex items-center justify-between'>
-                            <div className='flex items-center space-x-2 my-3'>
+                        <div className='flex items-center justify-between hover:bg-gray-light'>
+                            <div className='flex items-center space-x-2 my-3 hover:bg-gray-light'>
                                 <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                                 <p className='text-dark-green text-sm'>Paprika</p>
                             </div>
                             <div className='flex text-dark-green space-x-2 text-sm '>
-                                <button>
-                                    <MinusCircleIcon className=' transition duration-300 hover:scale-110 h-5 w-5 text-green'/>
-                                </button>
-                                <p className=' text-dark-green'>1</p>
-                                <button>
-                                    <PlusCircleIcon className='transition duration-300 hover:scale-110 solid h-5 w-5 text-white fill-green' />
-                                </button>
+                                <MinusCircleIcon onClick={reduceCount} className='transition duration-300 hover:scale-110 h-5 w-5 text-green mr-2'></MinusCircleIcon>
+                                {count}
+                                <PlusCircleIcon  onClick={incrementCount} className='transition duration-300 hover:scale-110 solid h-5 w-5 text-white fill-green' />
                                 <button>
                                     <TrashIcon className='transition duration-300 hover:scale-110 h-5 w-5 text-red-500' />
                                 </button>
                             
                             </div>
                         </div>
-                        <div className='flex items-center justify-between'>
-                            <div className='flex items-center space-x-2 my-3'>
+                        <div className='flex items-center justify-between hover:bg-gray-light'>
+                            <div className='flex items-center space-x-2 my-3 hover:bg-gray-light'>
                                 <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                                 <p className='text-gray text-sm line-through'>Avocado</p>
                             </div>
@@ -94,7 +96,7 @@ export default function List() {
                             </div>
                         </div>
 
-                        <div className='flex items-center justify-between'>
+                        <div className='flex items-center justify-between hover:bg-gray-light'>
                             <div className='flex items-center space-x-2 my-3'>
                             <input type="checkbox" className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2" />
                             <p className='text-gray text-sm line-through'>Tomatoes</p>
@@ -125,3 +127,5 @@ export default function List() {
         </>
     )
 }
+
+export default List;

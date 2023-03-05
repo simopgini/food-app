@@ -44,6 +44,7 @@
 
 .immagine {
   background-image: url('https://spoonacular.com/recipeImages/716429-556x370.jpg');
+  background-size:contain;
 }
 
 /* .prova::before {
