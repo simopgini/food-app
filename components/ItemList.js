@@ -1,10 +1,7 @@
 
 import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon, TrashIcon, PencilSquareIcon } from '@heroicons/react/24/outline'
 import { MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/24/solid'
-import { HomeIcon } from '@heroicons/react/20/solid'
 import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useState } from 'react'
 
 const ItemList = ({items, removeItem, editItem}) => {

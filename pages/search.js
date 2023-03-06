@@ -59,7 +59,7 @@ export default function Search() {
 
   return (
       <>
-        <div className="xs:h-screen mb-8">
+        <div className="h-screen mb-8">
             <div>
                 <div className='px-4 mb-6 mt-16 flex justify-between items-center'>
                     <Link href="/" className=' bg-white rounded-lg p-1 shadow-md'><ChevronLeftIcon className='h-6 w-6'/></Link>

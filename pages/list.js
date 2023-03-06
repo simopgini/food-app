@@ -7,21 +7,30 @@ import { useState, useEffect } from 'react'
 import ItemList from '@/components/ItemList'
 import Alert from '@/components/Alert'
 
-const ingredientsList = [
-    {
-        id: '1',
-        name: 'Orange juice',
-      },
-      {
-        id: '2',
-        name: 'Bread',
-    },
-    {
-        id: '3',
-        name: 'Cazzi mia',
-    }
-]
+// const ingredientsList = [
+//     {
+//         id: '1',
+//         name: 'Orange juice',
+//       },
+//       {
+//         id: '2',
+//         name: 'Bread',
+//     },
+//     {
+//         id: '3',
+//         name: 'Cazzi mia',
+//     }
+// ]
 
+// const getLocalStorage = () => {
+//     let listStorage = localStorage.getItem("list")
+//     if (listStorage){
+//         return JSON.parse(localStorage.getItem("list"))
+//     }
+//     else {
+//         return []
+//     }
+// }
 
 const List = () => {
 
@@ -49,7 +58,9 @@ const List = () => {
     }
 
     const [name, setName] = useState('');
+    // const [list, setList] = useState(getLocalStorage());
     const [list, setList] = useState([]);
+
     const [isEditing, setIsEditing] = useState(false);
     const [editId, setEditId] = useState(null);
     const [alert, setAlert] = useState({   
@@ -105,6 +116,15 @@ const List = () => {
         setEditId(id)
         setName(specificItem.title)
     }
+
+    useEffect(() => {
+        localStorage.setItem("list", JSON.stringify(list))
+    }, [list])
+
+    // useEffect(() => {
+    //     localStorage.setItem("list", JSON.stringify(list))
+    // }, [list])
+
     // function handleChange(event) {
     //      setName(event.target.value);
     //  }
@@ -163,8 +183,6 @@ const List = () => {
                             </div>
                         </section>
                     )}
-
-                    
                 </div>
 
 
