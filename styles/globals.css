@@ -47,6 +47,16 @@
   background-size:contain;
 }
 
+.danger {
+  background-color: rgb(227, 150, 150);
+  color: rgb(141, 14, 14)
+}
+
+.success {
+  background-color: rgb(162, 227, 150);
+  color: rgb(56, 141, 14)
+}
+
 /* .prova::before {
   border-left: 4px;
   
