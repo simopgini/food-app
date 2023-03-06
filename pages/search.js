@@ -68,25 +68,25 @@ export default function Search() {
                 </div>
             </div>
 
-        <div className='px-4 flex items-center mb-6'>
-          <label className="flex-1 relative block uppercase">
-            <div className="sr-only">SEARCH</div>
-            <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-              <MagnifyingGlassIcon className='h-4 w-4 mr-1 text-gray' />
-            </span>
-            <input style={{borderWidth: 0}}
-              className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-light w-full  rounded-md py-2 pl-9 pr-3 shadow-md focus:outline-none 
-              focus:border-green focus:ring-green focus:ring-1 sm:text-sm" 
-              placeholder="Search by food name" type="text" name="search"/>
-          </label>
-          <button onClick={fetchSearchedRecipes}
-          className="ml-2">
-            <AdjustmentsHorizontalIcon className='h-8 w-8 mr-1 text-gray' />
-          </button>
-        </div>
+            <div className='px-4 flex items-center mb-6'>
+              <label className="flex-1 relative block uppercase">
+                <div className="sr-only">SEARCH</div>
+                <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                  <MagnifyingGlassIcon className='h-4 w-4 mr-1 text-gray' />
+                </span>
+                <input style={{borderWidth: 0}}
+                  className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-light w-full  rounded-md py-2 pl-9 pr-3 shadow-md focus:outline-none 
+                  focus:border-green focus:ring-green focus:ring-1 sm:text-sm" 
+                  placeholder="Search by food name" type="text" name="search"/>
+              </label>
+              <button onClick={fetchSearchedRecipes}
+              className="ml-2">
+                <AdjustmentsHorizontalIcon className='h-8 w-8 mr-1 text-gray' />
+              </button>
+            </div>
 
 
-        <section className='mb-6'>
+            <section className='mb-6'>
               <div className="container flex-grow w-full mx-auto">
                   <div className="pl-4">
                     <div className=" my-4">
