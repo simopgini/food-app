@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-const ItemList = ({items}) => {
+const ItemList = ({items, removeItem, editItem}) => {
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
@@ -34,10 +34,11 @@ const ItemList = ({items}) => {
                   {count}
                 <PlusCircleIcon onClick={incrementCount} className='transition duration-300 hover:scale-110 h-5 w-5 text-green'></PlusCircleIcon>
                 <button>
-                  <PencilSquareIcon className='hover:scale-110 h-5 w-5 text-green' />                
+                  <PencilSquareIcon onClick={() => editItem(id)} className='hover:scale-110 h-5 w-5 text-green' />                
                 </button>
-                <button>
-                  <TrashIcon className='clear-btn transition duration-300 hover:scale-110 h-5 w-5 text-red-500' />
+                <button >
+                  <TrashIcon  onClick={() => removeItem(id)}
+                              className='clear-btn transition duration-300 hover:scale-110 h-5 w-5 text-red-500' />
                 </button>
             </div>
           </li>
