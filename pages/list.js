@@ -47,15 +47,7 @@ const List = () => {
     
     //     setList(newList);
     // }
-    const [count, setCount] = useState(0);
 
-    const incrementCount = () => {
-        setCount(count + 1)
-    }
-
-    const reduceCount = () => {
-        count > 0 ? setCount(count - 1) : count
-    }
 
     const [name, setName] = useState('');
     // const [list, setList] = useState(getLocalStorage());
@@ -90,7 +82,7 @@ const List = () => {
         } else {
             // show alert
             showAlert(true, "success", "Ingredient added to the list")
-            const newItem = {id: new Date().getTime().toString(), title: name}
+            const newItem = {id: new Date().getTime().toString(), title: name, count:0}
             setList([...list, newItem])
             setName("")
         }
