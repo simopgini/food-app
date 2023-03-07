@@ -39,6 +39,9 @@ module.exports = {
         'gray-line': '#DEDCDC',
         'orange': '#EBA352',
         'gray-dark': '#273444',
+      },
+      variants: {
+        color: ["responsive", "hover", "focus", "active"]
       }
       // ,
       // screens: {

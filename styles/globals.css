@@ -54,6 +54,13 @@
 }
 
 .success {
-  /* background-color: rgb(162, 227, 150); */
   color: rgb(56, 141, 14)
+}
+
+.active {
+  color: #60B99E;
+}
+
+.deactive {
+  color: #8B8E8D;
 }
