@@ -64,3 +64,14 @@
 .deactive {
   color: #8B8E8D;
 }
+
+.active-btn {
+  color: white;
+  background-color: #60B99E;
+}
+
+.deactive-btn {
+  color: rgb(8 34 36);
+  background-color: rgb(241 245 245);
+
+}

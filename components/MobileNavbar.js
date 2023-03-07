@@ -9,15 +9,12 @@ import { HiHome, HiOutlineHome, HiSearch, HiOutlineSearch, HiClipboardList, HiOu
 
 
 const MobileNavbar = () => {
-    const router = useRouter();
 
-    const [toggle, setToggle] = useState(false)
-        const handleClick = () => {
-        setToggle(!toggle)
-    }
+    // const [toggle, setToggle] = useState(false)
+    //     const handleClick = () => {
+    //     setToggle(!toggle)
+    // }
 
-
-    
     // const [active, setActive] = useState(false)
     // const handleClick = () => {
     //     setActive(!active)
@@ -37,6 +34,24 @@ const MobileNavbar = () => {
     //     setColor(e.target.value)
     // }
 
+    const router = useRouter();
+
+    const [toggle, setToggle] = useState("active")
+        const handleClick = () => {
+        setToggle("deactive")
+    }
+    
+    // const [icon, setIcon] = useState(<HiHome className='h-6 w-6 mr-1 hover:text-green transition'/>)
+    // const handleIcon = () => {
+    //     setIcon(<HiOutlineHome className='h-6 w-6 mr-1 hover:text-green transition'/>)
+    // }
+
+    // const [isActive, setIsActive] = useState(false);
+    // const [isActive2, setIsActive2] = useState(false);
+    // const [isActive3, setIsActive3] = useState(false);
+    // const [isActive4, setIsActive4] = useState(false);
+
+
 return (
     <nav className='sticky bottom-0 bg-white border-t border-gray-line'>
         <ul className='py-6 pb-8 px-10 flex justify-between items-center text-sm'>
@@ -46,7 +61,7 @@ return (
                     <button className={router.pathname == "/" ? "active" : "deactive"}
                                 onClick={handleClick}
                                 >
-                        {toggle ? <HiOutlineHome className='h-6 w-6 mr-1 hover:text-green transition'/> : <HiHome className='h-6 w-6 mr-1 hover:text-green transition'/>}
+                        {toggle ? <HiHome className='h-6 w-6 mr-1 hover:text-green transition'/> : <HiOutlineHome className='h-6 w-6 mr-1 hover:text-green transition'/>}
                     </button>
                 </Link>
              </li>
@@ -55,7 +70,7 @@ return (
                 <Link href="/search" legacyBehavior>
                     <a className={router.pathname == "/search" ? "active" : "deactive"}
                         onClick={handleClick}>
-                        {toggle ? <HiOutlineSearch className='h-6 w-6 mr-1 hover:text-green transition'/> : <HiSearch className='h-6 w-6 mr-1 hover:text-green transition'/>}
+                        {toggle ? <HiSearch className='h-6 w-6 mr-1 hover:text-green transition'/> : <HiOutlineSearch className='h-6 w-6 mr-1 hover:text-green transition'/>}
                     </a>
                 </Link>
             </li>
@@ -64,7 +79,7 @@ return (
                 <Link href="/list" legacyBehavior>
                     <a className={router.pathname == "/list" ? "active" : "deactive"}
                     onClick={handleClick}>
-                    {toggle ? <HiOutlineClipboardList className='h-6 w-6 mr-1 hover:text-green transition'/> : <HiClipboardList className='h-6 w-6 mr-1 hover:text-green transition'/>}                    
+                    {toggle ? <HiClipboardList className='h-6 w-6 mr-1 hover:text-green transition'/> : <HiOutlineClipboardList className='h-6 w-6 mr-1 hover:text-green transition'/>}                    
                     </a>
                 </Link>
             </li>
@@ -73,10 +88,54 @@ return (
                 <Link href="/profile" legacyBehavior>
                     <a className={router.pathname == "/profile" ? "active" : "deactive"}
                     onClick={handleClick}>
-                    {toggle ? <HiOutlineUser className='h-6 w-6 mr-1 hover:text-green transition'/> : <HiUser className='h-6 w-6 mr-1 hover:text-green transition'/>}                    
+                    {toggle ? <HiUser className='h-6 w-6 mr-1 hover:text-green transition'/> : <HiOutlineUser className='h-6 w-6 mr-1 hover:text-green transition'/>}                    
                     </a>
                 </Link>
             </li>
+
+
+
+
+
+
+            {/* TEST */}
+            {/* <li>
+                <Link href="/" legacyBehavior>
+                    <button className={router.pathname == "/" ? "active" : "deactive"} onClick={handleClick}>
+                        {isActive ? <HiHome className='h-6 w-6 mr-1 hover:text-green transition' onClick={()=>{setIsActive(!isActive)}}/> : 
+                                  <HiOutlineHome className='h-6 w-6 mr-1 hover:text-green transition' onClick={()=>{setIsActive(!isActive)}} />}            
+                    </button>
+                </Link>
+             </li>
+
+            <li>
+                <Link href="/search" legacyBehavior>
+                    <a className={router.pathname == "/search" ? "active" : "deactive"} onClick={handleClick}>
+                        {isActive2 ? <HiSearch className='h-6 w-6 mr-1 hover:text-green transition' onClick={()=>{setIsActive2(!isActive)}}/> : 
+                                  <HiOutlineSearch className='h-6 w-6 mr-1 hover:text-green transition' onClick={()=>{setIsActive2(!isActive)}} />}    
+                    </a>
+                </Link>
+            </li>
+            
+            <li>
+                <Link href="/list" legacyBehavior>
+                    <a className={router.pathname == "/list" ? "active" : "deactive"} onClick={handleClick}>
+                        {isActive3 ? <HiClipboardList className='h-6 w-6 mr-1 hover:text-green transition' onClick={()=>{setIsActive3(!isActive)}}/> : 
+                                  <HiOutlineClipboardList className='h-6 w-6 mr-1 hover:text-green transition' onClick={()=>{setIsActive3(!isActive)}} />}
+                    </a>
+                </Link>
+            </li>
+            
+            <li>
+                <Link href="/profile" legacyBehavior>
+                    <a className={router.pathname == "/profile" ? "active" : "deactive"} onClick={handleClick}>
+                        {isActive4 ? <HiUser className='h-6 w-6 mr-1 hover:text-green transition' onClick={()=>{setIsActive4(!isActive)}}/> : 
+                                  <HiOutlineUser className='h-6 w-6 mr-1 hover:text-green transition' onClick={()=>{setIsActive4(!isActive)}} />}
+                    </a>
+                </Link>
+            </li> */}
+
+            
 
 
             {/* <li>

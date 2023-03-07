@@ -14,11 +14,15 @@ import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIco
 import Image from 'next/image'
 import HorizontalCardHome from '@/components/HorizontalCardHome'
 import Modal from '@/components/Modal'
+import { useRouter } from 'next/router';
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const router = useRouter();
+
   const [recipes, setrecipes] = useState({results:[
     {
         "id": 716429,
@@ -86,6 +90,11 @@ export default function Home() {
   setrecipes(data);
 };
 
+  const [active, setActive] = useState("active-btn")
+    const handleActive = () => {
+    setActive("deactive-btn")
+  }
+
   return (
     <>
       <Head>
@@ -138,30 +147,58 @@ export default function Home() {
               
               <div className="pl-4 container flex-grow w-full mx-auto">
                     <div className="container my-4">
-                      
+
+
+                      {/* ONCLICK ALL'ENDPOINT */}
                       <div id="scrollContainer"
                         className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-4" >
                         <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
                             <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Breakfast</button>
                         </div>
                         <div
-                          className="flex-none mr-2 md:pb-4 rounded-lg">
+                          className="flex-none mr-2 mb-2  md:pb-4 rounded-lg">
                             <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Main course</button>
                         </div>
                         <div
-                          className="flex-none  mr-2 md:pb-4 rounded-lg">
+                          className="flex-none  mr-2 mb-2 md:pb-4 rounded-lg">
                             <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Snack</button>
                         </div>
                         <div
-                          className="flex-none  mr-2 md:pb-4rounded-lg">
+                          className="flex-none  mr-2 mb-2 md:pb-4rounded-lg">
                             <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dinner</button>
                         </div>
                         <div
-                          className="flex-none  mr-2 md:pb-4  rounded-lg">
+                          className="flex-none  mr-2 mb-2 md:pb-4  rounded-lg">
                             <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dessert</button>
                         </div>
                         
                       </div>
+      
+
+                      {/* TEST AGGIUNGENDO LINK E ACIVE SUL ROUTING */}
+                      {/* <div id="scrollContainer"
+                          className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-center mb-4" >
+                          <div className="flex-none mb-2 mr-2 md:py-4 rounded-lg">
+                              <Link href="/recipe" legacyBehavior>
+                                <a className={router.pathname == "/recipe" ? "active-btn btn-tag active:hover:text-white hover:bg-green px-5 py-2 rounded-full text-sm" : "deactive-btn btn-tag  hover:bg-green px-5 py-2 rounded-full text-sm"}
+                                  onClick={handleActive}>
+                                      Breakfast
+                                </a>                            
+                              </Link>
+                          </div>
+                          
+                          <div
+                            className="flex-none mr-2 md:py-4 rounded-lg">
+                              <Link href="/recipe" legacyBehavior>
+                                <button className={ router.pathname == "/recipe" ? "active-btn btn-tag  hover:bg-green px-5 py-2 rounded-full text-sm" : "deactive-btn btn-tag  hover:bg-green px-5 py-2 rounded-full text-sm"}
+                                  onClick={handleActive}>
+                                      prova
+                                </button>                            
+                              </Link>
+                          </div>
+                          
+                        </div> */}
+                      
                     </div>
                     
                 </div>
@@ -280,6 +317,88 @@ export default function Home() {
             {/* <div className="App ">
               <Modal />
             </div> */}
+
+            {/* CHECK FINALE CON TAILWIND, poi aggiungi nel componente vertical card */}
+            <section class="flex overflow-x-auto pl-4 mb-3">
+              <div className="flex-none">
+                <div className='flex gap-3'>
+                  <div className="bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer px-3 pb-4">
+                    <div className="p-4 h-fit">
+                      <img className="h-auto w-auto hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
+                    </div>
+                    <div className="px-4 py-2"> 
+                      <h2 className="text-lg text-bc1 font-medium title-font">
+                          Readers
+                      </h2>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div className="flex-none">
+                <div className='flex gap-3 '>
+                  <div className="bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer px-3 pb-4">
+                    <img className="hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
+                    <h3 className="tracking-widest text-xs text-black font-medium"> Hello</h3>
+                    <h2 className="text-lg text-bc1 font-medium title-font">
+                        Readers
+                    </h2>
+                    <p className="leading-relaxed text-base text-black">
+                      Dont forget to follow me
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-none">
+                <div className='flex gap-3'>
+                  <div className="bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer px-3 pb-4">
+                    <img className="hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
+                    <h3 className="tracking-widest text-xs text-black font-medium"> Hello</h3>
+                    <h2 className="text-lg text-bc1 font-medium title-font">
+                        Readers
+                    </h2>
+                    <p className="leading-relaxed text-base text-black">
+                      Dont forget to follow me
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-none">
+                <div className='flex gap-3'>
+                  <div className="bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer px-3 pb-4">
+                    <img className="hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
+                    <h3 className="tracking-widest text-xs text-black font-medium"> Hello</h3>
+                    <h2 className="text-lg text-bc1 font-medium title-font">
+                        Readers
+                    </h2>
+                    <p className="leading-relaxed text-base text-black">
+                      Dont forget to follow me
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+            {/* CHECK CON TAILWIND DIRETTAMENTE */}
+            {/* <section className='mt-4 -mb-3'>
+              <div className='not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-800/25'>
+                <div style="background-position: 10px 10px;"
+                    className='absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]'>
+                </div>
+                <div className='relative rounded-xl overflow-auto'>
+                  <div className='max-w-md mx-auto bg-white shadow-xl min-w-0 dark:bg-slate-800 dark:highlight-white/5'>
+                    <div className='overflow-x-auto flex'>
+                      <div className='flex-none py-6 px-3 first:pl-6 last:pr-6'>
+                        <div className='flex flex-col items-center justify-center gap-3'>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section> */}
 
             <section>
               <div className='px-4 pb-3 flex justify-between items-center font-bold'>
