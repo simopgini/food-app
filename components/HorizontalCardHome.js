@@ -6,9 +6,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const HorizontalCardHome = ({recipe}) => {
-
+    
 return (
-    <div className="mb-2 flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
+    // mb-2
+    <div className="my-4 flex-none w-2/3 md:w-1/3 mr-8 md:pb-4 bg-green rounded-lg">
         <Link href="/recipe" className="space-y-2">
             <div className="aspect-w-16 aspect-h-9">
                 <img 

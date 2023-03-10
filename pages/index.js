@@ -106,7 +106,7 @@ export default function Home() {
 
       {/* HOME SECTION */}
       <div>
-          <div className="xs:h-full mb-8">
+          <div className=" mb-8">
             <div className='mt-14 mb-6 pl-4 text-dark-green text-xl font-bold'>
               Hello 👋
             </div>
@@ -139,7 +139,45 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='mb-6'>
+
+            <section className='mb-3'>
+              <div className='pl-4'>
+                <h1 className=' text-dark-green text-lg font-bold'>Category</h1>
+                {/* container flex-grow w-full mx-auto */}
+                  <div className="">
+                    <div className="">
+                      <div className="container">
+                        <div className="flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
+
+                          <button className="my-6 px-5  py-2.5 flex-none text-white bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                            breakfast
+                          </button>
+
+                          <button className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green active:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                                breakfast
+                          </button>
+
+                          <button className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                          asdasd
+                          </button>
+
+                          <button className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                          prova
+                          </button>
+
+                          <button className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                          breakkie
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              </div>
+            </section>
+
+            {/* TAG DA DECOMMENTARE VECCHIO */}
+            {/* <section className='mb-6'>
               <div className='px-4 flex justify-between items-center font-bold'>
                 <h1 className='text-dark-green text-lg font-bold'>Category</h1>
                 <div className='text-green text-xs'>See all</div>
@@ -148,10 +186,8 @@ export default function Home() {
               <div className="pl-4 container flex-grow w-full mx-auto">
                     <div className="container my-4">
 
-
-                      {/* ONCLICK ALL'ENDPOINT */}
                       <div id="scrollContainer"
-                        className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-4" >
+                        className="flex flex-no-wrap overflow-auto scrolling-touch items-start mb-4" >
                         <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
                             <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Breakfast</button>
                         </div>
@@ -173,36 +209,10 @@ export default function Home() {
                         </div>
                         
                       </div>
-      
-
-                      {/* TEST AGGIUNGENDO LINK E ACIVE SUL ROUTING */}
-                      {/* <div id="scrollContainer"
-                          className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-center mb-4" >
-                          <div className="flex-none mb-2 mr-2 md:py-4 rounded-lg">
-                              <Link href="/recipe" legacyBehavior>
-                                <a className={router.pathname == "/recipe" ? "active-btn btn-tag active:hover:text-white hover:bg-green px-5 py-2 rounded-full text-sm" : "deactive-btn btn-tag  hover:bg-green px-5 py-2 rounded-full text-sm"}
-                                  onClick={handleActive}>
-                                      Breakfast
-                                </a>                            
-                              </Link>
-                          </div>
-                          
-                          <div
-                            className="flex-none mr-2 md:py-4 rounded-lg">
-                              <Link href="/recipe" legacyBehavior>
-                                <button className={ router.pathname == "/recipe" ? "active-btn btn-tag  hover:bg-green px-5 py-2 rounded-full text-sm" : "deactive-btn btn-tag  hover:bg-green px-5 py-2 rounded-full text-sm"}
-                                  onClick={handleActive}>
-                                      prova
-                                </button>                            
-                              </Link>
-                          </div>
-                          
-                        </div> */}
-                      
                     </div>
                     
                 </div>
-            </section>
+            </section> */}
 
             {/* <section className='mb-6'>
               <div className="container flex-grow w-full mx-auto">
@@ -318,8 +328,70 @@ export default function Home() {
               <Modal />
             </div> */}
 
+
+            {/* <section className='mb-6'>
+
+              <div className='pl-4'>
+                <div className='pr-4 pb-3 flex justify-between items-center font-bold'>
+                  <h1 className='text-dark-green text-lg font-bold'>Category</h1>
+                  <div className='text-green text-xs'>See all</div>
+                </div>
+                <div className='flex overflow-auto gap-3 md:gap-4 lg:gap-6'>
+                  <div className="flex-none">
+                    <div className='flex'>
+                            <div className="flex-none mb-2 md:pb-4 rounded-lg">
+                                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm hover:scale-105 duration-500 cursor-pointer' onClick={fetchRecipes}>Breakfast</button>
+                            </div>
+                    </div>
+                  </div>
+                  <div className="flex-none">
+                    <div className='flex gap-3'>
+                            <div className="flex-none mb-2 md:pb-4 rounded-lg">
+                                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm hover:scale-105 duration-500 cursor-pointer' onClick={fetchRecipes}>ciaociaooo</button>
+                            </div>
+                    </div>
+                  </div>
+                  <div className="flex-none">
+                    <div className='flex gap-3'>
+                            <div className="flex-none mb-2 md:pb-4 rounded-lg">
+                                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm hover:scale-105 duration-500 cursor-pointer' onClick={fetchRecipes}>hola</button>
+                            </div>
+                    </div>
+                  </div>
+                  <div className="flex-none">
+                    <div className='flex gap-3'>
+                            <div className="flex-none mb-2 md:pb-4 rounded-lg">
+                                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm hover:scale-105 duration-500 cursor-pointer' onClick={fetchRecipes}>Bast</button>
+                            </div>
+                    </div>
+                  </div>
+                  <div className="flex-none">
+                    <div className='flex gap-3'>
+                            <div className="flex-none mb-2 md:pb-4 rounded-lg">
+                                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm hover:scale-105 duration-500 cursor-pointer' onClick={fetchRecipes}>asfast</button>
+                            </div>
+                    </div>
+                  </div>
+                  <div className="flex-none">
+                    <div className='flex gap-3'>
+                            <div className="flex-none mb-2 md:pb-4 rounded-lg">
+                                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm hover:scale-105 duration-500 cursor-pointer' onClick={fetchRecipes}>Breakfast</button>
+                            </div>
+                    </div>
+                  </div>
+                  <div className="flex-none">
+                    <div className='flex gap-3'>
+                            <div className="flex-none mb-2 md:pb-4 rounded-lg">
+                                <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm hover:scale-105 duration-500 cursor-pointer' onClick={fetchRecipes}>dfg</button>
+                            </div>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
+            </section> */}
             {/* CHECK FINALE CON TAILWIND, poi aggiungi nel componente vertical card */}
-            <section class="flex overflow-x-auto pl-4 mb-3">
+            {/* <section class="flex overflow-x-auto pl-4 mb-3">
               <div className="flex-none">
                 <div className='flex gap-3'>
                   <div className="bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer px-3 pb-4">
@@ -327,58 +399,75 @@ export default function Home() {
                       <img className="h-auto w-auto hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
                     </div>
                     <div className="px-4 py-2"> 
-                      <h2 className="text-lg text-bc1 font-medium title-font">
+                      <h2 className="text-sm pb-1 font-semibold text-dark-green mb-1">
                           Readers
                       </h2>
+                      <div className='flex justify-between text-gray pb-6'>
+                        <div className='flex items-center text-sm'>
+                            <FireIcon className='h-4 w-4 mr-1' />
+                            <span className='font-light text-xs'>200 Kcal</span>
+                        </div>
+                        <div className='flex items-center text-sm'>
+                            <ClockIcon className='h-4 w-4 mr-1' />
+                            <span className='font-light text-xs'>30 min</span>
+                        </div>
+                      </div>
                     </div>
-
-                  </div>
-                </div>
-              </div>
-              <div className="flex-none">
-                <div className='flex gap-3 '>
-                  <div className="bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer px-3 pb-4">
-                    <img className="hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
-                    <h3 className="tracking-widest text-xs text-black font-medium"> Hello</h3>
-                    <h2 className="text-lg text-bc1 font-medium title-font">
-                        Readers
-                    </h2>
-                    <p className="leading-relaxed text-base text-black">
-                      Dont forget to follow me
-                    </p>
                   </div>
                 </div>
               </div>
               <div className="flex-none">
                 <div className='flex gap-3'>
                   <div className="bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer px-3 pb-4">
-                    <img className="hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
-                    <h3 className="tracking-widest text-xs text-black font-medium"> Hello</h3>
-                    <h2 className="text-lg text-bc1 font-medium title-font">
-                        Readers
-                    </h2>
-                    <p className="leading-relaxed text-base text-black">
-                      Dont forget to follow me
-                    </p>
+                    <div className="p-4 h-fit">
+                      <img className="h-auto w-auto hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
+                    </div>
+                    <div className="px-4 py-2"> 
+                      <h2 className="text-sm pb-1 font-semibold text-dark-green mb-1">
+                          Readers
+                      </h2>
+                      <div className='flex justify-between text-gray pb-6'>
+                        <div className='flex items-center text-sm'>
+                            <FireIcon className='h-4 w-4 mr-1' />
+                            <span className='font-light text-xs'>200 Kcal</span>
+                        </div>
+                        <div className='flex items-center text-sm'>
+                            <ClockIcon className='h-4 w-4 mr-1' />
+                            <span className='font-light text-xs'>30 min</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="flex-none">
                 <div className='flex gap-3'>
                   <div className="bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer px-3 pb-4">
-                    <img className="hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
-                    <h3 className="tracking-widest text-xs text-black font-medium"> Hello</h3>
-                    <h2 className="text-lg text-bc1 font-medium title-font">
-                        Readers
-                    </h2>
-                    <p className="leading-relaxed text-base text-black">
-                      Dont forget to follow me
-                    </p>
+                    <div className="p-4 h-fit">
+                      <img className="h-auto w-auto hover:transition hover:duration-300 hover:object-none hover:object-center rounded-xl contrast-[1.1] saturate-[1.4]" src="https://spoonacular.com/recipeImages/511728-312x231.jpg" alt="content"/>
+                    </div>
+                    <div className="px-4 py-2"> 
+                      <h2 className="text-sm pb-1 font-semibold text-dark-green mb-1">
+                          Readers
+                      </h2>
+                      <div className='flex justify-between text-gray pb-6'>
+                        <div className='flex items-center text-sm'>
+                            <FireIcon className='h-4 w-4 mr-1' />
+                            <span className='font-light text-xs'>200 Kcal</span>
+                        </div>
+                        <div className='flex items-center text-sm'>
+                            <ClockIcon className='h-4 w-4 mr-1' />
+                            <span className='font-light text-xs'>30 min</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              
+              
 
-            </section>
+            </section> */}
 
             {/* CHECK CON TAILWIND DIRETTAMENTE */}
             {/* <section className='mt-4 -mb-3'>
@@ -400,7 +489,7 @@ export default function Home() {
               </div>
             </section> */}
 
-            <section>
+            <section className=''>
               <div className='px-4 pb-3 flex justify-between items-center font-bold'>
                 <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
                 <div className='text-green text-xs'>See all</div>
@@ -419,6 +508,32 @@ export default function Home() {
         
         </div>
 
+
+
+        
+                    {/* NEW: TEST AGGIUNGENDO LINK E ACIVE SUL ROUTING: bottoni homepage */}
+                      {/* <div id="scrollContainer"
+                          className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-center mb-4" >
+                          <div className="flex-none mb-2 mr-2 md:py-4 rounded-lg">
+                              <Link href="/recipe" legacyBehavior>
+                                <a className={router.pathname == "/recipe" ? "active-btn btn-tag active:hover:text-white hover:bg-green px-5 py-2 rounded-full text-sm" : "deactive-btn btn-tag  hover:bg-green px-5 py-2 rounded-full text-sm"}
+                                  onClick={handleActive}>
+                                      Breakfast
+                                </a>                            
+                              </Link>
+                          </div>
+                          
+                          <div
+                            className="flex-none mr-2 md:py-4 rounded-lg">
+                              <Link href="/recipe" legacyBehavior>
+                                <button className={ router.pathname == "/recipe" ? "active-btn btn-tag  hover:bg-green px-5 py-2 rounded-full text-sm" : "deactive-btn btn-tag  hover:bg-green px-5 py-2 rounded-full text-sm"}
+                                  onClick={handleActive}>
+                                      prova
+                                </button>                            
+                              </Link>
+                          </div>
+                          
+                        </div> */}
 
 
 
