@@ -1,9 +1,6 @@
-
-import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon, TrashIcon, PencilSquareIcon, MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
-import { HomeIcon } from '@heroicons/react/20/solid'
-import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 import Link from 'next/link'
+import { HiOutlineFire, HiOutlineClock } from "react-icons/hi";
 
 const SearchCard = ({searchRecipe}) => {
 
@@ -27,11 +24,11 @@ return (
                 <h2 className='text-base pb-1 font-semibold text-dark-green'>{searchRecipe.title}</h2>
                   <div className='flex justify-between text-gray pb-2'>
                     <div className='flex items-center text-sm'>
-                      <ClockIcon className='h-4 w-4 mr-1' />
+                      <HiOutlineClock className='h-4 w-4 mr-1' />
                       <span className='font-light text-xs'>5 Min</span>
                     </div>
                     <div className='flex items-center text-xs'>
-                    <FireIcon className='h-4 w-4 mr-1' />
+                    <HiOutlineFire className='h-4 w-4 mr-1' />
                       <span className='font-light text-xs'>176 Kcal</span>
                     </div>
                   </div>

@@ -1,10 +1,10 @@
-import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline'
-import { HomeIcon } from '@heroicons/react/20/solid'
-import { MagnifyingGlassIcon, ChevronLeftIcon } from '@heroicons/react/24/solid'
+import { AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import SearchCard from '@/components/SearchCard'
 import { useState } from 'react'
 
+// HiOutlineFire, HiOutlineClock, HiArrowLeft, heart, HiSearch, cerca3row, più, meno, edit, delete
+import { HiOutlineSearch, HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Search() {
   const [searchRecipes, setSearchedRecipes] = useState({results:[]});
@@ -62,7 +62,9 @@ export default function Search() {
         <div className="h-screen mb-8">
             <div>
                 <div className='px-4 mb-6 mt-16 flex justify-between items-center'>
-                    <Link href="/" className=' bg-white rounded-lg p-1 shadow-md'><ChevronLeftIcon className='h-6 w-6'/></Link>
+                    <Link href="/" className=' bg-white rounded-lg p-1 shadow-md'>
+                      <HiOutlineChevronLeft className='h-6 w-6'/>
+                    </Link>
                     <div className='flex-1 bg-white'></div>
                     <div className='flex-auto uppercase p-1 font-bold text-xl'>Search</div>
                 </div>
@@ -72,7 +74,7 @@ export default function Search() {
               <label className="flex-1 relative block uppercase">
                 <div className="sr-only">SEARCH</div>
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                  <MagnifyingGlassIcon className='h-4 w-4 mr-1 text-gray' />
+                  <HiOutlineSearch className='h-5 w-5 mr-1 text-gray' />
                 </span>
                 <input style={{borderWidth: 0}}
                   className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-light w-full  rounded-md py-2 pl-9 pr-3 shadow-md focus:outline-none 
