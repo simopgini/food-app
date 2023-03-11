@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon, TrashIcon, PencilSquareIcon, MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
-import { HomeIcon } from '@heroicons/react/20/solid'
-import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
 import Image from "next/image";
+import { HiOutlineClock, HiOutlineFire, HiOutlineArrowLeft, HiHeart } from 'react-icons/hi';
 
 
 const Modal = () => {
@@ -37,8 +35,8 @@ const Modal = () => {
                   >
                     
                         <div className='px-4 mt-16 flex justify-between items-center'>
-                            <button onClick={() => setShowModal(false)} className='bg-gray-mid rounded-lg p-1'><ChevronLeftIcon className='h-6 w-6'/></button>
-                            <div className='bg-gray-mid rounded-lg p-1'><HeartIcon className='h-6 w-6 text-green'/></div>
+                            <button onClick={() => setShowModal(false)} className='bg-gray-mid rounded-lg p-1'><HiOutlineArrowLeft className='h-6 w-6'/></button>
+                            <div className='bg-gray-mid rounded-lg p-1'><HiHeart className='h-6 w-6 text-green'/></div>
                         </div>
                         {/* <Image src="/avocado.jpg" width="130" height="130"/> */}
                         {/* <div className="bg-cover bg-center" style={{backgroundImage: url('/avocado.jpg')}}></div> */}
@@ -51,7 +49,7 @@ const Modal = () => {
                                 Avocado Toast
                             </h1>
                             <p className='flex text-gray'>
-                                <ClockIcon className='h-4 w-4 mr-1' />
+                                <HiOutlineClock className='h-4 w-4 mr-1' />
                                 <span className='font-light text-xs'>10 min</span>
                             </p>
                             </div>
@@ -62,7 +60,7 @@ const Modal = () => {
                                 <p>80g carbs</p>
                                 </div>
                                 <div className='mb-4 flex items-center'>
-                                <div className='bg-gray-mid rounded-lg p-1 mr-2'><FireIcon className='h-5 w-5'/></div>
+                                <div className='bg-gray-mid rounded-lg p-1 mr-2'><HiOutlineFire className='h-5 w-5'/></div>
                                 <p>275 Kcal</p>
                                 </div>
                             </div>
