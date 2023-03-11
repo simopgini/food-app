@@ -123,7 +123,7 @@ export default function Home() {
                     <div className="container my-4">
                       
                       <div id="scrollContainer"
-                        className="flex flex-no-wrap overflow-x-scrollv gap-2 lg:gap-4 scrolling-touch items-start mb-4" >
+                        className="flex flex-no-wrap overflow-x-auto gap-3 lg:gap-4 scrolling-touch items-start mb-4" >
                           
                         {recipes.results.map((recipe) => {
                           return (
