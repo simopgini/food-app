@@ -1,10 +1,8 @@
-import { AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import SearchCard from '@/components/SearchCard'
 import { useState } from 'react'
 
-// HiOutlineFire, HiOutlineClock, HiArrowLeft, heart, HiSearch, cerca3row, più, meno, edit, delete
-import { HiOutlineSearch, HiOutlineChevronLeft } from "react-icons/hi";
+import { HiOutlineSearch, HiOutlineChevronLeft, HiOutlineAdjustments } from "react-icons/hi";
 
 export default function Search() {
   const [searchRecipes, setSearchedRecipes] = useState({results:[]});
@@ -83,10 +81,9 @@ export default function Search() {
               </label>
               <button onClick={fetchSearchedRecipes}
               className="ml-2">
-                <AdjustmentsHorizontalIcon className='h-8 w-8 mr-1 text-gray' />
+                <HiOutlineAdjustments className='h-7 w-7 mr-1 text-gray rotate-90' />
               </button>
             </div>
-
 
             <section className='mb-6'>
               <div className="flex-grow w-full mx-auto">

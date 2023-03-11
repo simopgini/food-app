@@ -1,8 +1,6 @@
-
-import { ClockIcon, FireIcon, AdjustmentsHorizontalIcon, TrashIcon, PencilSquareIcon } from '@heroicons/react/24/outline'
-import { MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/24/solid'
-import { ClipboardIcon, MagnifyingGlassIcon, UserIcon, ChevronLeftIcon, HeartIcon } from '@heroicons/react/24/solid'
 import { useState } from 'react'
+import { HiOutlineChevronLeft, HiOutlinePlusCircle, HiPlusCircle, HiMinusCircle, HiOutlineMinusCircle, HiOutlinePencilAlt, HiOutlineTrash } from "react-icons/hi";
+
 
 const ItemList = ({items, removeItem, editItem}) => {
   const [count, setCount] = useState(0);
@@ -30,14 +28,14 @@ const ItemList = ({items, removeItem, editItem}) => {
                 <p className='text-dark-green text-sm'>{item.title}</p>
               </div>
               <div className='flex text-dark-green space-x-2 text-sm'>
-                <MinusCircleIcon onClick={() => reduceCount(item)} className='transition duration-300 hover:scale-110 h-5 w-5 text-green mr-2'></MinusCircleIcon>
+                <HiMinusCircle onClick={() => reduceCount(item)} className='transition duration-300 hover:scale-110 h-5 w-5 text-green mr-2'></HiMinusCircle>
                   {item.count}
-                <PlusCircleIcon onClick={() => incrementCount(item)} className='transition duration-300 hover:scale-110 h-5 w-5 text-green'></PlusCircleIcon>
+                <HiPlusCircle onClick={() => incrementCount(item)} className='transition duration-300 hover:scale-110 h-5 w-5 text-green'></HiPlusCircle>
                 <button>
-                  <PencilSquareIcon onClick={() => editItem(item.id)} className='hover:scale-110 h-5 w-5 text-green' />                
+                  <HiOutlinePencilAlt onClick={() => editItem(item.id)} className='hover:scale-110 h-5 w-5 text-green' />                
                 </button>
                 <button >
-                  <TrashIcon  onClick={() => removeItem(item.id)}
+                  <HiOutlineTrash  onClick={() => removeItem(item.id)}
                               className='clear-btn transition duration-300 hover:scale-110 h-5 w-5 text-red-500' />
                 </button>
             </div>
