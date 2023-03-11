@@ -87,7 +87,7 @@ export default function Search() {
 
 
             <section className='mb-6'>
-              <div className="container flex-grow w-full mx-auto">
+              <div className=" flex-grow w-full mx-auto">
                   <div className="pl-4">
                     <div className=" my-4">
                       

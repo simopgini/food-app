@@ -140,33 +140,41 @@ export default function Home() {
             </section>
 
 
-            <section className='mb-3'>
-              <div className='pl-4'>
-                <h1 className=' text-dark-green text-lg font-bold'>Category</h1>
+            <section className='mb-6'>
+              <div className='px-4 flex justify-between items-center font-bold'>
+                <h1 className='text-dark-green text-lg font-bold'>Category</h1>
+                <div className='text-green text-xs'>See all</div>
+              </div>
+              <div className='flex-grow w-full mx-auto'>
                 {/* container flex-grow w-full mx-auto */}
-                  <div className="">
-                    <div className="">
-                      <div className="container">
+                  <div className="pl-4">
+                    <div className="my-4">
+                      <div className="">
                         <div className="flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
 
-                          <button className="my-6 px-5  py-2.5 flex-none text-white bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
-                            breakfast
+                          <button onClick={fetchRecipes}
+                                  className="mb-2 px-5  py-2.5 flex-none text-white bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                            Breakfast
                           </button>
 
-                          <button className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green active:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
-                                breakfast
+                          <button onClick={fetchRecipes}
+                                  className="mb-2 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green active:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                                Main course
                           </button>
 
-                          <button className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
-                          asdasd
+                          <button onClick={fetchRecipes}
+                                  className="mb-2 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                          Snack
                           </button>
 
-                          <button className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
-                          prova
+                          <button onClick={fetchRecipes}
+                                  className="mb-2 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                          Dinner
                           </button>
 
-                          <button className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
-                          breakkie
+                          <button onClick={fetchRecipes}
+                                  className="mb-2 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                          Dessert
                           </button>
                         </div>
                       </div>
@@ -176,43 +184,51 @@ export default function Home() {
               </div>
             </section>
 
-            {/* TAG DA DECOMMENTARE VECCHIO */}
-            {/* <section className='mb-6'>
+            {/* <section className='mb-3'>
               <div className='px-4 flex justify-between items-center font-bold'>
                 <h1 className='text-dark-green text-lg font-bold'>Category</h1>
                 <div className='text-green text-xs'>See all</div>
               </div>
-              
-              <div className="pl-4 container flex-grow w-full mx-auto">
-                    <div className="container my-4">
+              <div className='pl-4'>
+                // container flex-grow w-full mx-auto
+                  <div className="">
+                    <div className="">
+                      <div className="container">
+                        <div className="flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
 
-                      <div id="scrollContainer"
-                        className="flex flex-no-wrap overflow-auto scrolling-touch items-start mb-4" >
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
-                            <button className='btn-tag bg-green hover:bg-green text-white px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Breakfast</button>
+                          <button onClick={fetchRecipes}
+                                  className="my-6 px-5  py-2.5 flex-none text-white bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                            Breakfast
+                          </button>
+
+                          <button onClick={fetchRecipes}
+                                  className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green active:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                                Main course
+                          </button>
+
+                          <button onClick={fetchRecipes}
+                                  className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                          Snack
+                          </button>
+
+                          <button onClick={fetchRecipes}
+                                  className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                          Dinner
+                          </button>
+
+                          <button onClick={fetchRecipes}
+                                  className="my-6 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+                          Dessert
+                          </button>
                         </div>
-                        <div
-                          className="flex-none mr-2 mb-2  md:pb-4 rounded-lg">
-                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green  hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Main course</button>
-                        </div>
-                        <div
-                          className="flex-none  mr-2 mb-2 md:pb-4 rounded-lg">
-                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Snack</button>
-                        </div>
-                        <div
-                          className="flex-none  mr-2 mb-2 md:pb-4rounded-lg">
-                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dinner</button>
-                        </div>
-                        <div
-                          className="flex-none  mr-2 mb-2 md:pb-4  rounded-lg">
-                            <button  className='btn-tag bg-gray-light hover:bg-green active:bg-green hover:text-white text-dark-green px-5 py-2 rounded-full text-sm' onClick={fetchRecipes}>Dessert</button>
-                        </div>
-                        
                       </div>
                     </div>
-                    
-                </div>
+                  </div>
+                
+              </div>
             </section> */}
+
+
 
             {/* <section className='mb-6'>
               <div className="container flex-grow w-full mx-auto">
