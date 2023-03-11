@@ -511,7 +511,7 @@ export default function Home() {
                 <div className='text-green text-xs'>See all</div>
               </div>
 
-              <div className='items-stretch grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-x-10 md:gap-y-10 sm:gap-x-8 sm:gap-y-8 gap-x-2 gap-y-2 text-white px-4'>
+              <div className='items-stretch grid 2xl:grid-cols-7 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-x-10 md:gap-y-10 sm:gap-x-8 sm:gap-y-8 gap-x-2 gap-y-2 text-white px-4'>
                 {recipes.results.map((recipe) => {
                 return (
                   <VerticalCard key={recipe.id} recipe={recipe} className=" "/>
