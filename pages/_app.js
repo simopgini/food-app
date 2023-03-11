@@ -1,6 +1,5 @@
 import '@/styles/globals.css'
 import React from 'react'
-
 import MobileNavbar from '@/components/MobileNavbar'
 
 
