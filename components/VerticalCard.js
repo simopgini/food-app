@@ -38,12 +38,6 @@ return (
                 </div>
             </div>
         </Link>
-
-        
-
-        
-
-        
 </>
     )
 }

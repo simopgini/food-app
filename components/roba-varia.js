@@ -239,4 +239,26 @@
                     </div>
                 </div>
             </div> */}
-            
+
+                        {/* <div className='ml-2 my-1 mr-2 '>
+              <div className='h-20 w-20 md:h-24 xl:h-40 md:w-24 xl:w-40 rounded-xl'>
+                <img 
+                        className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-lg"
+                        src={searchRecipe.image} 
+                        alt={searchRecipe.title} 
+                        // fill=true
+                        />
+              </div>
+            </div> */}
+
+                        // SEARCHCARD DENTRO LINK
+            // <div className='ml-2 my-1 mr-2 '>
+            //   <div className='h-20 w-20 md:h-24 xl:h-40 md:w-24 xl:w-40 rounded-xl'>
+            //     <img 
+            //             className="contrast-[1.1] saturate-[1.4] object-cover shadow-md hover:shadow-xl h-20 md:h-24 xl:h-40 rounded-lg"
+            //             src={searchRecipe.image} 
+            //             alt={searchRecipe.title} 
+            //             // fill=true
+            //             />
+            //   </div>
+            // </div>
