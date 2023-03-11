@@ -7,6 +7,7 @@ import Image from 'next/image'
 import HorizontalCardHome from '@/components/HorizontalCardHome'
 import Modal from '@/components/Modal'
 import { useRouter } from 'next/router';
+import DesktopNavbar from '@/components/DesktopNavbar'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -98,6 +99,9 @@ export default function Home() {
 
       {/* HOME SECTION */}
       <div>
+        
+        {/* <DesktopNavbar /> */}
+
           <div className=" mb-8">
             <div className='mt-14 mb-6 pl-4 text-dark-green text-xl font-bold'>
               Hello 👋
