@@ -9,6 +9,7 @@ import Modal from '@/components/Modal'
 import { useRouter } from 'next/router';
 import DesktopNavbar from '@/components/DesktopNavbar'
 import RecipeVerticalCard from '@/components/RecipeVerticalCard'
+import Link from 'next/link'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -135,10 +136,9 @@ export default function Home() {
             <section className='mb-3'>
               <div className='px-4 flex justify-between items-center font-bold'>
                 <h1 className='text-dark-green text-lg font-bold'>Category</h1>
-                <div className='text-green text-xs'>See all</div>
+                {/* <Link href="/allRecipes" className='text-green text-xs'>See all</Link> */}
               </div>
               <div className='flex-grow w-full mx-auto'>
-                {/* container flex-grow w-full mx-auto */}
                   <div className="pl-4">
                     <div className="my-4">
                       <div className="">
@@ -180,7 +180,7 @@ export default function Home() {
             <section className='mb-6'>
               <div className='px-4 pb-3 flex justify-between items-center font-bold'>
                 <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
-                <div className='text-green text-xs'>See all</div>
+                {/* <Link href="/allRecipes" className='text-green text-xs'>See all</Link> */}
               </div>
 
               <div className='flex-grow w-full mx-auto'>

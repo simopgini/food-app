@@ -92,7 +92,7 @@ export default function Search() {
                       
                       <div id="scrollContainer"
                         className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start" >
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-green hover:bg-green text-white px-5 rounded-full text-sm'>
                               <span className='mr-2'>Italian</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -100,7 +100,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4  mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>Spanish</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -108,7 +108,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>Japanese</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -116,7 +116,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>India</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -124,7 +124,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>Mexican</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -132,7 +132,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>Middle Eastern</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -140,7 +140,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>Chinese</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -148,7 +148,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>Greek</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -156,7 +156,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>French</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -164,7 +164,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>American</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -172,7 +172,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>German</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -180,7 +180,7 @@ export default function Search() {
                             </button>
                         </div>
 
-                        <div className="flex-none mb-2 mr-2 md:pb-4 rounded-lg">
+                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>British</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
