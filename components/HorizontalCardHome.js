@@ -9,7 +9,7 @@ return (
     <div className="my-4 flex-none  rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer shadow-md hover:shadow-lg">
         <Link href="/recipe" className="">
 
-            <div className='relative h-40 w-64 sm:h-40 sm:w-56'>
+            <div className='relative h-40 w-64 sm:h-40 sm:w-56 lg:h-52 lg:w-80'>
                 <Image 
                     className='contrast-[1.1] saturate-[1.4] rounded-xl'
                     priority
