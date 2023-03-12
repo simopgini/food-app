@@ -7,7 +7,7 @@ const VerticalCard = ({recipe}) => {
 return (
     <>
         <Link href="/recipe"  
-            className='bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
+            className='w-48 first-of-type:ml-1.5 last-of-type:mr-2 mb-4 bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
             <div className='pt-4 py-2 md:pt-4 md:py-2 flex justify-center'>
                 <div className='mx-4 relative h-28 w-36 md:h-38 md:w-44 xl:mx-4'>
                     <Image 
