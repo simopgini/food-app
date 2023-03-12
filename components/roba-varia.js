@@ -262,3 +262,33 @@
             //             />
             //   </div>
             // </div>
+
+            {/* HORIZONTAL CARD HOME OLD */}
+            {/* <section className='mb-6'>
+              <div className='pl-4'>
+                <h1 className=' text-dark-green text-lg font-bold'>Getting Inspired</h1>
+
+                // SCROLL-X CARDS
+                // container
+                // pl-4 py-4 sm:py-16
+                <div className="container flex-grow w-full mx-auto">
+                  // mx-auto w-full md:w-4/5 px-4 //
+                  <div className="">
+                    <div className="container my-4">
+                      
+                      <div className="flex flex-no-wrap overflow-x-auto gap-3 lg:gap-4 scrolling-touch items-start mb-4" >
+                          
+                        {recipes.results.map((recipe) => {
+                          return (
+                            <HorizontalCardHome key={recipe.id} recipe={recipe} className=" "/>
+                              )
+                            })
+                        }
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </section> */}
+        
