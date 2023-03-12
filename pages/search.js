@@ -91,7 +91,7 @@ export default function Search() {
                     <div className=" my-4">
                       
                       <div id="scrollContainer"
-                        className="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start" >
+                        className="flex flex-no-wrap overflow-x-auto scrolling-touch items-start" >
                         <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-green hover:bg-green text-white px-5 rounded-full text-sm'>
                               <span className='mr-2'>Italian</span> 
