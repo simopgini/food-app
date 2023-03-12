@@ -8,7 +8,7 @@ import HorizontalCardHome from '@/components/HorizontalCardHome'
 import Modal from '@/components/Modal'
 import { useRouter } from 'next/router';
 import DesktopNavbar from '@/components/DesktopNavbar'
-import { HiOutlineClock, HiOutlineFire } from 'react-icons/hi'
+import { HiClock, HiOutlineClock, HiOutlineFire } from 'react-icons/hi'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -119,8 +119,7 @@ export default function Home() {
                   <div className="">
                     <div className="container my-4">
                       
-                      <div id="scrollContainer"
-                        className="flex flex-no-wrap overflow-x-auto gap-3 lg:gap-4 scrolling-touch items-start mb-4" >
+                      <div className="flex flex-no-wrap overflow-x-auto gap-3 lg:gap-4 scrolling-touch items-start mb-4" >
                           
                         {recipes.results.map((recipe) => {
                           return (
@@ -135,7 +134,43 @@ export default function Home() {
                 
               </div>
             </section>
+            
+            <section className='mb-6'>
+              <div className='px-4 pb-3 flex justify-between items-center font-bold'>
+                <h1 className='text-dark-green text-lg font-bold'>Getting Inspired</h1>
+              </div>
+              <div className='flex-grow w-full mx-auto'>
+                  <div className="pl-4">
+                    <div className="my-4">
+                      <div className="">
+                        <div className="flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
 
+                          <div className='my-4 flex-none  rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer shadow-md hover:shadow-lg'>
+                                <div className='relative h-40 w-64 sm:h-40 sm:w-56 lg:h-52 lg:w-80'>
+                                    <Image 
+                                        className='hover:transition hover:duration-300 rounded-xl contrast-[1.1] saturate-[1.4]'
+                                        priority
+                                        src="https://spoonacular.com/recipeImages/511728-312x231.jpg"
+                                        alt="dxf"
+                                        fill
+                                        style={{objectFit:"fill"}}
+                                    />
+                                  <div className="w-full rounded-b-xl bg-gradient-to-t from-dark-green to-transparent  bottom-0 absolute px-2 py-2 text-white">
+                                    <h2 className="text-base pb-1 font-semibold truncate">sdhjgr rtd</h2>
+                                    <div className='flex items-center text-sm'>
+                                        <HiClock className='h-4 w-4 mr-1 text-white' />
+                                        <span className='font-light text-xs'>30 min</span>
+                                    </div>
+                                  </div> 
+                                </div>
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </section>
 
             <section className='mb-6'>
               <div className='px-4 flex justify-between items-center font-bold'>
@@ -183,7 +218,7 @@ export default function Home() {
 
 
             <section className='mb-6'>
-            <div className='px-4 pb-3 flex justify-between items-center font-bold'>
+              <div className='px-4 pb-3 flex justify-between items-center font-bold'>
                 <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
                 <div className='text-green text-xs'>See all</div>
               </div>
