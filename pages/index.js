@@ -8,6 +8,7 @@ import HorizontalCardHome from '@/components/HorizontalCardHome'
 import Modal from '@/components/Modal'
 import { useRouter } from 'next/router';
 import DesktopNavbar from '@/components/DesktopNavbar'
+import { HiOutlineClock, HiOutlineFire } from 'react-icons/hi'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -179,6 +180,140 @@ export default function Home() {
                 
               </div>
             </section>
+
+
+            <section className='mb-6'>
+            <div className='px-4 pb-3 flex justify-between items-center font-bold'>
+                <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
+                <div className='text-green text-xs'>See all</div>
+              </div>
+              <div className='flex-grow w-full mx-auto'>
+                {/* container flex-grow w-full mx-auto */}
+                  <div className="pl-4">
+                    <div className="my-4">
+                      <div className="">
+                        <div className="flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
+
+                          <div className='ml-0.5 mb-4 bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
+                            <div className='pt-4 py-2 md:pt-4 md:py-2 flex justify-center'>
+                                <div className='mx-4 relative h-28 w-36 md:h-38 md:w-44 xl:mx-4'>
+                                    <Image 
+                                        className='hover:transition hover:duration-300 rounded-xl contrast-[1.1] saturate-[1.4]'
+                                        priority
+                                        src="https://spoonacular.com/recipeImages/511728-312x231.jpg"
+                                        alt="dxf"
+                                        fill
+                                        style={{objectFit:"fill"}}
+                                    />
+                                </div>
+                            </div>
+                            <div className='px-4 py-2'>
+                                <h2 className='text-sm pb-1 font-semibold text-dark-green truncate mb-1'>dsfsdf</h2>
+                                <div className='flex justify-between text-gray pb-6'>
+                                    <div className='flex items-center text-sm'>
+                                        <HiOutlineFire className='h-4 w-4 mr-1' />
+                                        <span className='font-light text-xs'>200 Kcal</span>
+                                    </div>
+                                    <div className='flex items-center text-sm'>
+                                        <HiOutlineClock className='h-4 w-4 mr-1' />
+                                        <span className='font-light text-xs'>30 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div className='mb-4 bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
+                            <div className='pt-4 py-2 md:pt-4 md:py-2 flex justify-center'>
+                                <div className='mx-4 relative h-28 w-36 md:h-38 md:w-44 xl:mx-4'>
+                                    <Image 
+                                        className='hover:transition hover:duration-300 rounded-xl contrast-[1.1] saturate-[1.4]'
+                                        priority
+                                        src="https://spoonacular.com/recipeImages/511728-312x231.jpg"
+                                        alt="dxf"
+                                        fill
+                                        style={{objectFit:"fill"}}
+                                    />
+                                </div>
+                            </div>
+                            <div className='px-4 py-2'>
+                                <h2 className='text-sm pb-1 font-semibold text-dark-green truncate mb-1'>dsfsdf</h2>
+                                <div className='flex justify-between text-gray pb-6'>
+                                    <div className='flex items-center text-sm'>
+                                        <HiOutlineFire className='h-4 w-4 mr-1' />
+                                        <span className='font-light text-xs'>200 Kcal</span>
+                                    </div>
+                                    <div className='flex items-center text-sm'>
+                                        <HiOutlineClock className='h-4 w-4 mr-1' />
+                                        <span className='font-light text-xs'>30 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div className='mb-4 bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
+                            <div className='pt-4 py-2 md:pt-4 md:py-2 flex justify-center'>
+                                <div className='mx-4 relative h-28 w-36 md:h-38 md:w-44 xl:mx-4'>
+                                    <Image 
+                                        className='hover:transition hover:duration-300 rounded-xl contrast-[1.1] saturate-[1.4]'
+                                        priority
+                                        src="https://spoonacular.com/recipeImages/511728-312x231.jpg"
+                                        alt="dxf"
+                                        fill
+                                        style={{objectFit:"fill"}}
+                                    />
+                                </div>
+                            </div>
+                            <div className='px-4 py-2'>
+                                <h2 className='text-sm pb-1 font-semibold text-dark-green truncate mb-1'>dsfsdf</h2>
+                                <div className='flex justify-between text-gray pb-6'>
+                                    <div className='flex items-center text-sm'>
+                                        <HiOutlineFire className='h-4 w-4 mr-1' />
+                                        <span className='font-light text-xs'>200 Kcal</span>
+                                    </div>
+                                    <div className='flex items-center text-sm'>
+                                        <HiOutlineClock className='h-4 w-4 mr-1' />
+                                        <span className='font-light text-xs'>30 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div className='mr-2 mb-4 bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer'>
+                            <div className='pt-4 py-2 md:pt-4 md:py-2 flex justify-center'>
+                                <div className='mx-4 relative h-28 w-36 md:h-38 md:w-44 xl:mx-4'>
+                                    <Image 
+                                        className='hover:transition hover:duration-300 rounded-xl contrast-[1.1] saturate-[1.4]'
+                                        priority
+                                        src="https://spoonacular.com/recipeImages/511728-312x231.jpg"
+                                        alt="dxf"
+                                        fill
+                                        style={{objectFit:"fill"}}
+                                    />
+                                </div>
+                            </div>
+                            <div className='px-4 py-2'>
+                                <h2 className='text-sm pb-1 font-semibold text-dark-green truncate mb-1'>dsfsdf</h2>
+                                <div className='flex justify-between text-gray pb-6'>
+                                    <div className='flex items-center text-sm'>
+                                        <HiOutlineFire className='h-4 w-4 mr-1' />
+                                        <span className='font-light text-xs'>200 Kcal</span>
+                                    </div>
+                                    <div className='flex items-center text-sm'>
+                                        <HiOutlineClock className='h-4 w-4 mr-1' />
+                                        <span className='font-light text-xs'>30 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              </div>
+            </section>
+
+
 
             <section className=''>
               <div className='px-4 pb-3 flex justify-between items-center font-bold'>
