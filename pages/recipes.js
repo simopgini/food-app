@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Modal from '@/components/Modal'
 import RecipeVerticalCard from '@/components/RecipeVerticalCard';
 
+// questa route non funziona: Uncaught TypeError: Cannot read properties of undefined (reading 'map') index.js?46cb:598
 const recipes = ()  => {
     return (
         <>
@@ -25,4 +26,7 @@ const recipes = ()  => {
     )
 }
 export default recipes;
+
+
+// ET http://localhost:3000/recipes 500 (Internal Server Error)
 
