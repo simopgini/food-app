@@ -59,7 +59,7 @@ export default function Search() {
   setSearchedRecipes(data);
 };
 
-const searchCuisine = [
+const cuisineButton = [
   {
     "id": 1,
     "cuisine": "italian",
@@ -161,7 +161,7 @@ const searchCuisine = [
                       <ul
                         className="flex flex-no-wrap overflow-x-auto scrolling-touch items-start" >
                         
-                        {searchCuisine.map((cuisine) => {
+                        {cuisineButton.map((cuisine) => {
                           return (
                             <CuisineSearchButtons key={cuisine.id} cuisine={cuisine} emoji={cuisine.emoji} className=" "/>
                               )
