@@ -1,22 +1,19 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router';
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
+const CuisineSearchButtons = ({ cuisine }) => {
+  const router = useRouter();
 
-const CuisineSearchButtons = ({cuisine}) => {
-    
-    const router = useRouter();
+  const [toggle, setToggle] = useState("active");
+  const handleClick = () => {
+    setToggle("deactive");
+  };
 
-    const [toggle, setToggle] = useState("active")
-        const handleClick = () => {
-        setToggle("deactive")
-    }
+  const [searchCuisine, setSearchedCuisine] = useState({ results: [] });
 
-    const [searchCuisine, setSearchedCuisine] = useState({results:[]});
-
-    const fetchSearchedCuisine = async () => {
-
+  const fetchSearchedCuisine = async () => {
     const response = `{
         "results": [
             {
@@ -81,28 +78,27 @@ const CuisineSearchButtons = ({cuisine}) => {
             }
             ],
             }
-        }`
-    
+        }`;
+
     const data = JSON.parse(response);
 
     setSearchedCuisine(data);
+  };
 
-
-    }
-    
-return (
-    <li key={cuisine.id}
-        className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
-        {/* <Link href={`/search/`}> */}
-            <button onClick={fetchSearchedCuisine}
-                    className='relative btn-tag bg-gray-lighter  hover:bg-green hover:text-white px-5 rounded-full text-sm'>
-                <span className='mr-2'>{cuisine.cuisine}</span> 
-                <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
-                <span className='ml-2'>{cuisine.emoji}</span>
-            </button>
-        {/* </Link> */}
+  return (
+    <li key={cuisine.id} className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
+      {/* <Link href={`/search/`}> */}
+      <button
+        onClick={fetchSearchedCuisine}
+        className="relative btn-tag bg-gray-lighter  hover:bg-green hover:text-white px-5 rounded-full text-sm"
+      >
+        <span className="mr-2">{cuisine.cuisine}</span>
+        <span className="inset-y-0 absolute py-4 border-l-2 border-white"></span>
+        <span className="ml-2">{cuisine.emoji}</span>
+      </button>
+      {/* </Link> */}
     </li>
-    )
-}
+  );
+};
 
 export default CuisineSearchButtons;
