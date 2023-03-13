@@ -10,6 +10,7 @@ import { useRouter } from 'next/router';
 import DesktopNavbar from '@/components/DesktopNavbar'
 import RecipeVerticalCard from '@/components/RecipeVerticalCard'
 import Link from 'next/link'
+import CategoryHomeButtons from '@/components/CategoryHomeButtons'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -45,46 +46,93 @@ export default function Home() {
     }
 ]});
 
-  const type = ["breakfast", "main course", "snack", "dinner", "dessert", "soup", "salad", "appetizer", "beverage", "sauce", "drink" ]
 
-  const fetchRecipes = async () => {
-  // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}");
+const fetchRecipes = async () => {
+  // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}&number=3");
   // const data = await response.json();
   
   const response = `{
-      "offset": 0,
-      "number": 2,
-      "results": [
-          {
-              "id": 716429,
-              "title": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
-              "image": "https://spoonacular.com/recipeImages/716429-556x370.jpg",
-              "imageType": "jpg"
-          },
-          {
-              "id": 715538,
-              "title": "Bruschetta Style",
-              "image": "https://spoonacular.com/recipeImages/715538-312x231.jpg",
-              "imageType": "jpg"
-          },
-          {
-            "id": 7,
-            "title": "Caprese Pasta",
-            "image": "https://spoonacular.com/recipeImages/511728-312x231.jpg",
-            "imageType": "jpg"
-          },
-          {
-              "id": 38,
-              "title": "Smoothie",
-              "image": "https://spoonacular.com/recipeImages/655235-312x231.jpg",
-              "imageType": "jpg"
-          }
-      ],
-      "totalResults": 86
+    "offset": 0,
+    "number": 2,
+    "results": [
+      {
+        "id": 716429,
+        "title": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
+        "image": "https://spoonacular.com/recipeImages/716429-556x370.jpg",
+        "imageType": "jpg"
+      },
+      {
+        "id": 715538,
+        "title": "Bruschetta Style",
+        "image": "https://spoonacular.com/recipeImages/715538-312x231.jpg",
+        "imageType": "jpg"
+      },
+      {
+        "id": 7,
+        "title": "Caprese Pasta",
+        "image": "https://spoonacular.com/recipeImages/511728-312x231.jpg",
+        "imageType": "jpg"
+      },
+      {
+        "id": 38,
+        "title": "Smoothie",
+        "image": "https://spoonacular.com/recipeImages/655235-312x231.jpg",
+        "imageType": "jpg"
+      }
+    ],
+    "totalResults": 86
   }`
   const data = JSON.parse(response);
-
+  
   setrecipes(data);
+  
+  // PRIMA QUERY DELLA HOME quando clicca sulla card di getting inspired es. "Pasta", "Pizza",  "Curry" ecc ecc
+  // https://api.spoonacular.com/recipes/complexSearch?query=pasta&number=3
+  const categoryTypeHome = ["breakfast", "snack", "dinner", "dessert", "soup", "salad", "appetizer", "beverage", "sauce", "drink" ]
+
+  // const categoryTypeHome = [
+  //   {
+  //     "id": 1,
+  //     "type": "breakfast",
+  //   },
+  //   {
+  //     "id": 2,
+  //     "type": "snack",
+  //   },
+  //   {
+  //     "id": 3,
+  //     "type": "dinner",
+  //   },
+  //     {
+  //     "id": 4,
+  //     "type": "dessert",
+  //   },
+  //   {
+  //     "id": 5,
+  //     "type": "soup",
+  //   },
+  //   {
+  //     "id": 6,
+  //     "type": "salad",
+  //   },
+  //   {
+  //     "id": 7,
+  //     "type": "appetizer",
+  //   },
+  //     {
+  //     "id": 8,
+  //     "type": "beverage",
+  //   },
+  //   {
+  //     "id": 7,
+  //     "type": "sauce",
+  //   },
+  //     {
+  //     "id": 8,
+  //     "type": "drink",
+  //   }
+  // ]
+
 };
 
   const [active, setActive] = useState("active-btn")
@@ -145,7 +193,13 @@ export default function Home() {
                     <div className="my-4">
                       <div className="">
                         <div className=" flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
-
+                          {/* {categoryTypeHome.map((type) => {
+                            return (
+                              <CategoryHomeButtons onClick={fetchRecipes} key={type.id} type={type} className=" "/>
+                                )
+                              })
+                          } */}
+                          
                           <button onClick={fetchRecipes}
                                   className="mb-4 px-5  py-2.5 flex-none text-white bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
                             Breakfast
@@ -153,7 +207,7 @@ export default function Home() {
 
                           <button onClick={fetchRecipes}
                                   className="mb-4 px-5  py-2.5 flex-none hover:text-white bg-gray-light hover:bg-green active:bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
-                                Main course
+                                Salad
                           </button>
 
                           <button onClick={fetchRecipes}

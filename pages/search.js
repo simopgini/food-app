@@ -62,62 +62,62 @@ export default function Search() {
 const searchCuisine = [
   {
     "id": 1,
-    "cuisine": "Italian",
+    "cuisine": "italian",
     "emoji": "🍕",
   },
   {
     "id": 2,
-    "cuisine": "Spanish",
+    "cuisine": "spanish",
     "emoji": "🥘",
   },
   {
     "id": 3,
-    "cuisine": "Japanese",
+    "cuisine": "japanese",
     "emoji": "🍱",
   },
   {
     "id": 4,
-    "cuisine": "Indian",
+    "cuisine": "indian",
     "emoji": "🍛",
   },
   {
     "id": 5,
-    "cuisine": "Mexican",
+    "cuisine": "mexican",
     "emoji": "🌮",
   },
   {
     "id": 6,
-    "cuisine": "Middle Eastern",
+    "cuisine": "middle Eastern",
     "emoji": "🧆",
   },
   {
     "id": 7,
-    "cuisine": "Chinese",
+    "cuisine": "chinese",
     "emoji": "🥟",
   },
   {
     "id": 8,
-    "cuisine": "Greek",
+    "cuisine": "greek",
     "emoji": "🥙",
   },
   {
     "id": 9,
-    "cuisine": "French",
+    "cuisine": "french",
     "emoji": "🥐",
   },
   {
     "id": 10,
-    "cuisine": "American",
+    "cuisine": "american",
     "emoji": "🍔",
   },
   {
     "id": 11,
-    "cuisine": "German",
+    "cuisine": "german",
     "emoji": "🥨",
   },
   {
     "id": 12,
-    "cuisine": "British",
+    "cuisine": "british",
     "emoji": "🫖",
   }
 ]
