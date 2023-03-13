@@ -3,8 +3,12 @@ import SearchCard from '@/components/SearchCard'
 import { useState } from 'react'
 
 import { HiOutlineSearch, HiOutlineChevronLeft, HiOutlineAdjustments } from "react-icons/hi";
+import CuisineSearchButtons from '@/components/CuisineSearchButtons';
 
 export default function Search() {
+
+
+
   const [searchRecipes, setSearchedRecipes] = useState({results:[]});
 
   const fetchSearchedRecipes = async () => {
@@ -49,10 +53,74 @@ export default function Search() {
         "totalResults": 150
         }`
 
+
   const data = JSON.parse(response);
 
   setSearchedRecipes(data);
 };
+
+const searchCuisine = [
+  {
+    "id": 1,
+    "cuisine": "Italian",
+    "emoji": "🍕",
+  },
+  {
+    "id": 2,
+    "cuisine": "Spanish",
+    "emoji": "🥘",
+  },
+  {
+    "id": 3,
+    "cuisine": "Japanese",
+    "emoji": "🍱",
+  },
+  {
+    "id": 4,
+    "cuisine": "Indian",
+    "emoji": "🍛",
+  },
+  {
+    "id": 5,
+    "cuisine": "Mexican",
+    "emoji": "🌮",
+  },
+  {
+    "id": 6,
+    "cuisine": "Middle Eastern",
+    "emoji": "🧆",
+  },
+  {
+    "id": 7,
+    "cuisine": "Chinese",
+    "emoji": "🥟",
+  },
+  {
+    "id": 8,
+    "cuisine": "Greek",
+    "emoji": "🥙",
+  },
+  {
+    "id": 9,
+    "cuisine": "French",
+    "emoji": "🥐",
+  },
+  {
+    "id": 10,
+    "cuisine": "American",
+    "emoji": "🍔",
+  },
+  {
+    "id": 11,
+    "cuisine": "German",
+    "emoji": "🥨",
+  },
+  {
+    "id": 12,
+    "cuisine": "British",
+    "emoji": "🫖",
+  }
+]
 
 
   return (
@@ -90,17 +158,26 @@ export default function Search() {
                   <div className="pl-4">
                     <div className=" my-4">
                       
-                      <div id="scrollContainer"
+                      <ul
                         className="flex flex-no-wrap overflow-x-auto scrolling-touch items-start" >
-                        <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
+                        
+                        {searchCuisine.map((cuisine) => {
+                          return (
+                            <CuisineSearchButtons key={cuisine.id} cuisine={cuisine} emoji={cuisine.emoji} className=" "/>
+                              )
+                            })
+                        }
+
+
+                        {/* <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-green hover:bg-green text-white px-5 rounded-full text-sm'>
                               <span className='mr-2'>Italian</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
                               <span className='ml-2'>🍕</span>
                             </button>
-                        </div>
+                        </div> */}
 
-                        <div className="flex-none mb-4  mr-2 md:pb-4 rounded-lg">
+                        {/* <div className="flex-none mb-4  mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>Spanish</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
@@ -179,15 +256,15 @@ export default function Search() {
                               <span className='ml-2'>🥨</span>
                             </button>
                         </div>
-
+                        
                         <div className="flex-none mb-4 mr-2 md:pb-4 rounded-lg">
                             <button className='relative btn-tag bg-gray-light disabled:bg-gray-light hover:text-white active:text-white text-dark-green active:bg-green hover:bg-green px-5 rounded-full text-sm'>
                               <span className='mr-2'>British</span> 
                               <span className='inset-y-0 absolute py-4 border-l-2 border-white'></span>
                               <span className='ml-2'>🫖</span>
                             </button>
-                        </div>
-                      </div>
+                        </div> */}
+                      </ul>
                     </div>
                     
                   </div>

@@ -45,6 +45,8 @@ export default function Home() {
     }
 ]});
 
+  const type = ["breakfast", "main course", "snack", "dinner", "dessert", "soup", "salad", "appetizer", "beverage", "sauce", "drink" ]
+
   const fetchRecipes = async () => {
   // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}");
   // const data = await response.json();
