@@ -3,8 +3,37 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-const CategoryHomeButtons = ({ type }) => {
+const CategoryHomeButtons = ({category}) => {
   const router = useRouter();
+
+  const [recipes, setrecipes] = useState({
+    results: [
+      {
+        id: 716429,
+        title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
+        image: "https://spoonacular.com/recipeImages/716429-556x370.jpg",
+        imageType: "jpg",
+      },
+      {
+        id: 715538,
+        title: "Bruschetta Style",
+        image: "https://spoonacular.com/recipeImages/715538-312x231.jpg",
+        imageType: "jpg",
+      },
+      {
+        id: 7,
+        title: "Caprese Pasta",
+        image: "https://spoonacular.com/recipeImages/511728-312x231.jpg",
+        imageType: "jpg",
+      },
+      {
+        id: 38,
+        title: "Smoothie",
+        image: "https://spoonacular.com/recipeImages/655235-312x231.jpg",
+        imageType: "jpg",
+      },
+    ],
+  });
 
   const [toggle, setToggle] = useState("active");
   const handleClick = () => {
@@ -23,13 +52,14 @@ const CategoryHomeButtons = ({ type }) => {
 </li> */
   }
 
-  return (
-    <li key={type.id}>
+  return ( 
+    <li className="list-none">
       {/* <Link href={`...`}> */}
-      <button className="mb-4 px-5  py-2.5 flex-none text-white bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
-        {type.type}
+      <button onClick={() => category.callback(category.type)}
+              className="mb-4 px-5  py-2.5 flex-none text-white bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+        {category.type}
       </button>
-      {/* </Link> */}
+        {console.log(category)}
     </li>
   );
 };
