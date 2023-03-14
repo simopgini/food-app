@@ -12,6 +12,7 @@ import RecipeVerticalCard from "@/components/RecipeVerticalCard";
 import Link from "next/link";
 import CategoryHomeButtons from "@/components/CategoryHomeButtons";
 import recipeJson from "@/components/recipeJson";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -255,7 +256,8 @@ export default function Home() {
                     <div className="flex flex-no-wrap overflow-x-auto gap-3 lg:gap-6 scrolling-touch items-start mb-4">
                       {recipes.results.map((recipe) => {
                         return (
-                          <VerticalCard onClick={recipeJson}
+                          <VerticalCard 
+                            // onClick={recipeJson}
                             key={recipe.id}
                             recipe={recipe}
                             className=" "

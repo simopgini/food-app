@@ -1,5 +1,5 @@
 import { HiClock, HiOutlineClock } from "react-icons/hi";
-
+import recipeJson from "./recipeJson";
 import Image from "next/image";
 import Link from "next/link";
 

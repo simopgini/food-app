@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   HiOutlineChevronLeft,
@@ -9,14 +9,29 @@ import {
   HiOutlineHeart,
 } from "react-icons/hi";
 import Modal from "@/components/Modal";
+import recipeJson from "@/components/recipeJson";
+// import recipeJson from "../components/recipeJson";
+
+
 
 const recipe = () => {
+  
+  //const [recipeCard, setRecipeCard] = useState({})
+  //const fetchRecipe = async () => { 
+    // const r = await fetch("https://api.spoonacular.com/recipes/716429/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true")
+    // const data =await r.text();
+  //  const data = JSON.parse(recipeJson)
+
+  //  setRecipeCard(data);
+ //}
+
+  // console.log(recipeJson)
   return (
     <>
-      {/* PAGINA RICETTA: dopo aver cliccato ricette sulla home o su cerca */}
       {/* <div>
           <div className=''> */}
       {/* bg-cover bg-center  */}
+
       <div className="immagine bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center contrast-[1.1] saturate-[1.4]">
         {/* h-96  */}
         <div className="px-4 pt-16 flex justify-between items-center mb-24">
@@ -39,7 +54,7 @@ const recipe = () => {
           <section className="px-4 pb-4 ">
             <div className="pt-8 flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
-                Avocado Toast
+                {/* {recipeJson.extendedIngredients.name} */}
               </h1>
               <p className="flex text-gray">
                 <HiOutlineClock className="h-4 w-4 mr-1" />
@@ -83,7 +98,7 @@ const recipe = () => {
                     <Image
                       src="/avocado.svg"
                       alt="spaghetti icon"
-                      width={18}
+                      width={20}
                       height={20}
                     />
                   </div>

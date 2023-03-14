@@ -1,12 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineFire, HiOutlineClock } from "react-icons/hi";
+import { useState } from "react";
+import recipeJson from "./recipeJson";
 
 const VerticalCard = ({ recipe }) => {
+
+  // href="/recipe/{id}"
+  // href="/recipe/{recipe.key}"
+  // "/recipe/[recipe.key]"
+
   return (
     <>
       <Link
-        href="/recipe"
+        href={`/recipe/${recipe.key}`}
+        // href={`/recipe/1234`}
+
         className="w-48 first-of-type:ml-1.5 last-of-type:mr-2 mb-4 bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer"
       >
         <div className="pt-4 py-2 md:pt-4 md:py-2 flex justify-center">
