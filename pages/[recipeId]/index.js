@@ -11,7 +11,7 @@ import {
 import Modal from "@/components/Modal";
 import recipeJson from "@/components/recipeJson";
 import Ingredients from "@/components/Ingredients";
-import Nutrients from "@/components/Nutrients";
+import Switcher from "@/components/Switcher";
 // import recipeJson from "../components/recipeJson";
 
 
@@ -67,35 +67,13 @@ const Recipe = ({recipe}) => {
                 <span className="font-light text-xs">{recipeCard.readyInMinutes} min</span>
               </p>
             </div>
-                    {/* {Object.keys(recipeCard.nutrition).map((elem) => { 
-                    <h1 className=" mb-6 text-dark-green text-xl font-bold">
-                      {elem}
-                    </h1>
-                    })} */}
-                        {/* <p>{Object.keys(recipeCard.nutrition)}80g carbs</p> */}
-                        {/* extendedIngredients */}
-                        {/* {recipeCard.map((elem) => { 
-                          <p>{elem.pricePerServing}</p>                  
-                        })} */}
 
-              <div className="flex justify-between text-dark-green">
-                <div className="text-sm font-semibold">
-                  {/* {recipeCard.nutrition[0].map((nutrient) => {
-                      return (
-                        <Nutrients
-                          // key={nutrient.id}
-                          nutrient={nutrient}
-                          quantity={nutrient.original}
-                          image={nutrient.image}
-                          amount={nutrient.amount}
-                          unit={nutrient.unit}
-                          className=" "
-                        />
-                        );
-                  })} */}
-                </div>
-              </div>
 
+            {/* <div>{recipeCard.nutrition.nutrients[0].amount}prova</div>
+
+              {recipeCard.extendedIngredients.map((elem) => { 
+                <div>{elem.name}</div>                  
+              })} */}
 
             <div className="flex justify-between text-dark-green">
               <div className="text-sm font-semibold">
@@ -109,21 +87,14 @@ const Recipe = ({recipe}) => {
                       height={20}
                     />
                   </div>
-                  <div>{recipeCard.extendedIngredients[0].name}prova</div>
-
-                  {recipeCard.extendedIngredients.map((elem) => { 
-                    <div>{elem.name}</div>                  
-                  })}
-
-
-
-                  <p>80g carbs</p>
+                  <p>{recipeCard.nutrition.nutrients[3].amount}g carbs</p>
                 </div>
+
                 <div className="mb-4 flex items-center">
                   <div className="bg-gray-mid rounded-lg p-1 mr-2">
                     <HiOutlineFire className="h-5 w-5" />
                   </div>
-                  <p>275 Kcal</p>
+                  <p>{recipeCard.nutrition.nutrients[0].amount} Kcal</p>
                 </div>
               </div>
               <div className="mb-8 text-sm font-semibold">
@@ -137,7 +108,7 @@ const Recipe = ({recipe}) => {
                       height={20}
                     />
                   </div>
-                  <p>29g proteins</p>
+                  <p>{recipeCard.nutrition.nutrients[9].amount}g proteins</p>
                 </div>
                 <div className="mb-4 flex items-center">
                   <div className="bg-gray-mid rounded-lg p-1 mr-2">
@@ -148,10 +119,12 @@ const Recipe = ({recipe}) => {
                       height={20}
                     />
                   </div>
-                  <p>96g fats</p>
+                  <p>{recipeCard.nutrition.nutrients[1].amount}g fats</p>
                 </div>
               </div>
             </div>
+
+              <Switcher />
 
             <div className="bg-gray-mid py-1.5 px-1 flex rounded-xl font-medium">
               <button className="text-gray-mid bg-dark-green px-10 py-2 rounded-xl">
