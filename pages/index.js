@@ -180,7 +180,6 @@ export default function Home() {
                           <HorizontalCardHome
                             key={recipe.id}
                             recipe={recipe}
-                            className=" "
                           />
                         );
                       })}
@@ -204,7 +203,7 @@ export default function Home() {
                       {categoryTypeHome.map((type) => {
                             {type.callback=fetchRecipes}
                             return ( 
-                              <CategoryHomeButtons category={type} key={type.id} className=" "/>
+                              <CategoryHomeButtons category={type} key={type.id} className=""/>
                                 )
                               })
                           }

@@ -10,6 +10,7 @@ import {
 } from "react-icons/hi";
 import Modal from "@/components/Modal";
 import recipeJson from "@/components/recipeJson";
+import Ingredients from "@/components/Ingredients";
 // import recipeJson from "../components/recipeJson";
 
 
@@ -34,11 +35,12 @@ const Recipe = ({recipe}) => {
   if(recipeCard === undefined){
     return <div className="flex justify-center items-center text-base text-dark-green">Loading...</div>
   }
-  console.log(recipeCard.extendedIngredients.name)
+  // console.log(recipeCard.extendedIngredients.name)
   // console.log(recipeJson)
   return (
     <>
-      {/* c'è un import chiamato classNames che permette di prendere più classNames */}
+      {/* c'è un import chiamato classNames che permette di prendere più classNames, prova per vedere 
+          se si riesce a mettere l'img come sfondo in maniera dinamica */}
       <div
         className="immagine bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center contrast-[1.1] saturate-[1.4]">
         {/* h-96  */}
@@ -75,6 +77,22 @@ const Recipe = ({recipe}) => {
                       height={20}
                     />
                   </div>
+              {/* {Object.keys(recipeCard.nutrition).map((elem) => { 
+              <h1 className=" mb-6 text-dark-green text-xl font-bold">
+                {elem}
+              </h1>
+              })} */}
+                  {/* <p>{Object.keys(recipeCard.nutrition)}80g carbs</p> */}
+                  {/* extendedIngredients */}
+                  {/* {recipeCard.map((elem) => { 
+                    <p>{elem.pricePerServing}</p>                  
+                  })} */}
+                  <div>{recipeCard.extendedIngredients[0].name}prova</div>
+
+                  {recipeCard.extendedIngredients.map((elem) => { 
+                    <div>{elem.name}</div>                  
+                  })}
+
                   <p>80g carbs</p>
                 </div>
                 <div className="mb-4 flex items-center">
@@ -124,6 +142,32 @@ const Recipe = ({recipe}) => {
                 Ingredients
               </h1>
               <p className="flex text-gray">
+                <span className="font-light text-xs">Items</span>
+              </p>
+            </div>
+
+            <div>
+              {recipeCard.extendedIngredients.map((ingredient) => {
+                        return (
+                          <Ingredients
+                            key={ingredient.id}
+                            ingredient={ingredient}
+                            quantity={ingredient.original}
+                            // image={ingredient.image}
+                            amount={ingredient.amount}
+                            unit={ingredient.unit}
+                            className=" "
+                          />
+                );
+              })}
+            </div>
+          </section>
+          {/* <section className="px-4">
+            <div className="flex justify-between items-baseline">
+              <h1 className=" mb-6 text-dark-green text-xl font-bold">
+                Ingredients
+              </h1>
+              <p className="flex text-gray">
                 <span className="font-light text-xs">4 items</span>
               </p>
             </div>
@@ -157,10 +201,10 @@ const Recipe = ({recipe}) => {
                 <p className="pr-2">q.b.</p>
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* INSTRUCTIONS SECTION */}
-          <section>
+          {/* <section>
             <div className="px-4 flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 Instructions
@@ -197,7 +241,7 @@ const Recipe = ({recipe}) => {
               </div>
               <p>Don’t forget lime and paprika. </p>
             </div>
-          </section>
+          </section> */}
           {/* </div>
             </div> */}
         </div>

@@ -56,7 +56,7 @@ const CategoryHomeButtons = ({category}) => {
     <li className="list-none">
       {/* <Link href={`...`}> */}
       <button onClick={() => category.callback(category.type)}
-              className="mb-4 px-5  py-2.5 flex-none text-white bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
+              className="first-letter:uppercase mb-4 px-5  py-2.5 flex-none text-white bg-green rounded-full text-sm hover:scale-105 duration-500 cursor-pointer">
         {category.type}
       </button>
         {console.log(category)}
