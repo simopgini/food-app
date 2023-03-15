@@ -11,6 +11,7 @@ import {
 import Modal from "@/components/Modal";
 import recipeJson from "@/components/recipeJson";
 import Ingredients from "@/components/Ingredients";
+import Nutrients from "@/components/Nutrients";
 // import recipeJson from "../components/recipeJson";
 
 
@@ -66,8 +67,39 @@ const Recipe = ({recipe}) => {
                 <span className="font-light text-xs">{recipeCard.readyInMinutes} min</span>
               </p>
             </div>
+                    {/* {Object.keys(recipeCard.nutrition).map((elem) => { 
+                    <h1 className=" mb-6 text-dark-green text-xl font-bold">
+                      {elem}
+                    </h1>
+                    })} */}
+                        {/* <p>{Object.keys(recipeCard.nutrition)}80g carbs</p> */}
+                        {/* extendedIngredients */}
+                        {/* {recipeCard.map((elem) => { 
+                          <p>{elem.pricePerServing}</p>                  
+                        })} */}
+
+              <div className="flex justify-between text-dark-green">
+                <div className="text-sm font-semibold">
+                  {/* {recipeCard.nutrition[0].map((nutrient) => {
+                      return (
+                        <Nutrients
+                          // key={nutrient.id}
+                          nutrient={nutrient}
+                          quantity={nutrient.original}
+                          image={nutrient.image}
+                          amount={nutrient.amount}
+                          unit={nutrient.unit}
+                          className=" "
+                        />
+                        );
+                  })} */}
+                </div>
+              </div>
+
+
             <div className="flex justify-between text-dark-green">
               <div className="text-sm font-semibold">
+
                 <div className="mb-4 flex items-center">
                   <div className="bg-gray-mid rounded-lg p-1 mr-2">
                     <Image
@@ -77,21 +109,13 @@ const Recipe = ({recipe}) => {
                       height={20}
                     />
                   </div>
-              {/* {Object.keys(recipeCard.nutrition).map((elem) => { 
-              <h1 className=" mb-6 text-dark-green text-xl font-bold">
-                {elem}
-              </h1>
-              })} */}
-                  {/* <p>{Object.keys(recipeCard.nutrition)}80g carbs</p> */}
-                  {/* extendedIngredients */}
-                  {/* {recipeCard.map((elem) => { 
-                    <p>{elem.pricePerServing}</p>                  
-                  })} */}
                   <div>{recipeCard.extendedIngredients[0].name}prova</div>
 
                   {recipeCard.extendedIngredients.map((elem) => { 
                     <div>{elem.name}</div>                  
                   })}
+
+
 
                   <p>80g carbs</p>
                 </div>
@@ -103,6 +127,7 @@ const Recipe = ({recipe}) => {
                 </div>
               </div>
               <div className="mb-8 text-sm font-semibold">
+                
                 <div className="mb-4 flex items-center">
                   <div className="bg-gray-mid rounded-lg p-1 mr-2">
                     <Image
@@ -127,12 +152,14 @@ const Recipe = ({recipe}) => {
                 </div>
               </div>
             </div>
+
             <div className="bg-gray-mid py-1.5 px-1 flex rounded-xl font-medium">
               <button className="text-gray-mid bg-dark-green px-10 py-2 rounded-xl">
                 Ingredients
               </button>
               <button className="text-dark-green pl-10">Instructions</button>
             </div>
+
           </section>
 
           {/* INGREDIENTS SECTION */}
@@ -153,7 +180,6 @@ const Recipe = ({recipe}) => {
                             key={ingredient.id}
                             ingredient={ingredient}
                             quantity={ingredient.original}
-                            // image={ingredient.image}
                             amount={ingredient.amount}
                             unit={ingredient.unit}
                             className=" "
