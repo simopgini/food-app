@@ -6,16 +6,27 @@ import recipeJson from "./recipeJson";
 
 const VerticalCard = ({ recipe }) => {
 
+  // const [recipeCard, setRecipeCard] = useState({"extendedIngredients": [{}]})
+  // const fetchRecipe = async () => { 
+  //   // const r = await fetch("https://api.spoonacular.com/recipes/716429/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true")
+  //   // const r = await fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)
+
+  //   // const data =await r.text();
+  // const data = JSON.parse(recipeJson)
+  //   // console.log(recipeJson.extendedIngredients.name)
+  //   setRecipeCard(data);
+  // }
+
   // href="/recipe/{id}"
   // href="/recipe/{recipe.key}"
   // "/recipe/[recipe.key]"
-
+  
   return (
     <>
       <Link
-        href={`/recipe/${recipe.key}`}
+        href={`/${recipe.id}`}
         // href={`/recipe/1234`}
-
+        // onClick={fetchRecipe}
         className="w-48 first-of-type:ml-1.5 last-of-type:mr-2 mb-4 bg-white rounded-xl drop-shadow hover:scale-105 duration-500 cursor-pointer"
       >
         <div className="pt-4 py-2 md:pt-4 md:py-2 flex justify-center">

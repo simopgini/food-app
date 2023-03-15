@@ -159,7 +159,7 @@ export default function Home() {
       <div>
         {/* <DesktopNavbar /> */}
 
-        <div className=" mb-8">
+        <div className="h-full mb-8">
           <div className="mt-14 mb-6 pl-4 text-dark-green text-xl font-bold">
             Hello 👋
           </div>
@@ -259,6 +259,7 @@ export default function Home() {
                           <VerticalCard 
                             // onClick={recipeJson}
                             key={recipe.id}
+                            id={recipe.id}
                             recipe={recipe}
                             className=" "
                           />
