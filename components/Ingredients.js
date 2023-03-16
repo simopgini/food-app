@@ -3,7 +3,7 @@ import { HiCheck } from "react-icons/hi";
 
 const Ingredients = ({ ingredient }) => {
   return (
-    <li className="bg-gray-lighter text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-dark-green">
+    <li className="bg-gray-lighter transition hover:shadow-md text-sm font-medium mb-2 py-2 px-2 flex justify-between items-center rounded-xl text-dark-green">
       <div className="rounded-xl flex items-center">
         <div className="bg-white rounded-lg p-1 mr-2 text-green text-lg">
           <HiCheck />

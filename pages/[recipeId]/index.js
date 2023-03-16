@@ -16,6 +16,8 @@ import Instructions from "@/components/Instructions";
 // import recipeJson from "../components/recipeJson";
 
 const Recipe = ({ recipe }) => {
+  const [showIngredients, setShowIngredients] = useState();
+
   const [recipeCard, setRecipeCard] = useState();
   const fetchRecipe = async () => {
     // const r = await fetch("https://api.spoonacular.com/recipes/716429/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true")
@@ -46,7 +48,7 @@ const Recipe = ({ recipe }) => {
           se si riesce a mettere l'img come sfondo in maniera dinamica */}
       <div className="immagine bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center contrast-[1.1] saturate-[1.4]">
         {/* h-96  */}
-        <div className="px-4 pt-16 flex justify-between items-center mb-24">
+        <div className="px-4 md:px-8 pt-16 flex justify-between items-center mb-24">
           <Link href="/" className="bg-gray-mid rounded-lg p-1">
             <HiOutlineChevronLeft className="h-6 w-6" />
           </Link>
@@ -56,7 +58,7 @@ const Recipe = ({ recipe }) => {
         </div>
 
         <div className=" rounded-t-3xl bg-white shadow-sm">
-          <section className="px-4 pb-4 ">
+          <section className="px-4 md:px-8 pb-4 ">
             <div className="pt-8 flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 {recipeCard.title}
@@ -117,13 +119,13 @@ const Recipe = ({ recipe }) => {
             </div>
           </section>
             
-            <div className="px-4 pb-4 ">
+            <div className="px-4 md:px-8 pb-4 ">
               <Switcher />
             </div>            
 
           {/* INGREDIENTS SECTION */}
 
-          <section className="px-4">
+          <section className="px-4 md:px-8">
             <div className="flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 Ingredients
@@ -149,8 +151,8 @@ const Recipe = ({ recipe }) => {
             </ul>
           </section>
 
-          <section>
-            <div className="px-4 flex justify-between items-baseline">
+          <section className="">
+            <div className="px-4 md:px-8 lg:px-12 flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 Instructions
               </h1>
