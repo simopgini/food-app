@@ -10,8 +10,14 @@
         protocol: 'https',
         hostname: 'spoonacular.com',
         port: '',
-        pathname: '/recipeImages/**',
+        pathname: ['/recipeImages/**', '/cdn/ingredients_100x100/**'],
       },
+      // {
+      //   protocol: 'https',
+      //   hostname: 'spoonacular.com',
+      //   port: '',
+      //   pathname: '/cdn/ingredients_100x100/**',
+      // },
     ],
   },
 }

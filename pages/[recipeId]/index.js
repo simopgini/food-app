@@ -141,6 +141,7 @@ const Recipe = ({ recipe }) => {
                   <Ingredients
                     key={ingredient.id}
                     ingredient={ingredient}
+                    image={ingredient.image}
                     quantity={ingredient.original}
                     amount={ingredient.amount}
                     unit={ingredient.unit}
