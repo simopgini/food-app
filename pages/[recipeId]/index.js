@@ -150,7 +150,8 @@ const Recipe = ({ recipe }) => {
               })}
             </ul>
           </section>
-
+          
+          {/* INSTRUCTIONS SECTION */}
           <section className="">
             <div className="px-4 md:px-8 lg:px-12 flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
