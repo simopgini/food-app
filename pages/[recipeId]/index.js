@@ -8,7 +8,7 @@ import {
   HiHeart,
   HiOutlineHeart,
 } from "react-icons/hi";
-import Modal from "@/components/Modal";
+// import Modal from "@/components/Modal";
 import recipeJson from "@/components/recipeJson";
 import Ingredients from "@/components/Ingredients";
 import Switcher from "@/components/Switcher";
@@ -58,11 +58,9 @@ const Recipe = ({ recipe }) => {
         <div className=" rounded-t-3xl bg-white shadow-sm">
           <section className="px-4 pb-4 ">
             <div className="pt-8 flex justify-between items-baseline">
-              {/* {recipeCard.map((recipeTitle) => { */}
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 {recipeCard.title}
               </h1>
-              {/* })} */}
               <p className="flex text-gray">
                 <HiOutlineClock className="h-4 w-4 mr-1" />
                 <span className="font-light text-xs">
@@ -70,12 +68,6 @@ const Recipe = ({ recipe }) => {
                 </span>
               </p>
             </div>
-
-            {/* <div>{recipeCard.nutrition.nutrients[0].amount}prova</div>
-
-              {recipeCard.extendedIngredients.map((elem) => { 
-                <div>{elem.name}</div>                  
-              })} */}
 
             <div className="flex justify-between text-dark-green">
               <div className="text-sm font-semibold">
@@ -130,6 +122,7 @@ const Recipe = ({ recipe }) => {
             </div>            
 
           {/* INGREDIENTS SECTION */}
+
           <section className="px-4">
             <div className="flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
@@ -140,7 +133,7 @@ const Recipe = ({ recipe }) => {
               </p>
             </div>
 
-            <div>
+            <ul>
               {recipeCard.extendedIngredients.map((ingredient) => {
                 return (
                   <Ingredients
@@ -153,7 +146,7 @@ const Recipe = ({ recipe }) => {
                   />
                 );
               })}
-            </div>
+            </ul>
           </section>
 
           <section>
@@ -179,11 +172,7 @@ const Recipe = ({ recipe }) => {
             </div>
           </section>
           
-          {/* </div>
-            </div> */}
         </div>
-        {/* 
-        </div> */}
       </div>
     </>
   );
