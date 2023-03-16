@@ -127,15 +127,7 @@ const Recipe = ({ recipe }) => {
             
             <div className="px-4 pb-4 ">
               <Switcher />
-            </div>
-
-            {/* <div className="bg-gray-mid py-1.5 px-1 flex rounded-xl font-medium">
-              <button className="text-gray-mid bg-dark-green px-10 py-2 rounded-xl">
-                Ingredients
-              </button>
-              <button className="text-dark-green pl-10">Instructions</button>
-            </div> */}
-            
+            </div>            
 
           {/* INGREDIENTS SECTION */}
           <section className="px-4">
@@ -186,39 +178,7 @@ const Recipe = ({ recipe }) => {
               })}
             </div>
           </section>
-          {/* INSTRUCTIONS SECTION */}
-          <section>
-            <div className="mb-4 mx-4 flex items-center text-sm font-medium">
-              <div className="bg-green text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center">
-                <span className="px-2">1</span>
-              </div>
-              <p>
-                {recipeCard.extendedIngredients[0].original} Mash your avocado
-                separately.
-              </p>
-            </div>
-            <div className="mb-4 mx-4 flex items-center text-sm font-medium">
-              <div className="bg-green text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center">
-                <span className="px-2">2</span>
-              </div>
-              <p>Slice cherry tomatoes and add salt and pepper.</p>
-            </div>
-            <div className="mb-4 mx-4 flex items-center text-sm font-medium">
-              <div className="bg-green text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center">
-                <span className="px-2">3</span>
-              </div>
-              <p>
-                Buy good bread and toast it well. It offers a sturdy base and a
-                crisp contrast against the creamy avocado.
-              </p>
-            </div>
-            <div className="mb-4 mx-4 flex items-center text-sm font-medium">
-              <div className="bg-green text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center">
-                <span className="px-2">4</span>
-              </div>
-              <p>Don’t forget lime and paprika. </p>
-            </div>
-          </section>
+          
           {/* </div>
             </div> */}
         </div>

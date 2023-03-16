@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import classNames from "classnames";
 
 const Switcher = () => {
@@ -14,11 +14,7 @@ const Switcher = () => {
         isSelected ? `bg-gray-mid text-dark-green` : `bg-dark-green text-white`
       )}
     >
-                {/* "bg-red-400" : "bg-dark-green" */}
       <span
-        // onClick={() => {
-        //   setIsSelected(isSelected);
-        // }}
         className={classNames(
           " active:shadow-dark-green-500/50 hover:shadow-dark-green-500/50 transition-400 hover:shadow-xl  h-10 w-1/2 rounded-xl mr-2 font-medium flex items-center justify-center",
           isSelected ? `bg-dark-green text-white` : `bg-gray-mid text-dark-green`
