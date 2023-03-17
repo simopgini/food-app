@@ -16,7 +16,11 @@ import Instructions from "@/components/Instructions";
 // import recipeJson from "../components/recipeJson";
 
 const Recipe = ({ recipe }) => {
-  const [showIngredients, setShowIngredients] = useState();
+  const [showIngredients, setShowIngredients] = useState(true);
+
+  const handleIgredientsSection = () => {
+    setShowIngredients((showIngredients) ? false : true)
+  }
 
   const [recipeCard, setRecipeCard] = useState();
   const fetchRecipe = async () => {
@@ -120,12 +124,14 @@ const Recipe = ({ recipe }) => {
           </section>
             
             <div className="px-4 md:px-8 pb-4 ">
-              <Switcher />
+              <Switcher
+              handleSectionVisibility={handleIgredientsSection}
+              />
             </div>            
 
           {/* INGREDIENTS SECTION */}
 
-          <section className="px-4 md:px-8">
+          <section className={`px-4 md:px-8  ${showIngredients ? "" : "hidden"}`}>
             <div className="flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 Ingredients
@@ -153,7 +159,7 @@ const Recipe = ({ recipe }) => {
           </section>
           
           {/* INSTRUCTIONS SECTION */}
-          <section className="">
+          <section className={`px-4 md:px-8  ${!showIngredients ? "" : "hidden"}`}>
             <div className="px-4 md:px-8 lg:px-12 flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 Instructions

@@ -1,13 +1,14 @@
 import { useState } from "react";
 import classNames from "classnames";
 
-const Switcher = () => {
+const Switcher = ({handleSectionVisibility}) => {
   const [isSelected, setIsSelected] = useState(true);
 
   return (
     <button
       onClick={() => {
         setIsSelected(!isSelected);
+        handleSectionVisibility(!isSelected)
       }}
       className={classNames(
         " hover:shadow-lg  outline-1 flex items-center pl-1 w-full h-12 rounded-2xl font-medium ",
