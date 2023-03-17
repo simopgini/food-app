@@ -1515,7 +1515,7 @@ export default function Home() {
             Hello 👋
           </div>
 
-          {/* NEW ricette veg
+          {/* NEW ricette veg */}
           <section className="mb-6">
             <div className="px-4 pb-3 flex justify-between items-center font-bold">
               <h1 className="text-dark-green text-lg font-bold">
@@ -1529,7 +1529,7 @@ export default function Home() {
                     <div className="flex flex-no-wrap overflow-x-auto gap-3 lg:gap-6 scrolling-touch items-start mb-4">
                       {vegetarianRecipeCards.results.map((vegetarianRecipeCard) => {
                         return (
-                          <HorizontalCardHome key={vegetarianRecipeCard.id} recipe={vegetarianRecipeCard} title={vegetarianRecipeCard.title} />
+                          <HorizontalCardHome key={vegetarianRecipeCard.id} vegetarianRecipeCard={vegetarianRecipeCard} title={vegetarianRecipeCard.title} />
                         );
                       })}
                     </div>
@@ -1537,10 +1537,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </section> */}
+          </section>
 
           {/* RICETTE NON VEG */}
-          <section className="mb-6">
+          {/* <section className="mb-6">
             <div className="px-4 pb-3 flex justify-between items-center font-bold">
               <h1 className="text-dark-green text-lg font-bold">
                 Getting Inspired
@@ -1561,7 +1561,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           <section className="mb-3">
             <div className="px-4 flex justify-between items-center font-bold">
