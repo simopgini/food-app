@@ -10,7 +10,7 @@
         protocol: 'https',
         hostname: 'spoonacular.com',
         port: '',
-        pathname: ['/recipeImages/**', '/cdn/ingredients_100x100/*'],
+        pathname: '/recipeImages/**',
       },
       // {
       //   protocol: 'https',
