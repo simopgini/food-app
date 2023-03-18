@@ -16,6 +16,8 @@ export default function Search() {
     // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}");
     // const data = await response.json();
 
+    // CAMBIA LA QUERY IN ${query} in base a quello che è scritto nell'input in maniera dinamica
+    // https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&query=strawberry&number=3&addRecipeInformation=true&addRecipeNutrition=true
     const response = `{
         "results": [
         {
