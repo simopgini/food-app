@@ -19,7 +19,6 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const router = useRouter();
 
-  // https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&diet=vegetarian&addRecipeInformation=true&number=3
 
   const [vegetarianRecipeCards, setVegetarianRecipeCards] = useState({
     "results": [
@@ -694,7 +693,8 @@ export default function Home() {
   const fetchVegetarianRecipes = async () => {
     // const fetchRecipes = async (type) => {
     console.log();
-    // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}&number=3");
+    // DA AGGIUNGERE A QUESTO END POINT &addRecipeInformation=true
+      //const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&diet=vegetarian&addRecipeInformation=true&number=3");
     // const data = await response.json();
 
     const response = `{
@@ -1403,7 +1403,6 @@ export default function Home() {
 
   const fetchRecipes = async (type) => {
     // const fetchRecipes = async (type) => {
-    console.log(type);
     // const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&type=${type}&number=3");
     // const data = await response.json();
 
