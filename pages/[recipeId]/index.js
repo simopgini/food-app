@@ -13,9 +13,11 @@ import recipeJson from "@/components/recipeJson";
 import Ingredients from "@/components/Ingredients";
 import Switcher from "@/components/Switcher";
 import Instructions from "@/components/Instructions";
+import { useRouter } from 'next/router'
+
 // import recipeJson from "../components/recipeJson";
 
-const Recipe = ({ recipe }) => {
+const Recipe =  () => {
   const [showIngredients, setShowIngredients] = useState(true);
 
   const handleIgredientsSection = () => {
@@ -26,32 +28,31 @@ const Recipe = ({ recipe }) => {
 
   // dopo il click sulla card deve prendere l'id della ricetta ${recipe.id}
   // CHIAMATA ALLE API - renderizza la ricetta
-  // useEffect(() => {
-  //   async function fetchRecipe(){
-  //     const response = await fetch(RECIPE_INFO)      
-  //     if(!response.ok){
-  //       return <div>Oops! Something went wrong: the server did not return the recipe info... </div>
-  //     }
-
-  //     const data = await response.json()
-  //     setRecipeCard(data);
-  //   }
-  // fetchRecipe()
-  // }, [])
-
-  const fetchRecipe = async () => {
-    // const r = await fetch("https://api.spoonacular.com/recipes/716429/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true")
-    // const r = await fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)
-
-    // const data =await r.text();
-    const data = JSON.parse(recipeJson);
-    // console.log(recipeJson.extendedIngredients.name)
+  async function fetchRecipe(recipeID){
+    const response = await fetch(`https://api.spoonacular.com/recipes/${recipeID}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)      
+    if(!response.ok){
+      return <div>Oops! Something went wrong: the server did not return the recipe info... </div>
+    }
+    
+    const data = await response.json()
     setRecipeCard(data);
-  };
-
+  }
+  const router = useRouter()
   useEffect(() => {
-    fetchRecipe();
-  }, []);
+    if (router.query.recipeId !== undefined) {
+      fetchRecipe(router.query.recipeId)
+    }
+  }, [router.query.recipeId]);
+
+  // const fetchRecipe = async () => {
+  //   // const r = await fetch("https://api.spoonacular.com/recipes/716429/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true")
+  //   // const r = await fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)
+
+  //   // const data =await r.text();
+  //   const data = JSON.parse(recipeJson);
+  //   // console.log(recipeJson.extendedIngredients.name)
+  //   setRecipeCard(data);
+  // };
 
   if (recipeCard === undefined) {
     return (
@@ -60,8 +61,7 @@ const Recipe = ({ recipe }) => {
       </div>
     );
   }
-  // console.log(recipeCard.extendedIngredients.name)
-  // console.log(recipeJson)
+
   return (
     <>
       {/* c'è un import chiamato classNames che permette di prendere più classNames, prova per vedere 

@@ -6,7 +6,7 @@ const SearchCard = ({ searchRecipe }) => {
   return (
     <div className="px-4 mb-6">
       <Link
-        href="/recipe"
+        href={`/${searchRecipe.id}`}
         className="flex items-center bg-white  rounded-xl drop-shadow hover:scale-105 md:hover:scale-100 md:hover:shadow-md duration-500 cursor-pointer"
       >
         <div className="py-2 flex justify-center ">

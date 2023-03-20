@@ -1,3 +1,5 @@
+// DOMINIO
+
 // ENDPOINT UGUALE PER TUTTI
 const RECIPES = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3"
 // HOMEPAGE ENDPOINTS
@@ -5,11 +7,11 @@ const VEGETARIAN_RECIPES_HOME = "https://api.spoonacular.com/recipes/complexSear
 // const VEGETARIAN_RECIPES_HOME = `${RECIPES}&diet=vegetarian`
 
 const RECIPES_TYPE_URL =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3&type=${type}"
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3"
 // const RECIPES_TYPE_URL = `${RECIPES}&type=${type}`
 
 // SEARCH
-const SEARCH_RECIPE_NAME = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3&query=${inputRecipeName}"
+const SEARCH_RECIPE_NAME = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3"
 // const SEARCH_RECIPE_NAME = `${RECIPES}&query=${inputRecipeName}`
 
 const SEARCH_RECIPES_CUISINE = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3&cuisine=${cuisineButton.cuisine}"
