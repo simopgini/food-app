@@ -1,6 +1,10 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Ingredients from "@/components/Ingredients";
+import Switcher from "@/components/Switcher";
+import Instructions from "@/components/Instructions";
+import { useRouter } from 'next/router'
 import {
   HiOutlineChevronLeft,
   HiOutlineFire,
@@ -9,13 +13,7 @@ import {
   HiOutlineHeart,
 } from "react-icons/hi";
 // import Modal from "@/components/Modal";
-import recipeJson from "@/components/recipeJson";
-import Ingredients from "@/components/Ingredients";
-import Switcher from "@/components/Switcher";
-import Instructions from "@/components/Instructions";
-import { useRouter } from 'next/router'
 
-// import recipeJson from "../components/recipeJson";
 
 const Recipe =  () => {
   const [showIngredients, setShowIngredients] = useState(true);
@@ -26,8 +24,7 @@ const Recipe =  () => {
 
   const [recipeCard, setRecipeCard] = useState();
 
-  // dopo il click sulla card deve prendere l'id della ricetta ${recipe.id}
-  // CHIAMATA ALLE API - renderizza la ricetta
+  // dopo il click sulla card deve prendere l'id della ricetta ${recipe.id} + CHIAMATA ALLE API - renderizza la ricetta
   async function fetchRecipe(recipeID){
     const response = await fetch(`https://api.spoonacular.com/recipes/${recipeID}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)      
     if(!response.ok){
@@ -44,15 +41,7 @@ const Recipe =  () => {
     }
   }, [router.query.recipeId]);
 
-  // const fetchRecipe = async () => {
-  //   // const r = await fetch("https://api.spoonacular.com/recipes/716429/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true")
-  //   // const r = await fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)
 
-  //   // const data =await r.text();
-  //   const data = JSON.parse(recipeJson);
-  //   // console.log(recipeJson.extendedIngredients.name)
-  //   setRecipeCard(data);
-  // };
 
   if (recipeCard === undefined) {
     return (

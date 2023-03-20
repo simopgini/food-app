@@ -917,3 +917,111 @@
             </div> */}
 
           // CUISINE BUTTONS
+
+
+          {/* ROUTING PAGE WITH SEE RECIPES/CATEGORY ALL E CHE APRE TUTTE LE RICETTE CLICCANDO LA CARD
+            DI GETTING INSPIRED */}
+      {/* <section className=''>
+              <div className='px-4 pb-3 flex justify-between items-center font-bold'>
+                <h1 className='text-dark-green text-lg font-bold'>Popular Recipes</h1>
+                <div className='text-green text-xs'>See all</div>
+              </div>
+
+              <div className='items-stretch grid 2xl:grid-cols-7 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-x-10 md:gap-y-10 sm:gap-x-8 sm:gap-y-8 gap-x-2 gap-y-2 text-white px-4'>
+                {recipes.results.map((recipe) => {
+                return (
+                  <RecipeVerticalCard key={recipe.id} recipe={recipe} className=" "/>
+                    )
+                  })
+                }
+              </div>
+            </section> */}
+
+      {/* <div className="App ">
+              <Modal />
+            </div> */}
+
+      {/* PAGINA RICETTA: dopo aver cliccato ricette sulla home o su cerca */}
+      {/* <div>
+          <div className=''> */}
+      {/* <div className='px-4 mt-16 flex justify-between items-center'>
+              <div className='bg-gray-mid rounded-lg p-1'><ChevronLeftIcon className='h-6 w-6'/></div>
+              <div className='bg-gray-mid rounded-lg p-1'><HeartIcon className='h-6 w-6 text-green'/></div>
+            </div> */}
+      {/* <Image src="/avocado.jpg" width="130" height="130"/> */}
+      {/* <div className="bg-cover bg-center" style={{backgroundImage: url('/avocado.jpg')}}></div> */}
+      {/* <div className="bg-[url('/avocado.jpg')]"></div>
+
+            <div className='pt-28'></div>
+            <div className=' rounded-t-3xl'> */}
+      {/* <section className='px-4 pb-4 '>
+                <div className='flex justify-between items-baseline'>
+                  <h1 className=' mb-6 text-dark-green text-xl font-bold'>
+                    Avocado Toast
+                  </h1>
+                  <p className='flex text-gray'>
+                    <ClockIcon className='h-4 w-4 mr-1' />
+                    <span className='font-light text-xs'>10 min</span>
+                  </p>
+                </div>
+                <div className='flex justify-between text-dark-green'>
+                  <div className='text-sm font-semibold'>
+                    <div className='mb-4 flex items-center'>
+                      <div className='bg-gray-mid rounded-lg p-1 mr-2'><Image src="/spaghetti.svg" alt="spaghetti icon" width={20} height={20}/></div>
+                      <p>80g carbs</p>
+                    </div>
+                    <div className='mb-4 flex items-center'>
+                      <div className='bg-gray-mid rounded-lg p-1 mr-2'><FireIcon className='h-5 w-5'/></div>
+                      <p>275 Kcal</p>
+                    </div>
+                  </div>
+                  <div className='mb-8 text-sm font-semibold'>
+                    <div className='mb-4 flex items-center'>
+                      <div className='bg-gray-mid rounded-lg p-1 mr-2'><Image src="/taco.svg" alt="spaghetti icon" width={20} height={20}/></div>
+                      <p>29g proteins</p>
+                    </div>
+                    <div className='mb-4 flex items-center'>
+                      <div className='bg-gray-mid rounded-lg p-1 mr-2'><Image src="/avocado.svg" alt="spaghetti icon" width={18} height={20}/></div>
+                      <p>96g fats</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='bg-gray-mid py-1.5 px-1 flex rounded-xl font-medium'>
+                  <button className='text-gray-mid bg-dark-green px-10 py-2 rounded-xl'>Ingredients</button>
+                  <button className='text-dark-green pl-10'>Instructions</button>
+                </div>
+              </section> */}
+
+      {/* INSTRUCTIONS SECTION */}
+      {/* <section>
+                <div className='px-4 flex justify-between items-baseline'>
+                  <h1 className=' mb-6 text-dark-green text-xl font-bold'>
+                    Instructions
+                  </h1>
+                  <p className='flex text-gray'>
+                    <span className='font-light text-xs'>4 steps</span>
+                  </p>
+                </div>
+
+                <div className='mb-4 mx-4 flex items-center text-sm font-medium'>
+                      <div className='bg-green text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center'><span>1</span></div>
+                      <p>Mash your avocado separately.</p>
+                </div>
+                <div className='mb-4 mx-4 flex items-center text-sm font-medium'>
+                      <div className='bg-green text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center'><span>2</span></div>
+                      <p>Slice cherry tomatoes and add salt and pepper.</p>
+                </div>
+                <div className='mb-4 mx-4 flex items-center text-sm font-medium'>
+                      <div className='bg-green text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center'><span>3</span></div>
+                      <p>Buy good bread and toast it well. It offers a sturdy base and a crisp contrast against the creamy avocado.</p>
+                </div>
+                <div className='mb-4 mx-4 flex items-center text-sm font-medium'>
+                      <div className='bg-green text-white rounded-lg h-6 w-6 mr-2 flex items-center justify-center'><span>4</span></div>
+                      <p>Don’t forget lime and paprika. </p>
+                </div>
+              </section> */}
+      {/* </div>
+          </div> */}
+      
+
+      {/* </main> */}
