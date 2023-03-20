@@ -23,6 +23,22 @@ const Recipe = ({ recipe }) => {
   }
 
   const [recipeCard, setRecipeCard] = useState();
+
+  // dopo il click sulla card deve prendere l'id della ricetta ${recipe.id}
+  // CHIAMATA ALLE API - renderizza la ricetta
+  // useEffect(() => {
+  //   async function fetchRecipe(){
+  //     const response = await fetch(RECIPE_INFO)      
+  //     if(!response.ok){
+  //       return <div>Oops! Something went wrong: the server did not return the recipe info... </div>
+  //     }
+
+  //     const data = await response.json()
+  //     setRecipeCard(data);
+  //   }
+  // fetchRecipe()
+  // }, [])
+
   const fetchRecipe = async () => {
     // const r = await fetch("https://api.spoonacular.com/recipes/716429/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true")
     // const r = await fetch(`https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)

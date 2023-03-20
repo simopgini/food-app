@@ -31,21 +31,7 @@ import Alert from "@/components/Alert";
 
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
-// HiOutlineFire, HiOutlineClock, HiOutlineChevronLeft, heart, HiOutlineSearch, HiOutlineAdjustments, HiOutlinePlusCircle, HiPlusCircle, HiMinusCircle, HiOutlineMinusCircle, HiOutlinePencilAlt, HiOutlineTrash
-
 const List = () => {
-  // const [list, setList] = useState(ingredientsList);
-  // const [name, setName] = useState('');
-
-  // function handleChange(event) {
-  //     setName(event.target.value);
-  // }
-
-  // function handleAdd() {
-  //     const newList = list.concat({ name });
-
-  //     setList(newList);
-  // }
 
   const [name, setName] = useState("");
   // const [list, setList] = useState(getLocalStorage());
