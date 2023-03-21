@@ -11,7 +11,7 @@ const Switcher = ({handleSectionVisibility}) => {
         handleSectionVisibility(!isSelected)
       }}
       className={classNames(
-        " hover:shadow-lg  outline-1 flex items-center pl-1 w-full h-12 rounded-2xl font-medium ",
+        " hover:shadow-lg  outline-1 flex items-center  pl-1 w-full h-12 rounded-2xl font-medium ",
         isSelected ? `bg-gray-mid text-dark-green` : `bg-dark-green text-white`
       )}
     >
@@ -23,7 +23,7 @@ const Switcher = ({handleSectionVisibility}) => {
       >
         Ingredients
       </span>
-      Instructions
+      <span className="flex-1">Instructions</span>
     </button>
     // <button onClick={()=>{setIsSelected(!isSelected)}}
     //         className={classNames("flex items-center pl-1 w-full h-12 bg-gray-lighter rounded-2xl font-medium", {
