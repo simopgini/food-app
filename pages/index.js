@@ -220,6 +220,7 @@ export default function Home() {
               <h1 className="text-dark-green text-lg font-bold">
                 Popular Recipes
               </h1>
+              {/* <Link href="/allRecipes" className='text-green text-xs'>See all</Link> */}
             </div>
 
             <div className="flex-grow w-full mx-auto">
