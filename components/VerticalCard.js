@@ -28,11 +28,11 @@ const VerticalCard = ({ recipe }) => {
           <div className="flex justify-between text-gray pb-6">
             <div className="flex items-center text-sm">
               <HiOutlineFire className="h-4 w-4 mr-1" />
-              <span className="font-light text-xs">200 Kcal</span>
+              <span className="font-light text-xs">{recipe.nutrition.nutrients[0].amount} Kcal</span>
             </div>
             <div className="flex items-center text-sm">
               <HiOutlineClock className="h-4 w-4 mr-1" />
-              <span className="font-light text-xs">30 min</span>
+              <span className="font-light text-xs">{recipe.readyInMinutes} min</span>
             </div>
           </div>
         </div>

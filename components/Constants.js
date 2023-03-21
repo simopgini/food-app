@@ -1,24 +1,38 @@
+
 // DOMINIO
 
+import vegetarianDishesJson from "./MockAPI/vegetarianDishesJson";
+
+const DEBUG = true;
+
+const BASE = `https://api.spoonacular.com`
+
+const API_KEY = `?apiKey=5ea4af906f4443dba9c723a359aa6533`
+
 // ENDPOINT UGUALE PER TUTTI
-const RECIPES = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3"
+const RECIPES = `${BASE}/recipes`
+
+const RECIPES_COMPLEX_SEARCH = `${RECIPES}/complexSearch${API_KEY}`
+
 // HOMEPAGE ENDPOINTS
-const VEGETARIAN_RECIPES_HOME = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3&diet=vegetarian"
-// const VEGETARIAN_RECIPES_HOME = `${RECIPES}&diet=vegetarian`
-
-const RECIPES_TYPE_URL =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3"
-// const RECIPES_TYPE_URL = `${RECIPES}&type=${type}`
-
 // SEARCH
-const SEARCH_RECIPE_NAME = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3"
-// const SEARCH_RECIPE_NAME = `${RECIPES}&query=${inputRecipeName}`
-
-const SEARCH_RECIPES_CUISINE = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5ea4af906f4443dba9c723a359aa6533&addRecipeNutrition=true&addRecipeInformation=true&number=3&cuisine=${cuisineButton.cuisine}"
+//const SEARCH_RECIPES_CUISINE = `https://api.spoonacular.com/recipes/complexSearch${API_KEY}&addRecipeNutrition=true&addRecipeInformation=true&number=3&cuisine=${cuisineButton.cuisine}`
 // const SEARCH_RECIPES_CUISINE = `${RECIPES}&cuisine=${cuisineButton.cuisine}`
+//   function fetchVegetarianRecipes() {
+//   if (DEBUG) {
+//     return JSON.parse(vegetarianDishesJson)
+//   }
 
-// RECIPE
-const RECIPE_INFO = "https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true"
+//   // const response = await fetch(`${RECIPES_COMPLEX_SEARCH}&addRecipeNutrition=true&addRecipeInformation=true&number=3&diet=vegetarian`);
+//   // if (!response.ok) {
+//   //   return (
+//   //     <div>
+//   //       Oops! Something went wrong: the server did not return the recipes...{" "}
+//   //     </div>
+//   //   );
+//   // }
 
+//   // return await response.json();
+// }
 
-export { RECIPES_TYPE_URL, VEGETARIAN_RECIPES_HOME, SEARCH_RECIPE_NAME, SEARCH_RECIPES_CUISINE, RECIPE_INFO, RECIPES }
+export { RECIPES_COMPLEX_SEARCH, RECIPES }

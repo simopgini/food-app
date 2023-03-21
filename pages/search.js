@@ -9,7 +9,7 @@ import {
 import CuisineSearchButtons from "@/components/CuisineSearchButtons";
 import Alert from "@/components/Alert";
 import {
-  SEARCH_RECIPE_NAME,
+  RECIPES_COMPLEX_SEARCH
 } from "@/components/Constants";
 
 export default function Search() {
@@ -21,7 +21,7 @@ export default function Search() {
       return;
     }
     const response = await fetch(
-      `${SEARCH_RECIPE_NAME}&query=${inputRecipeName}`
+      `${RECIPES_COMPLEX_SEARCH}&query=${inputRecipeName}&addRecipeNutrition=true&addRecipeInformation=true&number=3`
     );
     if (!response.ok) {
       return (

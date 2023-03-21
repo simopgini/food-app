@@ -7,8 +7,8 @@ import HorizontalCardHome from "@/components/HorizontalCardHome";
 import { useRouter } from "next/router";
 import CategoryHomeButtons from "@/components/CategoryHomeButtons";
 import {
-  VEGETARIAN_RECIPES_HOME,
-  RECIPES_TYPE_URL,
+  RECIPES_COMPLEX_SEARCH,
+  RECIPES,
 } from "@/components/Constants";
 import Modal from "@/components/Modal";
 
@@ -22,7 +22,7 @@ export default function Home() {
   // 1° CHIAMATA ALLE API - VEGETARIAN che renderizza le recipe cards vegetariane
   useEffect(() => {
     async function fetchVegetarianRecipes() {
-      const response = await fetch(VEGETARIAN_RECIPES_HOME);
+      const response = await fetch(`${RECIPES_COMPLEX_SEARCH}&addRecipeNutrition=true&addRecipeInformation=true&number=3&diet=vegetarian`);
       if (!response.ok) {
         return (
           <div>
@@ -34,14 +34,17 @@ export default function Home() {
       const data = await response.json();
       setVegetarianRecipeCards(data);
     }
-    fetchVegetarianRecipes();
+    fetchVegetarianRecipes()
+    // const data = fetchVegetarianRecipes();
+    // console.log(data)
+    // setVegetarianRecipeCards(data);
   }, []);
 
   const [recipes, setrecipes] = useState(undefined);
 
   // 2° CHIAMATA ALLE API - BOTTONE CON CATEGORY-TYPE che renderizza le recipe cards in base al tipo es. breakfast, dinner, ecc.
   async function fetchRecipes(type) {
-    const response = await fetch(`${RECIPES_TYPE_URL}&type=${type}`);
+    const response = await fetch(`${RECIPES_COMPLEX_SEARCH}&type=${type}&addRecipeNutrition=true&addRecipeInformation=true&number=3`);
 
     if (!response.ok) {
       return (
@@ -64,7 +67,7 @@ export default function Home() {
   // dopo il click sulla card deve prendere l'id della ricetta ${recipe.id} + CHIAMATA ALLE API - renderizza la ricetta
   async function fetchRecipe(recipeID) {
     const response = await fetch(
-      "https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true"
+      `${RECIPES}/${recipeID}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`
     );
     if (!response.ok) {
       return (
