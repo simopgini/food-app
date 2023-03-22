@@ -18,14 +18,15 @@ import classNames from "classnames";
 
 
 const Recipe =  () => {
+  
   const [showIngredients, setShowIngredients] = useState(true);
-
+  
   const handleIgredientsSection = () => {
     setShowIngredients((showIngredients) ? false : true)
   }
-
+  
   const [recipeCard, setRecipeCard] = useState();
-
+  
   // dopo il click sulla card deve prendere l'id della ricetta ${recipe.id} + CHIAMATA ALLE API - renderizza la ricetta
   async function fetchRecipe(recipeID){
     const response = await fetch(`https://api.spoonacular.com/recipes/${recipeID}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)      
@@ -42,9 +43,10 @@ const Recipe =  () => {
       fetchRecipe(router.query.recipeId)
     }
   }, [router.query.recipeId]);
+  
+  const [isActive, setIsActive] = useState(false);
 
-
-
+  
   if (recipeCard === undefined) {
     return (
       <div className="flex justify-center items-center text-base text-dark-green">
@@ -92,18 +94,32 @@ const Recipe =  () => {
       <div 
         className="immagine bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center
         contrast-[1.1] saturate-[1.4]">
-        <div className="px-4 md:px-8 pt-16 flex justify-between items-center mb-36">
+        <div className="px-4 md:px-8 lg:px-16  pt-16 flex justify-between items-center mb-36 lg:mb-64">
           <Link href="/" className="bg-gray-mid rounded-lg p-1">
             <HiOutlineChevronLeft className="h-6 w-6" />
           </Link>
           <div className="bg-gray-mid rounded-lg p-1">
-            <HiHeart className="h-6 w-6 text-green" />
+
+            <div>
+              {isActive ? <HiHeart onClick={() => { setIsActive(!isActive) }} className="h-6 w-6 text-green" /> 
+              : <HiOutlineHeart onClick={() => {setIsActive(!isActive) }} className="h-6 w-6 text-green" />
+              }
+            </div>
+
+            {/* <HiOutlineHeart 
+              onClick={() => {
+                heartIcon ?
+              }}
+              className="h-6 w-6 text-green" 
+              /> */}
+            {/* <HiHeart className="h-6 w-6 text-green" /> */}
+
           </div>
         </div>
 
         <div className="-mt-24 rounded-t-3xl bg-white shadow-sm">
-          <section className="px-4 md:px-8 pb-4 ">
-            <div className="pt-8 flex justify-between items-baseline">
+          <section className="px-4 md:px-8 lg:px-16 pb-4 ">
+            <div className="pt-8 lg:pt-16 flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 {recipeCard.title}
               </h1>
@@ -136,7 +152,7 @@ const Recipe =  () => {
                   <p>{recipeCard.nutrition.nutrients[0].amount} Kcal</p>
                 </div>
               </div>
-              <div className="mb-8 text-sm font-semibold">
+              <div className="text-sm font-semibold">
                 <div className="mb-4 flex items-center">
                   <div className="bg-gray-mid rounded-lg p-1 mr-2">
                     <Image
@@ -163,7 +179,7 @@ const Recipe =  () => {
             </div>
           </section>
             
-            <div className="px-4 md:px-8 pb-4 ">
+            <div className="px-4 md:px-8 lg:px-16 pb-4 ">
               <Switcher
               handleSectionVisibility={handleIgredientsSection}
               />
@@ -171,7 +187,7 @@ const Recipe =  () => {
 
           {/* INGREDIENTS SECTION */}
 
-          <section className={`px-4 md:px-8  ${showIngredients ? "" : "hidden"}`}>
+          <section className={`px-4 md:px-8 lg:px-16 ${showIngredients ? "" : "hidden"}`}>
             <div className="flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 Ingredients
@@ -199,8 +215,8 @@ const Recipe =  () => {
           </section>
           
           {/* INSTRUCTIONS SECTION */}
-          <section className={`px-4 md:px-8  ${!showIngredients ? "" : "hidden"}`}>
-            <div className="px-4 md:px-8 lg:px-12 flex justify-between items-baseline">
+          <section className={`px-4 md:px-8 lg:px-16  ${!showIngredients ? "" : "hidden"}`}>
+            <div className="flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
                 Instructions
               </h1>
