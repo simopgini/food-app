@@ -6,7 +6,7 @@ export default function Profile() {
     <>
       <div className="h-screen mb-8">
         <div>
-          <div className="px-4 mb-6 mt-16 flex justify-between items-center">
+          <div className="px-4 md:px-8 lg:px-16 mb-6 mt-16 flex justify-between items-center">
             <Link
               href="/"
               className="hover:scale-105 bg-white rounded-lg p-1 shadow-md"

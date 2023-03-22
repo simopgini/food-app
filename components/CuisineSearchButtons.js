@@ -88,6 +88,8 @@ const CuisineSearchButtons = ({ cuisine }) => {
     const data = JSON.parse(searchCuisine);
 
     setSearchedCuisine(data);
+
+
   };
 
   return (

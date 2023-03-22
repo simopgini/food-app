@@ -105,7 +105,7 @@ const List = () => {
     <>
       <div className="h-screen mb-8">
         <div>
-          <div className="px-4 mb-6 mt-16 flex justify-between items-center">
+          <div className="px-4 md:px-8 lg:px-16 mb-6 mt-16 flex justify-between items-center">
             <Link
               href="/"
               className="hover:scale-105 bg-white rounded-lg p-1 shadow-md"
@@ -117,7 +117,7 @@ const List = () => {
           </div>
         </div>
 
-        <div className="px-4 mb-8">
+        <div className="px-4 md:px-8 lg:px-16 mb-8">
           <h2 className="font-bold text-xl text-[#0A2533]">
             My ingredients list:
           </h2>
@@ -126,7 +126,7 @@ const List = () => {
         {/* Type grocery item section mt-36*/}
         <div className="section-center">
           <div className=" mb-4 items-center">
-            <form className="px-4 grocery-form" onSubmit={handleSubmit}>
+            <form className="px-4 md:px-8 lg:px-16 grocery-form" onSubmit={handleSubmit}>
               <div className="flex form-control">
                 <input
                   className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-light w-full  rounded-lg py-2 pr-3 shadow-md focus:outline-none 
@@ -150,7 +150,7 @@ const List = () => {
             )}
           </div>
           {list.length > 0 && (
-            <section className="px-4 grocery-container">
+            <section className="px-4 md:px-8 lg:px-16 grocery-container">
               <ItemList
                 items={list}
                 removeItem={removeItem}

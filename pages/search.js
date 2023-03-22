@@ -132,7 +132,7 @@ export default function Search() {
     <>
       <div className="h-screen mb-8">
         <div>
-          <div className="px-4 mb-6 mt-16 flex justify-between items-center">
+          <div className="px-4 md:px-8 lg:px-16 mb-6 mt-16 flex justify-between items-center">
             <Link href="/" className=" bg-white rounded-lg p-1 shadow-md">
               <HiOutlineChevronLeft className="h-6 w-6" />
             </Link>
@@ -143,7 +143,7 @@ export default function Search() {
           </div>
         </div>
 
-        <div className=" mb-2 px-4 items-center">
+        <div className=" mb-2 px-4 md:px-8 lg:px-16 items-center">
           <form className="" onSubmit={handleSubmit}>
             <div className="flex form-control">
               <label className="flex-1 relative block uppercase">
@@ -179,7 +179,7 @@ export default function Search() {
 
         <section className="mb-6">
           <div className="flex-grow w-full mx-auto">
-            <div className="pl-4">
+            <div className="pl-4 md:px-8 lg:px-16">
               <div className=" my-4">
                 <ul className="flex flex-no-wrap overflow-x-auto scrolling-touch items-start">
                   {cuisineButton.map((cuisine) => {

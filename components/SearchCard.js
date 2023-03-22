@@ -4,7 +4,7 @@ import { HiOutlineFire, HiOutlineClock } from "react-icons/hi";
 
 const SearchCard = ({ searchRecipe }) => {
   return (
-    <div className="px-4 mb-6">
+    <div className="px-4 md:px-8 lg:px-16 mb-6">
       <Link
         href={`/${searchRecipe.id}`}
         className="flex items-center bg-white  rounded-xl drop-shadow hover:scale-105 md:hover:scale-100 md:hover:shadow-md duration-500 cursor-pointer"
