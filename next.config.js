@@ -3,21 +3,27 @@
    reactStrictMode: true,
  }
 
- module.exports = {
+//  module.exports = {
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: 'https',
+//         hostname: 'spoonacular.com',
+//         port: '',
+//         pathname: '/recipeImages/**',
+//       },
+//       // {
+//       //   protocol: 'https',
+//       //   hostname: 'spoonacular.com',
+//       //   port: '',
+//       //   pathname: '/cdn/ingredients_100x100/**',
+//       // },
+//     ],
+//   },
+// }
+
+module.exports = {
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'spoonacular.com',
-        port: '',
-        pathname: '/recipeImages/**',
-      },
-      // {
-      //   protocol: 'https',
-      //   hostname: 'spoonacular.com',
-      //   port: '',
-      //   pathname: '/cdn/ingredients_100x100/**',
-      // },
-    ],
+    domains: ["spoonacular.com"]
   },
 }
