@@ -135,7 +135,7 @@ export default function Home() {
 
   if (vegetarianRecipeCards === undefined) {
     return (
-      <div className="flex justify-center items-center text-base text-dark-green">
+      <div className="h-screen flex justify-center items-center text-base text-dark-green">
         Loading...
       </div>
     );
@@ -154,7 +154,7 @@ export default function Home() {
         {/* HOME SECTION */}
         {/* <DesktopNavbar /> */}
 
-        <div className="h-full mb-8">
+        <div className="h-screen mb-8">
           <div className="mt-14 mb-6 pl-4 md:pl-8 lg:pl-16 text-dark-green text-xl font-bold">
             Hello 👋
           </div>
