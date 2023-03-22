@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Link from "next/link";
+// import Image from "next/image";
+// import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import searchCuisine from "./searchCuisineJson";
+// import searchCuisine from "./searchCuisineJson";
 const CuisineSearchButtons = ({ cuisine }) => {
   const router = useRouter();
 

@@ -25,16 +25,6 @@ const Switcher = ({handleSectionVisibility}) => {
       </span>
       <span className="flex-1">Instructions</span>
     </button>
-    // <button onClick={()=>{setIsSelected(!isSelected)}}
-    //         className={classNames("flex items-center pl-1 w-full h-12 bg-gray-lighter rounded-2xl font-medium", {
-    //         'bg-dark-green': isSelected,
-    //         })}>
-    //     <span className={classNames("h-10 w-1/2 bg-dark-green rounded-xl mr-2 font-medium text-white flex items-center justify-center", {
-    //         'bg-gray-lighter': !isSelected,
-    //     }
-    //     )}>Ingredients</span>
-    //     Instructions
-    // </button>
   );
 };
 

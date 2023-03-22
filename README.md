@@ -1,3 +1,8 @@
+Hello folks, welcome to my Avocado Tribe app.
+
+This is a Next.js food app that uses the Spoonacular API to get recipes info(images, ingredients, nutritional values, cuisine, etc.).
+I've designed the mobile app with Figma and developed it with Tailwind CSS.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

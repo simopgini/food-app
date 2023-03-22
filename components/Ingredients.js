@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { HiCheck } from "react-icons/hi";
 
 const Ingredients = ({ ingredient }) => {
 
@@ -15,7 +14,6 @@ const Ingredients = ({ ingredient }) => {
               height={50}
               style={{ objectFit: "cover" }}
               />
-        {/* <HiCheck /> */}
         </div>
         <p className="first-letter:uppercase">{ingredient.name}</p>
       </div>
