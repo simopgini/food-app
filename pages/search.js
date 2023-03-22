@@ -21,7 +21,7 @@ export default function Search() {
       return;
     }
     const response = await fetch(
-      `${RECIPES_COMPLEX_SEARCH}&query=${inputRecipeName}&addRecipeNutrition=true&addRecipeInformation=true&number=3`
+      `${RECIPES_COMPLEX_SEARCH}&query=${inputRecipeName}&addRecipeNutrition=true&addRecipeInformation=true&number=1`
     );
     if (!response.ok) {
       return (
@@ -143,8 +143,7 @@ export default function Search() {
           </div>
         </div>
 
-        {/* COME FACCIO A PUSHARE CIò CHE è STATO SCRITTO NELL'INPUT DINAMICAMENTE DENTRO LA API REQUEST? */}
-        <div className=" mb-4 px-4 items-center">
+        <div className=" mb-2 px-4 items-center">
           <form className="" onSubmit={handleSubmit}>
             <div className="flex form-control">
               <label className="flex-1 relative block uppercase">
@@ -175,7 +174,7 @@ export default function Search() {
           </form>
         </div>
         {alert.show && (
-          <Alert className="pl-8" {...alert} removeAlert={showAlert} />
+          <Alert className="" {...alert} removeAlert={showAlert} />
         )}
 
         <section className="mb-6">

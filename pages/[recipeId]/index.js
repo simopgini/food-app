@@ -12,6 +12,8 @@ import {
   HiHeart,
   HiOutlineHeart,
 } from "react-icons/hi";
+import classNames from "classnames";
+
 // import Modal from "@/components/Modal";
 
 
@@ -52,12 +54,45 @@ const Recipe =  () => {
   }
 
   return (
-    <>
+    <div>
       {/* c'è un import chiamato classNames che permette di prendere più classNames, prova per vedere 
           se si riesce a mettere l'img come sfondo in maniera dinamica */}
-      <div className="immagine bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center contrast-[1.1] saturate-[1.4]">
-        {/* h-96  */}
-        <div className="px-4 md:px-8 pt-16 flex justify-between items-center mb-24">
+        {/* <div className="relative h-40 w-64 sm:h-40 sm:w-56 lg:h-52 lg:w-80">
+          <Image
+            className="contrast-[1.1] saturate-[1.4] bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center"
+            priority
+            src={recipeCard.image}
+            alt={recipeCard.title}
+            fill
+            // style={{ objectFit: "cover" }}
+          />
+        </div> */}
+
+
+        {/* <div 
+          className="relative  bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center
+          contrast-[1.1] saturate-[1.4]">
+            <Image
+            className="z-10 contrast-[1.1] saturate-[1.4] bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center"
+            priority
+            src={recipeCard.image}
+            alt={recipeCard.title}
+            fill
+            style={{ objectFit: "cover" }}
+            />
+          <div className="  z-50 px-4 md:px-8 pt-16 flex justify-between items-center mb-36">
+            <Link href="/" className="bg-gray-mid rounded-lg p-1">
+              <HiOutlineChevronLeft className="h-6 w-6" />
+            </Link>
+            <div className="bg-gray-mid rounded-lg p-1">
+              <HiHeart className="h-6 w-6 text-green" />
+            </div>
+          </div>
+        </div> */}
+      <div 
+        className="immagine bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center
+        contrast-[1.1] saturate-[1.4]">
+        <div className="px-4 md:px-8 pt-16 flex justify-between items-center mb-36">
           <Link href="/" className="bg-gray-mid rounded-lg p-1">
             <HiOutlineChevronLeft className="h-6 w-6" />
           </Link>
@@ -66,7 +101,7 @@ const Recipe =  () => {
           </div>
         </div>
 
-        <div className=" rounded-t-3xl bg-white shadow-sm">
+        <div className="-mt-24 rounded-t-3xl bg-white shadow-sm">
           <section className="px-4 md:px-8 pb-4 ">
             <div className="pt-8 flex justify-between items-baseline">
               <h1 className=" mb-6 text-dark-green text-xl font-bold">
@@ -188,8 +223,10 @@ const Recipe =  () => {
           </section>
           
         </div>
+
       </div>
-    </>
+
+    </div>
   );
 };
 export default Recipe;

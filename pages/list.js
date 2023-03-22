@@ -125,8 +125,8 @@ const List = () => {
 
         {/* Type grocery item section mt-36*/}
         <div className="section-center">
-          <div className=" mb-4 px-4 items-center">
-            <form className="grocery-form" onSubmit={handleSubmit}>
+          <div className=" mb-4 items-center">
+            <form className="px-4 grocery-form" onSubmit={handleSubmit}>
               <div className="flex form-control">
                 <input
                   className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-light w-full  rounded-lg py-2 pr-3 shadow-md focus:outline-none 
