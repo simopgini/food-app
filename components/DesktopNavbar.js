@@ -17,10 +17,10 @@ import MobileNavbar from "./MobileNavbar";
 const DesktopNavbar = () => {
   const router = useRouter();
 
-  const [toggle, setToggle] = useState("active")
-      const handleClick = () => {
-      setToggle("deactive")
-  }
+//   const [toggle, setToggle] = useState("active")
+//       const handleClick = () => {
+//       setToggle("deactive")
+//   }
 
   return (
     <nav className="hidden lg:block  bg-white border-gray-200 pt-4 rounded dark:bg-gray-900">
@@ -34,11 +34,21 @@ const DesktopNavbar = () => {
 
         <div className="hidden w-full lg:block lg:w-auto">
             <ul className="flex gap-8 font-semibold text-lg">
-                
 
+                <li className={router.pathname == "/" ? "active" : "deactive"}>
+                    <Link href="/" className="hover:text-green cursor-pointer ">Home</Link>
+                </li>
+                <li className={router.pathname == "/search" ? "active" : "deactive"}>
+                    <Link href="/search" className="hover:text-green cursor-pointer ">Search</Link>
+                </li>
+                <li className={router.pathname == "/list" ? "active" : "deactive"}>
+                    <Link href="/list" className="hover:text-green cursor-pointer ">List</Link>
+                </li>
+                <li className={router.pathname == "/profile" ? "active" : "deactive"}>
+                    <Link href="/profile" className="hover:text-green cursor-pointer ">Profile</Link>
+                </li>
 
-
-                <Link href="/"  className={router.pathname == "/" ? "active" : "deactive"}
+                {/* <Link href="/"  className={router.pathname == "/" ? "active" : "deactive"}
                       onClick={handleClick}>
                         <li className="hover:text-green cursor-pointer ">Home</li>
 
@@ -54,7 +64,7 @@ const DesktopNavbar = () => {
                 <Link href="/profile"  className={router.pathname == "/profile" ? "active" : "deactive"}
                       onClick={handleClick}>
                     <li className="hover:text-green cursor-pointer">Profile</li>
-                </Link>
+                </Link> */}
             </ul>
         </div>
       </div>
