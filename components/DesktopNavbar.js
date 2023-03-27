@@ -23,8 +23,8 @@ const DesktopNavbar = () => {
 //   }
 
   return (
-    <nav className="hidden lg:block  bg-white border-gray-200 pt-4 rounded dark:bg-gray-900">
-      <div className="px-4 md:px-8 lg:px-16  flex flex-wrap items-center justify-between mx-auto">
+    <nav className="hidden lg:block lg:relative lg:top-0 lg:z-30 lg:pb-8 bg-white pt-4 2xl:pt-8 rounded">
+      <div className="px-4 md:px-8 lg:px-16 2xl:px-24 flex flex-wrap items-center justify-between mx-auto">
         <div className="flex items-center">
             <Image src="/favicon.ico" alt="Avocado tribe Logo" width={40} height={40} />
             <span className="pl-4 text-2xl font-bold text-neutral-500">

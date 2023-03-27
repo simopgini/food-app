@@ -60,36 +60,20 @@ const Recipe =  () => {
 
   return (
     <div>
-      {/* c'è un import chiamato classNames che permette di prendere più classNames, prova per vedere 
-          se si riesce a mettere l'img come sfondo in maniera dinamica */}
-        {/* <div className="relative h-40 w-64 sm:h-40 sm:w-56 lg:h-52 lg:w-80">
+        <div className="h-36 w-full sm:h-64 sm:w-56 md:h-72 md:w-full lg:h-80 lg:w-80 2xl:h-96 2xl:w-full">
           <Image
-            className="contrast-[1.1] saturate-[1.4] bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center"
+            className="object-contain object-top 2xl:object-fill 2xl:object-top contrast-[1.1] saturate-[1.4] hover:transition hover:duration-300"
             priority
             src={recipeCard.image}
             alt={recipeCard.title}
             fill
-            // style={{ objectFit: "cover" }}
           />
-        </div> */}
 
-        {/* NEW */}
-        <div className="flex justify-center h-28 w-full sm:h-32 sm:w-56 lg:h-52 lg:w-80">
-          <Image
-            className="contrast-[1.1] saturate-[1.4] bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center"
-            priority
-            src={recipeCard.image}
-            alt={recipeCard.title}
-            fill
-            style={{ objectFit: "fill", objectPosition: "top"  }}
-            // width={300}
-            // height={200}
-          />
           <div className="px-4 md:px-8 lg:px-16  pt-16 flex justify-between items-center mb-36 lg:mb-64">
-            <Link href="/" className="absolute left-4 bg-white rounded-lg p-1">
+            <Link href="/" className="lg:hidden absolute left-4 bg-white rounded-lg p-1">
               <HiOutlineChevronLeft className="h-6 w-6" />
             </Link>
-            <div className="absolute right-4 bg-white rounded-lg p-1">
+            <div className="absolute right-4 lg:right-16 2xl:right-24 bg-white rounded-lg p-1">
 
               <div>
                 {isActive ? <HiHeart onClick={() => { setIsActive(!isActive) }} className="h-6 w-6 text-green" /> 
@@ -101,66 +85,28 @@ const Recipe =  () => {
           
         </div>
 
-        {/* <div 
-          className="relative  bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center
-          contrast-[1.1] saturate-[1.4]">
-            <Image
-            className="z-10 contrast-[1.1] saturate-[1.4] bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center"
-            priority
-            src={recipeCard.image}
-            alt={recipeCard.title}
-            fill
-            style={{ objectFit: "cover" }}
-            />
-          <div className="  z-50 px-4 md:px-8 pt-16 flex justify-between items-center mb-36">
-            <Link href="/" className="bg-gray-mid rounded-lg p-1">
-              <HiOutlineChevronLeft className="h-6 w-6" />
-            </Link>
-            <div className="bg-gray-mid rounded-lg p-1">
-              <HiHeart className="h-6 w-6 text-green" />
-            </div>
-          </div>
-        </div> */}
-
-      {/* immagine */}
-      <div 
-        className=" bg-no-repeat hover:transition hover:duration-300 hover:object-none hover:object-center
-        contrast-[1.1] saturate-[1.4]">
-        {/* <div className="px-4 md:px-8 lg:px-16  pt-16 flex justify-between items-center mb-36 lg:mb-64">
-          <Link href="/" className="bg-gray-mid rounded-lg p-1">
-            <HiOutlineChevronLeft className="h-6 w-6" />
-          </Link>
-          <div className="bg-gray-mid rounded-lg p-1">
-
-            <div>
-              {isActive ? <HiHeart onClick={() => { setIsActive(!isActive) }} className="h-6 w-6 text-green" /> 
-              : <HiOutlineHeart onClick={() => {setIsActive(!isActive) }} className="h-6 w-6 text-green" />
-              }
-            </div>
-          </div>
-        </div> */}
-
-        <div className="mt-8 rounded-t-3xl bg-white shadow-sm">
-          <section className="px-4 md:px-8 lg:px-16 pb-4 ">
+      <div className=" bg-no-repeat contrast-[1.1]">
+        <div className="h-screen mt-8 rounded-t-3xl bg-white shadow-sm">
+          <section className="px-4 md:px-8 lg:px-16 2xl:px-36 pb-4 ">
             <div className="pt-8 lg:pt-16 flex justify-between items-baseline">
-              <h1 className=" mb-6 text-dark-green text-xl font-bold">
+              <h1 className=" mb-6 text-dark-green text-xl 2xl:text-2xl 2xl:mb-10 font-bold">
                 {recipeCard.title}
               </h1>
-              <p className="flex text-gray">
-                <HiOutlineClock className="h-4 w-4 mr-1" />
-                <span className="font-light text-xs">
+              <p className="flex items-center text-gray">
+                <HiOutlineClock className="h-4 w-4 2xl:h-5 2xl:w-5 mr-1" />
+                <span className="font-light text-xs 2xl:text-sm">
                   {recipeCard.readyInMinutes} min
                 </span>
               </p>
             </div>
 
-            <div className="flex justify-between text-dark-green">
-              <div className="text-sm font-semibold">
+            <div className="2xl:px-44 flex justify-between text-dark-green">
+              <div className="text-sm 2xl:text-base font-semibold">
                 <div className="mb-4 flex items-center">
-                  <div className="bg-gray-mid rounded-lg p-1 mr-2">
+                  <div className="bg-gray-mid rounded-lg p-1 2xl:p-2 mr-2 2xl:mr-4">
                     <Image
                       src="/spaghetti.svg"
-                      alt="spaghetti icon"
+                      alt="spaghetti carbs icon"
                       width={20}
                       height={20}
                     />
@@ -168,30 +114,30 @@ const Recipe =  () => {
                   <p>{recipeCard.nutrition.nutrients[3].amount}g carbs</p>
                 </div>
 
-                <div className="mb-4 flex items-center">
-                  <div className="bg-gray-mid rounded-lg p-1 mr-2">
-                    <HiOutlineFire className="h-5 w-5" />
-                  </div>
-                  <p>{recipeCard.nutrition.nutrients[0].amount} Kcal</p>
-                </div>
-              </div>
-              <div className="text-sm font-semibold">
-                <div className="mb-4 flex items-center">
-                  <div className="bg-gray-mid rounded-lg p-1 mr-2">
+                <div className="mb-4 2xl:mb-8 flex items-center">
+                  <div className="bg-gray-mid rounded-lg p-1 2xl:p-2 mr-2 2xl:mr-4">
                     <Image
                       src="/taco.svg"
-                      alt="spaghetti icon"
+                      alt="protein taco icon"
                       width={20}
                       height={20}
                     />
                   </div>
                   <p>{recipeCard.nutrition.nutrients[9].amount}g proteins</p>
                 </div>
+              </div>
+              <div className="text-sm 2xl:text-base font-semibold">
                 <div className="mb-4 flex items-center">
-                  <div className="bg-gray-mid rounded-lg p-1 mr-2">
+                  <div className="bg-gray-mid rounded-lg p-1 2xl:p-2 mr-2 2xl:mr-4">
+                    <HiOutlineFire className="h-5 w-5" />
+                  </div>
+                  <p>{recipeCard.nutrition.nutrients[0].amount} Kcal</p>
+                </div>
+                <div className="mb-4 flex items-center">
+                  <div className="bg-gray-mid rounded-lg p-1 2xl:p-2 mr-2 2xl:mr-4">
                     <Image
                       src="/avocado.svg"
-                      alt="spaghetti icon"
+                      alt="avocado fat icon"
                       width={20}
                       height={20}
                     />
@@ -201,22 +147,21 @@ const Recipe =  () => {
               </div>
             </div>
           </section>
-            
-            <div className="px-4 md:px-8 lg:px-16 pb-4 ">
+            {/* 2xl:px-24  */}
+            <div className="px-4 md:px-8 lg:px-16 2xl:px-80 pb-4 2xl:pb-8  ">
               <Switcher
               handleSectionVisibility={handleIgredientsSection}
               />
             </div>            
 
           {/* INGREDIENTS SECTION */}
-
-          <section className={`px-4 md:px-8 lg:px-16 ${showIngredients ? "" : "hidden"}`}>
+          <section className={`px-4 md:px-8 lg:px-16 2xl:px-36 ${showIngredients ? "" : "hidden"}`}>
             <div className="flex justify-between items-baseline">
-              <h1 className=" mb-6 text-dark-green text-xl font-bold">
+              <h1 className=" mb-6 text-dark-green text-xl 2xl:text-2xl font-bold">
                 Ingredients
               </h1>
               <p className="flex text-gray">
-                <span className="font-light text-xs">Quantity</span>
+                <span className="font-light text-xs 2xl:text-sm">Quantity</span>
               </p>
             </div>
 
@@ -238,13 +183,13 @@ const Recipe =  () => {
           </section>
           
           {/* INSTRUCTIONS SECTION */}
-          <section className={`px-4 md:px-8 lg:px-16  ${!showIngredients ? "" : "hidden"}`}>
+          <section className={`px-4 md:px-8 lg:px-16 2xl:px-36 ${!showIngredients ? "" : "hidden"}`}>
             <div className="flex justify-between items-baseline">
-              <h1 className=" mb-6 text-dark-green text-xl font-bold">
+              <h1 className=" mb-6 text-dark-green text-xl 2xl:text-2xl font-bold">
                 Instructions
               </h1>
               <p className="flex text-gray">
-                <span className="font-light text-xs">Steps</span>
+                <span className="font-light text-xs 2xl:text-sm">Steps</span>
               </p>
             </div>
             <div>

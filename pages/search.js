@@ -143,7 +143,7 @@ export default function Search() {
           </div>
         </div>
 
-        <div className=" mb-2 lg:mb-8 px-4 md:px-8 lg:px-16 items-center">
+        <div className="lg:mb-8 px-4 md:px-8 lg:px-16 2xl:px-24 items-center">
           <form className="" onSubmit={handleSubmit}>
             <div className="flex form-control">
               <label className="flex-1 relative block uppercase">
@@ -174,12 +174,12 @@ export default function Search() {
           </form>
         </div>
         {alert.show && (
-          <Alert className="" {...alert} removeAlert={showAlert} />
+          <Alert className="ml-10" {...alert} removeAlert={showAlert} />
         )}
 
         <section className="mb-6">
           <div className="flex-grow w-full mx-auto">
-            <div className="pl-4 md:px-8 lg:px-16">
+            <div className="pl-4 md:pl-8 lg:pl-16 2xl:pl-24">
               <div className=" my-4">
                 <ul className="flex flex-no-wrap overflow-x-auto scrolling-touch items-start">
                   {cuisineButton.map((cuisine) => {
