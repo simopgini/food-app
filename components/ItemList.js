@@ -37,28 +37,28 @@ const ItemList = ({ items, removeItem, editItem }) => {
                 type="checkbox"
                 className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2"
               />
-              <p className="text-dark-green text-sm">{item.title}</p>
+              <p className="text-dark-green text-sm lg:text-base">{item.title}</p>
             </div>
-            <div className="flex text-dark-green space-x-2 text-sm">
+            <div className="flex items-center text-dark-green space-x-2 lg:space-x-3 text-sm">
               <HiMinusCircle
                 onClick={() => reduceCount(item)}
-                className="transition duration-300 hover:scale-110 h-5 w-5 text-green mr-2"
+                className="transition duration-300 hover:scale-110 h-5 w-5 lg:h-6 lg:w-6 text-green mr-2 lg:mr-3"
               ></HiMinusCircle>
               {item.count}
               <HiPlusCircle
                 onClick={() => incrementCount(item)}
-                className="transition duration-300 hover:scale-110 h-5 w-5 text-green"
+                className="transition duration-300 hover:scale-110 h-5 w-5 lg:h-6 lg:w-6 text-green"
               ></HiPlusCircle>
               <button>
                 <HiOutlinePencilAlt
                   onClick={() => editItem(item.id)}
-                  className="hover:scale-110 h-5 w-5 text-green"
+                  className="hover:scale-110 h-5 w-5 lg:h-6 lg:w-6 text-green"
                 />
               </button>
               <button>
                 <HiOutlineTrash
                   onClick={() => removeItem(item.id)}
-                  className="clear-btn transition duration-300 hover:scale-110 h-5 w-5 text-red-500"
+                  className="clear-btn transition duration-300 hover:scale-110 h-5 w-5 lg:h-6 lg:w-6 text-red-500"
                 />
               </button>
             </div>

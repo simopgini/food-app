@@ -56,7 +56,7 @@ const MobileNavbar = () => {
   // const [isActive4, setIsActive4] = useState(false);
 
   return (
-    <nav className="sticky bottom-0 bg-white border-t border-gray-line">
+    <nav className="lg:hidden sticky bottom-0 bg-white border-t border-gray-line">
       <ul className="py-6 pb-8 px-10 flex justify-between items-center text-sm">
         <li>
           <Link href="/" legacyBehavior>

@@ -12,6 +12,9 @@ import {
   HiHeart,
   HiOutlineHeart,
 } from "react-icons/hi";
+import {
+  RECIPES,
+} from "@/components/Constants";
 import classNames from "classnames";
 
 // import Modal from "@/components/Modal";
@@ -29,7 +32,7 @@ const Recipe =  () => {
   
   // dopo il click sulla card deve prendere l'id della ricetta ${recipe.id} + CHIAMATA ALLE API - renderizza la ricetta
   async function fetchRecipe(recipeID){
-    const response = await fetch(`https://api.spoonacular.com/recipes/${recipeID}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)      
+    const response = await fetch(`${RECIPES}/${recipeID}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`)      
     if(!response.ok){
       return <div>Oops! Something went wrong: the server did not return the recipe info... </div>
     }
@@ -49,7 +52,7 @@ const Recipe =  () => {
   
   if (recipeCard === undefined) {
     return (
-      <div className="flex justify-center items-center text-base text-dark-green">
+      <div className="h-screen flex justify-center items-center text-base text-dark-green">
         Loading...
       </div>
     );
@@ -82,7 +85,7 @@ const Recipe =  () => {
             // width={300}
             // height={200}
           />
-          <div className=" px-4 md:px-8 lg:px-16  pt-16 flex justify-between items-center mb-36 lg:mb-64">
+          <div className="px-4 md:px-8 lg:px-16  pt-16 flex justify-between items-center mb-36 lg:mb-64">
             <Link href="/" className="absolute left-4 bg-white rounded-lg p-1">
               <HiOutlineChevronLeft className="h-6 w-6" />
             </Link>

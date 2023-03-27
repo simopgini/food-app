@@ -131,8 +131,8 @@ export default function Search() {
   return (
     <>
       <div className="h-screen mb-8">
-        <div>
-          <div className="px-4 md:px-8 lg:px-16 mb-6 mt-16 flex justify-between items-center">
+        <div className="lg:mt-20">
+          <div className="lg:hidden px-4 md:px-8 lg:px-16 mb-6 mt-16 flex justify-between items-center">
             <Link href="/" className=" bg-white rounded-lg p-1 shadow-md">
               <HiOutlineChevronLeft className="h-6 w-6" />
             </Link>
@@ -143,16 +143,16 @@ export default function Search() {
           </div>
         </div>
 
-        <div className=" mb-2 px-4 md:px-8 lg:px-16 items-center">
+        <div className=" mb-2 lg:mb-8 px-4 md:px-8 lg:px-16 items-center">
           <form className="" onSubmit={handleSubmit}>
             <div className="flex form-control">
               <label className="flex-1 relative block uppercase">
-                <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                  <HiOutlineSearch className="h-5 w-5 mr-1 text-gray" />
+                <span className="absolute inset-y-0 left-0 flex items-center pl-2 lg:pl-3">
+                  <HiOutlineSearch className="h-5 w-5 mr-1 text-gray lg:h-6 lg:w-6" />
                 </span>
                 <input
-                  className="pl-9 flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-light w-full  rounded-lg py-2 pr-3 shadow-md focus:outline-none 
-                                      focus:border-green focus:ring-green focus:ring-1 sm:text-sm"
+                  className="pl-9 flex-1 placeholder:text-sm lg:placeholder:text-base lg:pl-14 placeholder:text-gray block  bg-gray-light w-full  rounded-lg py-2 lg:py-3.5 pr-3 shadow-md focus:outline-none 
+                            focus:border-green focus:ring-green focus:ring-1 sm:text-sm"
                   style={{ borderWidth: 0 }}
                   placeholder="Search your recipe"
                   type="text"
@@ -166,9 +166,9 @@ export default function Search() {
                 onClick={() => {
                   fetchSearchedRecipes(name);
                 }}
-                className="submit-btn drop-shadow-sm drop-shadow-white hover:shadow-[#A4D3C5] hover:scale-105 ml-2"
+                className="submit-btn drop-shadow-sm drop-shadow-white hover:shadow-[#A4D3C5] hover:scale-105 ml-2 lg:ml-4"
               >
-                <HiOutlineAdjustments className="h-7 w-7 mr-1 text-gray rotate-90" />
+                <HiOutlineAdjustments className="h-7 w-7 mr-1 lg:h-8 lg:w-8 text-gray rotate-90" />
               </button>
             </div>
           </form>

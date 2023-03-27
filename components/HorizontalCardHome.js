@@ -16,13 +16,13 @@ const HorizontalCardHome = ({ vegetarianRecipeCard }) => {
             fill
             style={{ objectFit: "cover" }}
           />
-          <div className="w-full rounded-b-xl bg-gradient-to-t from-dark-green to-transparent  bottom-0 absolute px-2 py-2 text-white">
-            <h2 className="text-base pb-1 font-semibold truncate">
+          <div className="w-full rounded-b-xl bg-gradient-to-t from-dark-green to-transparent bottom-0 absolute px-2 py-2 lg:px-4 lg:py-4 text-white">
+            <h2 className="text-base pb-1 font-semibold lg:text-lg truncate">
               {vegetarianRecipeCard.title}
             </h2>
-            <div className="flex items-center text-sm">
+            <div className="flex items-center text-sm lg:text-sm">
               <HiClock className="h-4 w-4 mr-1 text-white" />
-              <span className="font-light text-xs">{vegetarianRecipeCard.readyInMinutes} min</span>
+              <span className="font-light text-xs lg:text-sm">{vegetarianRecipeCard.readyInMinutes} min</span>
             </div>
           </div>
         </div>

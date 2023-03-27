@@ -11,6 +11,7 @@ import {
   RECIPES,
 } from "@/components/Constants";
 import Modal from "@/components/Modal";
+import DesktopNavbar from "@/components/DesktopNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,6 +56,8 @@ export default function Home() {
     }
 
     const data = await response.json();
+    console.log(data)
+
     setrecipes(data);
   }
 
@@ -150,19 +153,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* <DesktopNavbar> */}
       <div>
         {/* HOME SECTION */}
         {/* <DesktopNavbar /> */}
 
         <div className="h-screen mb-8">
-          <div className="mt-14 mb-6 pl-4 md:pl-8 lg:pl-16 text-dark-green text-xl font-bold">
+          <div className="lg:hidden mt-14 mb-6 pl-4 md:pl-8 lg:pl-16 text-dark-green text-xl font-bold">
             Hello 👋
           </div>
 
           {/* RICETTE VEGETARIANE - GETTING INSPIRED */}
-          <section className="mb-6">
+          <section className="lg:mt-14 mb-6">
             <div className="px-4 md:px-8 lg:px-16 pb-3 flex justify-between items-center font-bold">
-              <h1 className="text-dark-green text-lg font-bold">
+              <h1 className="text-dark-green text-lg lg:text-xl font-bold">
                 Getting Inspired
               </h1>
             </div>
@@ -191,12 +195,12 @@ export default function Home() {
 
           <section className="mb-3">
             <div className="px-4 md:px-8 lg:px-16 flex justify-between items-center font-bold">
-              <h1 className="text-dark-green text-lg font-bold">Category</h1>
+              <h1 className="text-dark-green text-lg lg:text-xl font-bold">Category</h1>
               {/* <Link href="/allRecipes" className='text-green text-xs'>See all</Link> */}
             </div>
             <div className="flex-grow w-full mx-auto">
               <div className="pl-4 md:pl-8 lg:pl-16">
-                <div className="my-4">
+                <div className="my-4 lg:mt-7 lg:my-6">
                   <div className="">
                     <ul className=" flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
                       {categoryTypeHome.map((type) => {
@@ -219,8 +223,8 @@ export default function Home() {
           </section>
 
           <section className="mb-6">
-            <div className="px-4 md:px-8 lg:px-16 pb-3 flex justify-between items-center font-bold">
-              <h1 className="text-dark-green text-lg font-bold">
+            <div className="px-4 md:px-8 lg:px-16 pb-3 lg:pb-6 flex justify-between items-center font-bold">
+              <h1 className="text-dark-green text-lg lg:text-xl font-bold">
                 Popular Recipes
               </h1>
               {/* <Link href="/allRecipes" className='text-green text-xs'>See all</Link> */}
@@ -250,6 +254,7 @@ export default function Home() {
           </section>
         </div>
       </div>
+      {/* </DesktopNavbar> */}
     </>
   );
 }

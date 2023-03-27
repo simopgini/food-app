@@ -104,8 +104,8 @@ const List = () => {
   return (
     <>
       <div className="h-screen mb-8">
-        <div>
-          <div className="px-4 md:px-8 lg:px-16 mb-6 mt-16 flex justify-between items-center">
+        <div className="lg:mt-20">
+          <div className="lg:hidden px-4 md:px-8 lg:px-16 mb-6 mt-16 flex justify-between items-center">
             <Link
               href="/"
               className="hover:scale-105 bg-white rounded-lg p-1 shadow-md"
@@ -125,11 +125,11 @@ const List = () => {
 
         {/* Type grocery item section mt-36*/}
         <div className="section-center">
-          <div className=" mb-4 items-center">
+          <div className="mb-4 lg:mb-6 items-center">
             <form className="px-4 md:px-8 lg:px-16 grocery-form" onSubmit={handleSubmit}>
               <div className="flex form-control">
                 <input
-                  className="flex-1 placeholder:text-sm placeholder:text-gray block  bg-gray-light w-full  rounded-lg py-2 pr-3 shadow-md focus:outline-none 
+                  className="flex-1 placeholder:text-sm lg:placeholder:text-base placeholder:text-gray block  bg-gray-light w-full  rounded-lg py-2 lg:py-3.5 pr-3 shadow-md focus:outline-none 
                                     focus:border-green focus:ring-green focus:ring-1 sm:text-sm"
                   style={{ borderWidth: 0 }}
                   placeholder="e.g. avocado"
@@ -139,7 +139,7 @@ const List = () => {
                 />
                 <button
                   type="submit"
-                  className="submit-btn drop-shadow-lg drop-shadow-white hover:shadow-[#A4D3C5] hover:bg-[#55a78e] duration-500 hover:scale-105 ml-3 px-4 py-2 bg-green text-sm text-white rounded-lg"
+                  className="submit-btn lg:text-base drop-shadow-lg drop-shadow-white hover:shadow-[#A4D3C5] hover:bg-[#55a78e] duration-500 hover:scale-105 ml-3 lg:ml-5 px-4 py-2 bg-green text-sm text-white rounded-lg"
                 >
                   {isEditing ? "Edit" : "Add"}
                 </button>
@@ -158,7 +158,7 @@ const List = () => {
               />
               <div className="flex my-4 justify-center">
                 <button
-                  className="text-red-500 hover:text-red-700 transition ease-out border border-red-500 hover:border-red-700 hover:bg-red-200 px-2 py-1 rounded-lg"
+                  className="lg:text-base text-red-500 hover:text-red-700 transition ease-out border border-red-500 hover:border-red-700 hover:bg-red-200 px-2 py-1 rounded-lg"
                   onClick={clearList}
                 >
                   Clear Items
