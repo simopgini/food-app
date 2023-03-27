@@ -22,7 +22,7 @@ const VerticalCard = ({ recipe }) => {
           </div>
         </div>
         <div className="px-4 py-2">
-          <h2 className="text-sm pb-1 font-semibold lg:text-base text-dark-green  mb-1.5 lg:mb-2">
+          <h2 className="text-sm pb-1 font-semibold lg:text-base text-dark-green truncate mb-1.5 lg:mb-2">
             {recipe.title}
           </h2>
           <div className="flex justify-between text-gray pb-6">

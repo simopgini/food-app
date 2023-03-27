@@ -6,9 +6,9 @@
 // const DEBUG = true;
 
 // DOMINIO
-const DEBUG = true
+const DEBUG = false
 
-const BASE = (DEBUG) ? `http://localhost:9999` :`https://api.spoonacular.com`
+const BASE = `https://api.spoonacular.com`
 
 const API_KEY = `?apiKey=5ea4af906f4443dba9c723a359aa6533`
 
