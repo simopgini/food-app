@@ -2,9 +2,11 @@
 // SE CI SONO TROPPE CHIAMATE AI VARI ENDPOINTS IN UNA GIORNATA, POI SPARISCONO LE SCHEDE DELLE RICETTE DOVE VIENE FATTA LA FETCH E RIAPPAIONO IL GIORNO DOPO
 
 // DOMINIO
-const DEBUG = true
+// const DEBUG = true
 
-const BASE = (DEBUG) ? `http://localhost:9999` :`https://api.spoonacular.com`
+// const BASE = (DEBUG) ? `http://localhost:9999` :`https://api.spoonacular.com`
+
+const BASE = `https://api.spoonacular.com`
 
 const API_KEY = `?apiKey=5ea4af906f4443dba9c723a359aa6533`
 
