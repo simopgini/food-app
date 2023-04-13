@@ -21,7 +21,7 @@ export default function Search() {
       return;
     }
     const response = await fetch(
-      `${RECIPES_COMPLEX_SEARCH}&query=${inputRecipeName}&addRecipeNutrition=true&addRecipeInformation=true&number=1`
+      `${RECIPES_COMPLEX_SEARCH}&query=${inputRecipeName}&addRecipeNutrition=true&addRecipeInformation=true&number=4`
     );
     if (!response.ok) {
       return (

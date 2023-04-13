@@ -10,8 +10,6 @@ import {
   RECIPES_COMPLEX_SEARCH,
   RECIPES,
 } from "@/components/Constants";
-import Modal from "@/components/Modal";
-import DesktopNavbar from "@/components/DesktopNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +21,7 @@ export default function Home() {
   // 1° CHIAMATA ALLE API - VEGETARIAN che renderizza le recipe cards vegetariane
   useEffect(() => {
     async function fetchVegetarianRecipes() {
-      const response = await fetch(`${RECIPES_COMPLEX_SEARCH}&addRecipeNutrition=true&addRecipeInformation=true&number=2&diet=vegetarian`);
+      const response = await fetch(`${RECIPES_COMPLEX_SEARCH}&addRecipeNutrition=true&addRecipeInformation=true&number=4&diet=vegetarian`);
       if (!response.ok) {
         return (
           <div>
@@ -45,7 +43,7 @@ export default function Home() {
 
   // 2° CHIAMATA ALLE API - BOTTONE CON CATEGORY-TYPE che renderizza le recipe cards in base al tipo es. breakfast, dinner, ecc.
   async function fetchRecipes(type) {
-    const response = await fetch(`${RECIPES_COMPLEX_SEARCH}&type=${type}&addRecipeNutrition=true&addRecipeInformation=true&number=2`);
+    const response = await fetch(`${RECIPES_COMPLEX_SEARCH}&type=${type}&addRecipeNutrition=true&addRecipeInformation=true&number=4`);
 
     if (!response.ok) {
       return (
