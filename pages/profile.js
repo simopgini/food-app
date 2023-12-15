@@ -1,3 +1,5 @@
+import ProfileFavourites from "@/components/ProfileFavourites";
+import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
@@ -16,9 +18,35 @@ export default function Profile() {
             <div className="flex-1 bg-white"></div>
             <div className="flex-auto p-1 font-bold text-xl">Profile</div>
           </div>
-          <p className="px-4 py-72 text-center text-xl">
+          <section className="px-4 md:px-8 lg:px-16">
+            <div className="flex flex-col justify-center">
+              <div className="flex justify-center rounded-full ">
+                <Image
+                  className="hover:transition hover:duration-300 contrast-[1.1] saturate-[1.4]"
+                  priority
+                  src="/profile-stats.jpg"
+                  alt="Shopping list"
+                  sizes="100vw"
+                  style={{
+                    width: "30%",
+                    height: "30%",
+                  }}
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <p className="text-sm md:text-lg lg:text-xl xl:text-xl text-center px-4 md:px-8 lg:px-16 2xl:px-24 mb-6">
+                Hello,
+              </p>
+            </div>
+            <ProfileFavourites />
+            <ProfileFavourites />
+            <ProfileFavourites />
+          </section>
+
+          {/* <p className="px-4 py-72 text-center text-xl">
             ⚠️ Work in progress ⚠️{" "}
-          </p>
+          </p> */}
         </div>
       </div>
     </>

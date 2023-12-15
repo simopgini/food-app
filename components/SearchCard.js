@@ -29,11 +29,15 @@ const SearchCard = ({ searchRecipe }) => {
             <div className="flex justify-between text-gray pb-2 lg:pb-3">
               <div className="flex items-center">
                 <HiOutlineClock className="h-4 w-4 mr-1" />
-                <span className="font-light text-xs lg:text-sm lg:mr-3">{searchRecipe.readyInMinutes} Min</span>
+                <span className="font-light text-xs lg:text-sm lg:mr-3">
+                  {searchRecipe.readyInMinutes} Min
+                </span>
               </div>
               <div className="flex items-center">
                 <HiOutlineFire className="h-4 w-4 mr-1" />
-                <span className="font-light text-xs lg:text-sm">{searchRecipe.nutrition.nutrients[0].amount} Kcal</span>
+                <span className="font-light text-xs lg:text-sm">
+                  {searchRecipe.nutrition.nutrients[0].amount} Kcal
+                </span>
               </div>
             </div>
             <div className="flex">

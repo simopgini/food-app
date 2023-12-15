@@ -6,11 +6,9 @@ import DesktopNavbar from "@/components/DesktopNavbar";
 export default function App({ Component, pageProps }) {
   return (
     <>
-      {/* <div className='xs:h-screen'> */}
-      {/* </div> */}
-        <DesktopNavbar />
-        <Component {...pageProps} />
-        <MobileNavbar  />
+      <DesktopNavbar />
+      <Component {...pageProps} />
+      <MobileNavbar />
     </>
   );
 }

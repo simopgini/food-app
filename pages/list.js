@@ -1,25 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useState, useEffect } from "react";
-import ItemList from "@/components/ItemList";
-import Alert from "@/components/Alert";
-
-// const getLocalStorage = () => {
-//     let listStorage = localStorage.getItem("list")
-//     if (listStorage){
-//         return JSON.parse(localStorage.getItem("list"))
-//     }
-//     else {
-//         return []
-//     }
-// }
-
-import { HiOutlineChevronLeft } from "react-icons/hi";
+import ItemList from "@/components/list/ItemList";
+import Alert from "@/components/list/Alert";
+import AddIngredientForm from "@/components/list/AddIngredientForm";
+import MobileHeaderList from "@/components/list/MobileHeaderList";
 
 const List = () => {
-
   const [name, setName] = useState("");
-  // const [list, setList] = useState(getLocalStorage());
   const [list, setList] = useState([]);
 
   const [isEditing, setIsEditing] = useState(false);
@@ -87,35 +74,10 @@ const List = () => {
     localStorage.setItem("list", JSON.stringify(list));
   }, [list]);
 
-  // useEffect(() => {
-  //     localStorage.setItem("list", JSON.stringify(list))
-  // }, [list])
-
-  // function handleChange(event) {
-  //      setName(event.target.value);
-  //  }
-
-  //  function handleAdd() {
-  //     const newList = list.concat({ name });
-
-  //      setList(newList);
-  //  }
-
   return (
     <>
       <div className="h-screen mb-8">
-        <div className="lg:mt-20">
-          <div className="lg:hidden px-4 md:px-8 lg:px-16 mb-6 mt-16 flex justify-between items-center">
-            <Link
-              href="/"
-              className="hover:scale-105 bg-white rounded-lg p-1 shadow-md"
-            >
-              <HiOutlineChevronLeft className="hover:animate-pulse h-6 w-6" />
-            </Link>
-            <div className="flex-1 bg-white"></div>
-            <div className="flex-auto p-1 font-bold text-xl">LIST</div>
-          </div>
-        </div>
+        <MobileHeaderList />
 
         <div className="px-4 md:px-8 lg:px-16 2xl:px-24 mb-8">
           <h2 className="font-bold text-xl text-[#0A2533]">
@@ -125,30 +87,42 @@ const List = () => {
 
         {/* Type grocery item section mt-36*/}
         <div className="section-center">
-          <div className="mb-4 lg:mb-6 items-center">
-            <form className="px-4 md:px-8 lg:px-16 2xl:px-24 grocery-form" onSubmit={handleSubmit}>
-              <div className="flex form-control">
-                <input
-                  className="flex-1 placeholder:text-sm lg:placeholder:text-base placeholder:text-gray block  bg-gray-light w-full  rounded-lg py-2 lg:py-3.5 pr-3 shadow-md focus:outline-none 
-                                    focus:border-green focus:ring-green focus:ring-1 sm:text-sm"
-                  style={{ borderWidth: 0 }}
-                  placeholder="e.g. avocado"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-                <button
-                  type="submit"
-                  className="submit-btn lg:text-base drop-shadow-lg drop-shadow-white hover:shadow-[#A4D3C5] hover:bg-[#55a78e] duration-500 hover:scale-105 ml-3 lg:ml-5 px-4 py-2 bg-green text-sm text-white rounded-lg"
-                >
-                  {isEditing ? "Edit" : "Add"}
-                </button>
-              </div>
-            </form>
+          <div className="mb-8 items-center">
+            <AddIngredientForm
+              isEditing={isEditing}
+              handleSubmit={handleSubmit}
+              name={name}
+              setName={setName}
+            />
+
             {alert.show && (
               <Alert {...alert} removeAlert={showAlert} list={list} />
             )}
           </div>
+
+          {list.length === 0 && (
+            <section className="flex flex-col justify-center">
+              <div className="flex justify-center">
+                <Image
+                  className="hover:transition hover:duration-300 rounded-xl contrast-[1.1] saturate-[1.4]"
+                  priority
+                  src="/shopping-list.jpg"
+                  alt="Shopping list"
+                  sizes="100vw"
+                  style={{
+                    width: "70%",
+                    height: "auto",
+                  }}
+                  width={500}
+                  height={300}
+                />
+              </div>
+              <p className="text-sm md:text-lg lg:text-xl xl:text-xl text-center px-4 md:px-8 lg:px-16 2xl:px-24 mb-6">
+                Did you forget to create a shopping list? Type the ingredients
+                you need to cook a delicious meal!
+              </p>
+            </section>
+          )}
           {list.length > 0 && (
             <section className="px-4 md:px-8 lg:px-16 2xl:px-24 grocery-container">
               <ItemList
@@ -167,8 +141,6 @@ const List = () => {
             </section>
           )}
         </div>
-
-
       </div>
     </>
   );

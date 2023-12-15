@@ -9,7 +9,7 @@ const Alert = ({ type, msg, removeAlert, list }) => {
   }, [list]);
 
   return (
-    <div className="pt-2 px-4 md:px-8 lg:px-16 2xl:px-24">
+    <div className="absolute pt-2 px-4 md:px-8 lg:px-16 2xl:px-24 z-50">
       <p className={`${type}`}>{msg}</p>
     </div>
   );
