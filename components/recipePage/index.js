@@ -3,25 +3,15 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Switcher from "@/components/Switcher";
 import { useRouter } from "next/router";
-import { HiOutlineChevronLeft, HiHeart, HiOutlineHeart } from "react-icons/hi";
+import { HiHeart, HiOutlineChevronLeft, HiOutlineHeart } from "react-icons/hi";
 import { RECIPES } from "@/components/data/Constants";
-import IngredientSection from "@/components/IngredientSection";
-import InstructionsSection from "@/components/InstructionsSection";
-import RecipeNutritionSection from "@/components/RecipeNutritionSection";
-import { useFavourites } from "@/store/FavoritesContext";
+import { HeartButton } from "@/components/recipePage/HeartButton";
+import RecipeNutritionSection from "./RecipeNutritionSection";
+import IngredientSection from "./IngredientSection";
+import InstructionsSection from "./InstructionsSection";
 
 const Recipe = () => {
-  const { addFavourite, removeFavourite } = useFavourites();
   const [showIngredients, setShowIngredients] = useState(true);
-
-  const handleHeartClick = () => {
-    if (isFavorite) {
-      removeFavourite(recipeCard.id);
-    } else {
-      addFavourite(recipeCard);
-    }
-    setIsFavorite(!isFavorite);
-  };
 
   const handleIgredientsSection = () => {
     setShowIngredients(showIngredients ? false : true);
@@ -53,7 +43,7 @@ const Recipe = () => {
     }
   }, [router.query.recipeId]);
 
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   if (recipeCard === undefined) {
     return (
@@ -82,14 +72,23 @@ const Recipe = () => {
             <HiOutlineChevronLeft className="h-6 w-6" />
           </Link>
           <div className="absolute right-4 lg:right-16 2xl:right-24 bg-white rounded-lg p-1">
-            {/* <HeartButton isActive={isActive} setIsActive={setIsActive} /> */}
-            <button onClick={handleHeartClick}>
-              {isFavorite ? (
-                <HiHeart className="h-6 w-6 text-green" />
+            <div>
+              {isActive ? (
+                <HiHeart
+                  onClick={() => {
+                    setIsActive(!isActive);
+                  }}
+                  className="h-6 w-6 text-green"
+                />
               ) : (
-                <HiOutlineHeart className="h-6 w-6 text-green" />
+                <HiOutlineHeart
+                  onClick={() => {
+                    setIsActive(!isActive);
+                  }}
+                  className="h-6 w-6 text-green"
+                />
               )}
-            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -98,6 +97,7 @@ const Recipe = () => {
         <div className="h-screen mt-8 rounded-t-3xl bg-white shadow-sm">
           <RecipeNutritionSection recipeCard={recipeCard} />
 
+          {/* 2xl:px-24  */}
           <div className="px-4 md:px-8 lg:px-16 2xl:px-80 pb-4 2xl:pb-8  ">
             <Switcher handleSectionVisibility={handleIgredientsSection} />
           </div>
@@ -119,3 +119,6 @@ const Recipe = () => {
   );
 };
 export default Recipe;
+{
+  /* <HeartButton isActive={isActive} setIsActive={setIsActive} /> */
+}

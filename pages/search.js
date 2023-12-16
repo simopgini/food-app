@@ -202,9 +202,6 @@ export default function Search() {
           </div>
         </section>
 
-        {/* <div 
-        className={showCards ? "" : "hidden"}
-        >  */}
         {searchRecipes.results.length === 0 && (
           <div className="flex flex-col justify-center">
             <div className="flex justify-center">

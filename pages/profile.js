@@ -1,9 +1,12 @@
-import ProfileFavourites from "@/components/ProfileFavourites";
+import ProfileFavourites from "@/components/profile/ProfileFavourites";
+import { useFavourites } from "@/store/FavoritesContext";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
 export default function Profile() {
+  const { favourites } = useFavourites();
+
   return (
     <>
       <div className="h-screen mb-8">
@@ -39,14 +42,16 @@ export default function Profile() {
                 Hello,
               </p>
             </div>
-            <ProfileFavourites />
-            <ProfileFavourites />
-            <ProfileFavourites />
-          </section>
+            <h2 className="font-bold text-xl text-[#0A2533] mb-8">
+              Saved favourite recipes
+            </h2>
 
-          {/* <p className="px-4 py-72 text-center text-xl">
-            ⚠️ Work in progress ⚠️{" "}
-          </p> */}
+            <ul>
+              {favourites.map((recipe) => (
+                <ProfileFavourites key={recipe.id} recipe={recipe} />
+              ))}
+            </ul>
+          </section>
         </div>
       </div>
     </>

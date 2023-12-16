@@ -1,9 +1,3 @@
-import { HiOutlineClock, HiOutlineFire } from "react-icons/hi";
-import Ingredients from "../Ingredients";
-import Instructions from "../Instructions";
-import Image from "next/image";
-import CategoryHomeButtons from "./CategoryHomeButtons";
-import HorizontalCardHome from "./HorizontalCardHome";
 import VerticalCard from "./VerticalCard";
 
 const PopularRecipesSection = ({ recipes }) => {
@@ -13,7 +7,6 @@ const PopularRecipesSection = ({ recipes }) => {
         <h1 className="text-dark-green text-lg lg:text-xl font-bold">
           Popular Recipes
         </h1>
-        {/* <Link href="/allRecipes" className='text-green text-xs'>See all</Link> */}
       </div>
 
       <div className="flex-grow w-full mx-auto">
@@ -24,7 +17,6 @@ const PopularRecipesSection = ({ recipes }) => {
                 {recipes.results.map((recipe) => {
                   return (
                     <VerticalCard
-                      // onClick={recipeJson}
                       key={recipe.id}
                       id={recipe.id}
                       recipe={recipe}

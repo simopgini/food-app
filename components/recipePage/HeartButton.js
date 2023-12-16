@@ -2,6 +2,13 @@ import { HiOutlineHeart, HiHeart } from "react-icons/hi";
 // import { useContext } from "react";
 
 export const HeartButton = ({ isActive, setIsActive }) => {
+  // const recipeCtx = useContext(RecipeInfoContext);
+
+  // const handleHeartClick = () => {
+  //   recipe.isFavorite = !recipe.isFavorite;
+  //   recipeCtx.handleFavoriteToggle(recipe);
+  // };
+
   return (
     <div>
       {isActive ? (
@@ -20,19 +27,12 @@ export const HeartButton = ({ isActive, setIsActive }) => {
         />
       )}
     </div>
+    // <button onClick={handleHeartClick}>
+    //   {recipe.isFavorite ? (
+    //     <HiHeart className="h-7 w-7 text-rose-500" />
+    //   ) : (
+    //     <HiOutlineHeart className="h-7 w-7 text-rose-500" />
+    //   )}
+    // </button>
   );
 };
-// const recipeCtx = useContext(RecipeInfoContext);
-
-// const handleHeartClick = () => {
-//   recipe.isFavorite = !recipe.isFavorite;
-//   recipeCtx.handleFavoriteToggle(recipe);
-// };
-
-// <button onClick={handleHeartClick}>
-//   {recipe.isFavorite ? (
-//     <HiHeart className="h-7 w-7 text-rose-500" />
-//   ) : (
-//     <HiOutlineHeart className="h-7 w-7 text-rose-500" />
-//   )}
-// </button>

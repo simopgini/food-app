@@ -1,5 +1,4 @@
-import { HiClock, HiOutlineClock } from "react-icons/hi";
-// import recipeJson from "./recipeJson";
+import { HiClock } from "react-icons/hi";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,7 +21,9 @@ const HorizontalCardHome = ({ vegetarianRecipeCard }) => {
             </h2>
             <div className="flex items-center text-sm lg:text-sm">
               <HiClock className="h-4 w-4 mr-1 text-white" />
-              <span className="font-light text-xs lg:text-sm">{vegetarianRecipeCard.readyInMinutes} min</span>
+              <span className="font-light text-xs lg:text-sm">
+                {vegetarianRecipeCard.readyInMinutes} min
+              </span>
             </div>
           </div>
         </div>
