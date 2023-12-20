@@ -1,15 +1,16 @@
 import Link from "next/link";
-import SearchCard from "@/components/SearchCard";
+import SearchCard from "@/components/search/SearchCard";
 import { useState } from "react";
 import {
   HiOutlineSearch,
   HiOutlineChevronLeft,
   HiOutlineAdjustments,
 } from "react-icons/hi";
-import CuisineSearchButtons from "@/components/CuisineSearchButtons";
+import CuisineSearchButtons from "@/components/search/CuisineSearchButtons";
 import Alert from "@/components/list/Alert";
 import { RECIPES_COMPLEX_SEARCH } from "@/components/data/Constants";
 import Image from "next/image";
+import { cuisineSearchButton } from "@/components/data/categoryButtons";
 
 const Search = () => {
   const [searchRecipes, setSearchedRecipes] = useState({ results: [] });
@@ -34,70 +35,7 @@ const Search = () => {
     setSearchedRecipes(data);
   }
 
-  const cuisineButton = [
-    {
-      id: 1,
-      cuisine: "italian",
-      emoji: "🍕",
-    },
-    {
-      id: 2,
-      cuisine: "spanish",
-      emoji: "🥘",
-    },
-    {
-      id: 3,
-      cuisine: "japanese",
-      emoji: "🍱",
-    },
-    {
-      id: 4,
-      cuisine: "indian",
-      emoji: "🍛",
-    },
-    {
-      id: 5,
-      cuisine: "mexican",
-      emoji: "🌮",
-    },
-    {
-      id: 6,
-      cuisine: "middle Eastern",
-      emoji: "🧆",
-    },
-    {
-      id: 7,
-      cuisine: "chinese",
-      emoji: "🥟",
-    },
-    {
-      id: 8,
-      cuisine: "greek",
-      emoji: "🥙",
-    },
-    {
-      id: 9,
-      cuisine: "french",
-      emoji: "🥐",
-    },
-    {
-      id: 10,
-      cuisine: "american",
-      emoji: "🍔",
-    },
-    {
-      id: 11,
-      cuisine: "german",
-      emoji: "🥨",
-    },
-    {
-      id: 12,
-      cuisine: "british",
-      emoji: "🫖",
-    },
-  ];
-
-  // SEARCH STATE AND ERRORS HANDLING
+  // SEARCH STATE AND ERROR HANDLING
   const [name, setName] = useState("");
 
   const [showCards, setShowCards] = useState(false);
@@ -183,7 +121,7 @@ const Search = () => {
             <div className="pl-4 md:pl-8 lg:pl-16 2xl:pl-24">
               <div className=" my-4">
                 <ul className="flex flex-no-wrap overflow-x-auto scrolling-touch items-start">
-                  {cuisineButton.map((cuisine) => {
+                  {cuisineSearchButton.map((cuisine) => {
                     {
                       cuisine.callback = fetchSearchedRecipes;
                     }

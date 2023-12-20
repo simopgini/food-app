@@ -1,13 +1,13 @@
-import ProfileFavourites from "@/pages/[recipeId]/ProfileFavourites";
+import ProfileFavourites from "@/components/profile/ProfileFavourites";
 import { useFavourites } from "@/store/FavoritesContext";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+// import { useState } from "react";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
 const Profile = () => {
   const { favourites } = useFavourites();
-  const [isSaved, setIsSaved] = useState(true);
+  // const [isSaved, setIsSaved] = useState(true);
 
   return (
     <>
@@ -47,7 +47,6 @@ const Profile = () => {
             <h2 className="font-bold text-xl text-[#0A2533] mb-8">
               Saved favourite recipes
             </h2>
-            {/* <p>No recipes added yet.</p> */}
             <ul>
               {favourites.length > 0 ? (
                 favourites.map((recipe) => (

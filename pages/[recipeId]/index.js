@@ -29,7 +29,7 @@ const Recipe = () => {
 
   const [recipeCard, setRecipeCard] = useState();
 
-  // dopo il click sulla card deve prendere l'id della ricetta ${recipe.id} + CHIAMATA ALLE API - renderizza la ricetta
+  // When you click on the card it takes the recipe id ${recipe.id} + Calls the API and renders the recipe
   async function fetchRecipe(recipeID) {
     const response = await fetch(
       `${RECIPES}/${recipeID}/information?apiKey=5ea4af906f4443dba9c723a359aa6533&includeNutrition=true`

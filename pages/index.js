@@ -1,15 +1,15 @@
 import React from "react";
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import { Inter } from "@next/font/google";
+// import { Inter } from "@next/font/google";
 import { useRouter } from "next/router";
 import { RECIPES_COMPLEX_SEARCH, RECIPES } from "@/components/data/Constants";
-import { categoryTypeHome } from "@/components/data/categoryTypeHome";
+import { categoryHomeButton } from "@/components/data/categoryButtons";
 import InspiredSection from "@/components/home/InspiredSection";
 import PopularRecipesSection from "@/components/home/PopularRecipesSection";
 import CategoryHomeButtons from "@/components/home/CategoryHomeButtons";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 const Home = () => {
   const router = useRouter();
@@ -130,7 +130,7 @@ const Home = () => {
                 <div className="my-4 lg:mt-7 lg:my-6">
                   <div className="">
                     <ul className=" flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
-                      {categoryTypeHome.map((type) => {
+                      {categoryHomeButton.map((type) => {
                         {
                           type.callback = fetchRecipes;
                         }

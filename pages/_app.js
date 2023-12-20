@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import React from "react";
-import MobileNavbar from "@/components/MobileNavbar";
-import DesktopNavbar from "@/components/DesktopNavbar";
+import MobileNavbar from "@/components/navbar/MobileNavbar";
+import DesktopNavbar from "@/components/navbar/DesktopNavbar";
 import { FavouritesProvider } from "@/store/FavoritesContext";
 
 const App = ({ Component, pageProps }) => {

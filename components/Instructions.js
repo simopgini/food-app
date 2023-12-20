@@ -1,7 +1,4 @@
-// import { useState, useEffect } from "react";
-
 const Instructions = ({ instruction, index }) => {
-
   return (
     <div className="mb-4 flex items-center text-sm font-medium">
       <div className="bg-green text-white rounded-xl h-6 w-6 2xl:h-10 2xl:w-10 mr-2 2xl:mr-4 flex items-center justify-center">

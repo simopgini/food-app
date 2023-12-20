@@ -1,4 +1,3 @@
-import Ingredients from "./Ingredients";
 import Instructions from "./Instructions";
 
 const InstructionsSection = ({ showIngredients, recipeCard }) => {
@@ -17,13 +16,12 @@ const InstructionsSection = ({ showIngredients, recipeCard }) => {
         </p>
       </div>
       <div>
-        {recipeCard.extendedIngredients.map((instruction, index = 0) => {
+        {recipeCard.extendedIngredients.map((instruction, index) => {
           return (
             <Instructions
               key={instruction.id}
               instruction={instruction}
               index={index}
-              className=" "
             />
           );
         })}
