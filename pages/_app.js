@@ -4,7 +4,7 @@ import MobileNavbar from "@/components/MobileNavbar";
 import DesktopNavbar from "@/components/DesktopNavbar";
 import { FavouritesProvider } from "@/store/FavoritesContext";
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <FavouritesProvider>
       <DesktopNavbar />
@@ -12,4 +12,5 @@ export default function App({ Component, pageProps }) {
       <MobileNavbar />
     </FavouritesProvider>
   );
-}
+};
+export default App;

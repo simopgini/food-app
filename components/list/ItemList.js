@@ -1,10 +1,7 @@
 import { useState } from "react";
 import {
-  HiOutlineChevronLeft,
-  HiOutlinePlusCircle,
   HiPlusCircle,
   HiMinusCircle,
-  HiOutlineMinusCircle,
   HiOutlinePencilAlt,
   HiOutlineTrash,
 } from "react-icons/hi";
@@ -37,7 +34,9 @@ const ItemList = ({ items, removeItem, editItem }) => {
                 type="checkbox"
                 className="appearance-none enabled:ring-green checked:ring-green text-green border-[#DEDCDC] checked:bg-gray-mid rounded-md h-6 w-6 mr-2"
               />
-              <p className="text-dark-green text-sm lg:text-base">{item.title}</p>
+              <p className="text-dark-green text-sm lg:text-base">
+                {item.title}
+              </p>
             </div>
             <div className="flex items-center text-dark-green space-x-2 lg:space-x-3 text-sm">
               <HiMinusCircle

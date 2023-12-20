@@ -1,11 +1,13 @@
-import ProfileFavourites from "@/components/profile/ProfileFavourites";
+import ProfileFavourites from "@/pages/[recipeId]/ProfileFavourites";
 import { useFavourites } from "@/store/FavoritesContext";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 
-export default function Profile() {
+const Profile = () => {
   const { favourites } = useFavourites();
+  const [isSaved, setIsSaved] = useState(true);
 
   return (
     <>
@@ -45,15 +47,20 @@ export default function Profile() {
             <h2 className="font-bold text-xl text-[#0A2533] mb-8">
               Saved favourite recipes
             </h2>
-
+            {/* <p>No recipes added yet.</p> */}
             <ul>
-              {favourites.map((recipe) => (
-                <ProfileFavourites key={recipe.id} recipe={recipe} />
-              ))}
+              {favourites.length > 0 ? (
+                favourites.map((recipe) => (
+                  <ProfileFavourites key={recipe.id} recipe={recipe} />
+                ))
+              ) : (
+                <p>No recipes added yet.</p>
+              )}
             </ul>
           </section>
         </div>
       </div>
     </>
   );
-}
+};
+export default Profile;

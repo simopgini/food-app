@@ -11,7 +11,7 @@ import Alert from "@/components/list/Alert";
 import { RECIPES_COMPLEX_SEARCH } from "@/components/data/Constants";
 import Image from "next/image";
 
-export default function Search() {
+const Search = () => {
   const [searchRecipes, setSearchedRecipes] = useState({ results: [] });
 
   // 1°CHIAMATA ALLE API - SEARCH che renderizza le recipe cards del nome che è stato dato all'input
@@ -239,4 +239,5 @@ export default function Search() {
       </div>
     </>
   );
-}
+};
+export default Search;

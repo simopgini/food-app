@@ -11,7 +11,7 @@ import CategoryHomeButtons from "@/components/home/CategoryHomeButtons";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const Home = () => {
   const router = useRouter();
 
   const [vegetarianRecipeCards, setVegetarianRecipeCards] = useState(undefined);
@@ -154,4 +154,5 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+export default Home;

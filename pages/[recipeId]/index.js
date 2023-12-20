@@ -82,7 +82,6 @@ const Recipe = () => {
             <HiOutlineChevronLeft className="h-6 w-6" />
           </Link>
           <div className="absolute right-4 lg:right-16 2xl:right-24 bg-white rounded-lg p-1">
-            {/* <HeartButton isActive={isActive} setIsActive={setIsActive} /> */}
             <button onClick={handleHeartClick}>
               {isFavorite ? (
                 <HiHeart className="h-6 w-6 text-green" />
