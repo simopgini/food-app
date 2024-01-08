@@ -1,5 +1,5 @@
 import { HiOutlineClock, HiOutlineFire } from "react-icons/hi";
-import Ingredients from "./Ingredients";
+import Ingredients from "./recipePage/Ingredients";
 import Instructions from "./Instructions";
 import Image from "next/image";
 

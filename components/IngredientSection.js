@@ -1,4 +1,4 @@
-import Ingredients from "./Ingredients";
+import Ingredients from "./recipePage/Ingredients";
 
 const IngredientSection = ({ showIngredients, recipeCard }) => {
   return (
