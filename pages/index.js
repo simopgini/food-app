@@ -129,7 +129,7 @@ const Home = () => {
               <div className="pl-4 md:pl-8 lg:pl-16 2xl:pl-24">
                 <div className="my-4 lg:mt-7 lg:my-6">
                   <div className="">
-                    <ul className=" flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
+                    <ul className="last:pr-4 flex flex-no-wrap overflow-x-auto gap-3 scrolling-touch items-start mb-4">
                       {categoryHomeButton.map((type) => {
                         {
                           type.callback = fetchRecipes;

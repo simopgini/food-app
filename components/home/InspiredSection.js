@@ -14,10 +14,10 @@ const InspiredSection = ({ vegetarianRecipeCards }) => {
         </h1>
       </div>
       <div className="flex-grow w-full mx-auto">
-        <div className="pl-4 px-4 md:pl-8 lg:pl-16 2xl:pl-24">
+        <div className="pl-4 md:pl-8 lg:pl-16 2xl:pl-24">
           <div className="my-4">
             <div className="">
-              <div className="flex flex-no-wrap overflow-x-auto gap-3 lg:gap-6 scrolling-touch items-start mb-4">
+              <div className="last:pr-4 flex flex-no-wrap overflow-x-auto gap-3 lg:gap-6 scrolling-touch items-start mb-4">
                 {vegetarianRecipeCards.results.map((vegetarianRecipeCard) => {
                   return (
                     <HorizontalCardHome

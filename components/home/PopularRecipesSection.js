@@ -13,7 +13,7 @@ const PopularRecipesSection = ({ recipes }) => {
         <div className="pl-4 md:pl-8 lg:pl-16 2xl:pl-24">
           <div className="my-4">
             <div className="">
-              <div className="flex flex-no-wrap overflow-x-auto gap-3 lg:gap-6 scrolling-touch items-start mb-4">
+              <div className="last:pr-2 flex flex-no-wrap overflow-x-auto gap-3 lg:gap-6 scrolling-touch items-start mb-4">
                 {recipes.results.map((recipe) => {
                   return (
                     <VerticalCard
